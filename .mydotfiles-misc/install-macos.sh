@@ -32,8 +32,9 @@ which brew &> /dev/null || /bin/bash -c "$(curl -fsSL https://raw.githubusercont
 ./Brewfile
 ./Caskfile
 
-sudo sh -c 'echo /usr/local/bin/zsh >> /etc/shells'
-chsh -s /usr/local/bin/zsh
+# since big sur, zsh version is the same as zsh bundled with brew
+# sudo sh -c 'echo /usr/local/bin/zsh >> /etc/shells'
+# chsh -s /usr/local/bin/zsh
 
 dockutil --no-restart --remove all
 
