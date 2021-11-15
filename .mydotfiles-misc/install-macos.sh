@@ -27,7 +27,7 @@ fi
 
 # install homebrew if it is not already installed
 export HOMEBREW_NO_GITHUB_API=1
-which brew &> /dev/null || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+which brew &> /dev/null || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 ./Brewfile
 ./Caskfile
