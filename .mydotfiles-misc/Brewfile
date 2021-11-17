@@ -4,6 +4,7 @@ brew install \
     universal-ctags \
     ack \
     awscli \
+    bat \
     binutils \
     cmake \
     cmus \
