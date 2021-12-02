@@ -357,3 +357,6 @@ defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
 killall Dock
 killall Finder
 killall SystemUIServer
+
+# install ohmyzsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"

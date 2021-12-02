@@ -1,3 +1,13 @@
+# path to oh-my-zsh installation
+export ZSH="$HOME/.oh-my-zsh"
+
+# theme name to load
+ZSH_THEME="robbyrussell"
+
+# disable automatic updates
+zstyle ':omz:update' mode disabled
+
+source $ZSH/oh-my-zsh.sh
 
 # add mydotfiles and dot aliases if git command exists
 command -v git > /dev/null && {
