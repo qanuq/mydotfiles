@@ -23,5 +23,5 @@ brew install --cask \
     transmission \
     virtualbox \
     virtualbox-extension-pack \
-    visual-studio-code \
-    vlc
+    vlc \
+    vscodium
