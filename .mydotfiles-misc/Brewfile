@@ -51,4 +51,5 @@ brew install \
     unar \
     watch \
     wdiff \
-    zsh
+    zsh-history-substring-search \
+    zsh-syntax-highlighting
