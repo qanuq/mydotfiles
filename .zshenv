@@ -1,3 +1,6 @@
+# use case-insensitive completion.
+export CASE_SENSITIVE="false"
+
 # add brew path to man path
 export MANPATH="/usr/local/share/man:/usr/share/man:$MANPATH"
 
