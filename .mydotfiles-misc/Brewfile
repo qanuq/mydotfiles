@@ -43,6 +43,7 @@ brew install \
     pigz \
     screen \
     shellcheck \
+    terminal-notifier \
     the_silver_searcher \
     tidy-html5 \
     tig \
