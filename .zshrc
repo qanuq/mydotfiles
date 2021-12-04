@@ -22,6 +22,16 @@ ZSH_HIGHLIGHT_REGEXP+=('[[:<:]]sudo[[:>:]]' fg=yellow,bold,underline,bg=black)
 ZSH_HIGHLIGHT_REGEXP+=('[[:<:]]rm[[:>:]]' fg=white,bold,bg=red)
 ZSH_HIGHLIGHT_REGEXP+=('[[:<:]]rmdir[[:>:]]' fg=white,bold,bg=red)
 
+# some syntax highlighting colors
+typeset -A ZSH_HIGHLIGHT_STYLES
+ZSH_HIGHLIGHT_STYLES[path]="fg=cyan"
+ZSH_HIGHLIGHT_STYLES[path_pathseparator]="fg=yellow"
+ZSH_HIGHLIGHT_STYLES[alias]='fg=cyan,bold'
+ZSH_HIGHLIGHT_STYLES[back-quoted-argument-unclosed]="fg=red"
+ZSH_HIGHLIGHT_STYLES[single-quoted-argument-unclosed]="fg=red"
+ZSH_HIGHLIGHT_STYLES[double-quoted-argument-unclosed]="fg=red"
+ZSH_HIGHLIGHT_STYLES[dollar-quoted-argument-unclosed]="fg=red"
+
 # must be at the end of file
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
