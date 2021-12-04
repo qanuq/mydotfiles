@@ -14,3 +14,5 @@ export VISUAL=$EDITOR
 # set less as pager
 export PAGER=less
 
+# path to viminfo file used by fasd
+export _FASD_VIMINFO=$HOME/.vim/viminfo

@@ -7,6 +7,12 @@ ZSH_THEME="robbyrussell"
 # disable automatic updates
 zstyle ':omz:update' mode disabled
 
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+plugins=(
+    fasd
+)
+
 source $ZSH/oh-my-zsh.sh
 
 # add mydotfiles and dot aliases if git command exists
@@ -19,6 +25,24 @@ command -v git > /dev/null && {
 command -v bat > /dev/null && {
     alias cat='bat -p'
     alias catd='bat -d'
+}
+
+# fasd can mimic https://github.com/rupa/v 's behaviour
+command -v fasd > /dev/null && {
+    # https://developpaper.com/fast-jump-tool-a-brief-introduction-to-fasd/
+    # remove default fasd aliases first
+    unalias v
+    unalias o
+    unalias j
+    alias v='f -e "$EDITOR" -B viminfo'
+    alias a='fasd -a' # any
+    alias s='fasd -si' # show search and select
+    alias d='fasd -d' # directory
+    alias f='fasd -f' # file
+    alias sd='fasd -sid'
+    alias sf='fasd -sif'
+    alias z='fasd_cd -d'
+    alias zz='fasd_cd -d -i'
 }
 
 # enable main highlighters, plus brackets and following regexp
