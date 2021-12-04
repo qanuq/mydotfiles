@@ -16,3 +16,6 @@ export PAGER=less
 
 # path to viminfo file used by fasd
 export _FASD_VIMINFO=$HOME/.vim/viminfo
+
+# globalias module will not expand these aliases
+export GLOBALIAS_FILTER_VALUES=(a cat catd d dot f la ll mydotfiles s sd sf v z zz)

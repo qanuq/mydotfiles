@@ -11,6 +11,7 @@ zstyle ':omz:update' mode disabled
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 plugins=(
     fasd
+    globalias
 )
 
 source $ZSH/oh-my-zsh.sh
