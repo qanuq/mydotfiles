@@ -15,6 +15,12 @@ command -v git > /dev/null && {
     alias dot=mydotfiles
 }
 
+# bat is a better cat
+command -v bat > /dev/null && {
+    alias cat='bat -p'
+    alias catd='bat -d'
+}
+
 # enable main highlighters, plus brackets and following regexp
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets regexp)
 typeset -A ZSH_HIGHLIGHT_REGEXP
