@@ -1,3 +1,6 @@
+# history time format
+export HIST_STAMPS="yyyy-mm-dd"
+
 # use case-insensitive completion.
 export CASE_SENSITIVE="false"
 
