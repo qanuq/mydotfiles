@@ -16,6 +16,7 @@ plugins=(
     common-aliases
     fasd
     globalias
+    sudo
 )
 
 source $ZSH/oh-my-zsh.sh
