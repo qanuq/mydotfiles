@@ -10,7 +10,9 @@ zstyle ':omz:update' mode disabled
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 plugins=(
+    aliases
     bgnotify
+    common-aliases
     fasd
     globalias
 )
