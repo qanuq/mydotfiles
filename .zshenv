@@ -1,3 +1,7 @@
+# big history
+export HISTSIZE=500000
+export SAVEHIST=$HISTSIZE
+
 # history time format
 export HIST_STAMPS="yyyy-mm-dd"
 
