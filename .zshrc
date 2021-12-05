@@ -51,6 +51,8 @@ command -v fasd > /dev/null && {
     alias zz='fasd_cd -d -i'
 }
 
+alias h=history
+
 # enable main highlighters, plus brackets and following regexp
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets regexp)
 typeset -A ZSH_HIGHLIGHT_REGEXP
