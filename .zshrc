@@ -16,6 +16,7 @@ plugins=(
     common-aliases
     fasd
     globalias
+    isodate
     iterm2
     macos
     sudo
