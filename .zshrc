@@ -12,6 +12,7 @@ zstyle ':omz:update' mode disabled
 plugins=(
     aliases
     bgnotify
+    colored-man-pages
     common-aliases
     fasd
     globalias
