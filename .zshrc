@@ -7,6 +7,13 @@ ZSH_THEME="robbyrussell"
 # disable automatic updates
 zstyle ':omz:update' mode disabled
 
+# keychain manages ssh agent
+zstyle :omz:plugins:keychain agents ssh
+# load identities
+zstyle :omz:plugins:keychain identities sirius_key antares_key
+# additional options to the keychain program
+zstyle :omz:plugins:keychain options --quiet --ignore-missing
+
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 plugins=(
@@ -18,6 +25,7 @@ plugins=(
     globalias
     isodate
     iterm2
+    keychain
     macos
     sudo
 )

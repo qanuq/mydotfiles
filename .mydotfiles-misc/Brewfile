@@ -30,6 +30,7 @@ brew install \
     grep \
     htop \
     jq \
+    keychain \
     less \
     libtool \
     libxml2 \
