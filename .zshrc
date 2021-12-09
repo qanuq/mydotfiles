@@ -22,6 +22,7 @@ plugins=(
     colored-man-pages
     common-aliases
     encode64
+    fancy-ctrl-z
     fasd
     globalias
     isodate
