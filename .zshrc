@@ -25,6 +25,7 @@ plugins=(
     fancy-ctrl-z
     fasd
     git
+    gitignore
     globalias
     isodate
     iterm2
