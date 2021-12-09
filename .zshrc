@@ -21,6 +21,7 @@ plugins=(
     bgnotify
     colored-man-pages
     common-aliases
+    encode64
     fasd
     globalias
     isodate
