@@ -24,6 +24,7 @@ plugins=(
     encode64
     fancy-ctrl-z
     fasd
+    git
     globalias
     isodate
     iterm2
