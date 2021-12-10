@@ -23,6 +23,7 @@ plugins=(
     common-aliases
     copybuffer
     copydir
+    copyfile
     encode64
     extract
     fancy-ctrl-z
