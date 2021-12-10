@@ -22,6 +22,7 @@ plugins=(
     colored-man-pages
     common-aliases
     copybuffer
+    copydir
     encode64
     extract
     fancy-ctrl-z
