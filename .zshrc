@@ -21,6 +21,7 @@ plugins=(
     bgnotify
     colored-man-pages
     common-aliases
+    copybuffer
     encode64
     extract
     fancy-ctrl-z
