@@ -29,6 +29,7 @@ plugins=(
     extract
     fancy-ctrl-z
     fasd
+    genpass
     git
     gitignore
     globalias
