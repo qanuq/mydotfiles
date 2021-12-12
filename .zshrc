@@ -41,6 +41,7 @@ plugins=(
     keychain
     macos
     mosh
+    rsync
     sudo
 )
 
