@@ -12,6 +12,7 @@ brew install \
     colormake \
     coreutils \
     diffutils \
+    direnv \
     dockutil \
     fasd \
     fd \
