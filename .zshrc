@@ -31,6 +31,7 @@ plugins=(
     fasd
     genpass
     git
+    git-flow-avh
     gitignore
     globalias
     gnu-utils
