@@ -37,6 +37,7 @@ plugins=(
     gnu-utils
     isodate
     iterm2
+    jump
     keychain
     macos
     sudo
@@ -75,6 +76,7 @@ command -v fasd > /dev/null && {
 }
 
 alias h=history
+alias j=jump
 
 # enable main highlighters, plus brackets and following regexp
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets regexp)
