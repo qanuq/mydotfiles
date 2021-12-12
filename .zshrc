@@ -33,6 +33,7 @@ plugins=(
     git
     gitignore
     globalias
+    gnu-utils
     isodate
     iterm2
     keychain
