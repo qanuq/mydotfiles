@@ -40,6 +40,7 @@ plugins=(
     jump
     keychain
     macos
+    mosh
     sudo
 )
 
