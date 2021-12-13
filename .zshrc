@@ -43,6 +43,7 @@ plugins=(
     keychain
     macos
     mosh
+    ripgrep
     rsync
     sudo
 )
