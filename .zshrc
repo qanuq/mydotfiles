@@ -30,6 +30,7 @@ plugins=(
     extract
     fancy-ctrl-z
     fasd
+    fd
     genpass
     git
     git-flow-avh
