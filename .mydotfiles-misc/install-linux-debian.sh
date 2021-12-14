@@ -15,6 +15,7 @@ sudo apt install -y libterm-readkey-perl
 sudo apt install -y ack
 sudo apt install -y direnv
 sudo apt install -y fasd
+sudo apt install -y fd-find
 
 curl --silent --location https://raw.githubusercontent.com/petervanderdoes/gitflow-avh/develop/contrib/gitflow-installer.sh --output ./gitflow-installer.sh && sudo /bin/bash gitflow-installer.sh install stable; rm -fv gitflow-installer.sh
 
