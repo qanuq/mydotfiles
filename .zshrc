@@ -30,7 +30,6 @@ plugins=(
     fasd
     fd
     genpass
-    git
     git-flow-avh
     gitignore
     globalias
@@ -80,6 +79,7 @@ command -v fasd > /dev/null && {
     alias zz='fasd_cd -d -i'
 }
 
+alias g=git
 alias h=history
 alias j=jump
 
