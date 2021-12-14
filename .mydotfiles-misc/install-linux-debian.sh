@@ -20,6 +20,7 @@ sudo apt install -y fdupes
 sudo apt install -y htop
 sudo apt install -y keychain
 sudo apt install -y mosh
+sudo apt install -y ncdu
 
 curl --silent --location https://raw.githubusercontent.com/petervanderdoes/gitflow-avh/develop/contrib/gitflow-installer.sh --output ./gitflow-installer.sh && sudo /bin/bash gitflow-installer.sh install stable; rm -fv gitflow-installer.sh
 
