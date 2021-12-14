@@ -46,6 +46,8 @@ plugins=(
     ripgrep
     rsync
     sudo
+    zsh-syntax-highlighting
+    zsh-history-substring-search
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -86,9 +88,15 @@ alias j=jump
 # enable main highlighters, plus brackets and following regexp
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets regexp)
 typeset -A ZSH_HIGHLIGHT_REGEXP
-ZSH_HIGHLIGHT_REGEXP+=('[[:<:]]sudo[[:>:]]' fg=yellow,bold,underline,bg=black)
-ZSH_HIGHLIGHT_REGEXP+=('[[:<:]]rm[[:>:]]' fg=white,bold,bg=red)
-ZSH_HIGHLIGHT_REGEXP+=('[[:<:]]rmdir[[:>:]]' fg=white,bold,bg=red)
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    ZSH_HIGHLIGHT_REGEXP+=('\bsudo\b' fg=yellow,bold,underline,bg=black)
+    ZSH_HIGHLIGHT_REGEXP+=('\brm\b' fg=white,bold,bg=red)
+    ZSH_HIGHLIGHT_REGEXP+=('\brmdir\b' fg=white,bold,bg=red)
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+    ZSH_HIGHLIGHT_REGEXP+=('[[:<:]]sudo[[:>:]]' fg=yellow,bold,underline,bg=black)
+    ZSH_HIGHLIGHT_REGEXP+=('[[:<:]]rm[[:>:]]' fg=white,bold,bg=red)
+    ZSH_HIGHLIGHT_REGEXP+=('[[:<:]]rmdir[[:>:]]' fg=white,bold,bg=red)
+fi
 
 # some syntax highlighting colors
 typeset -A ZSH_HIGHLIGHT_STYLES
@@ -99,7 +107,3 @@ ZSH_HIGHLIGHT_STYLES[back-quoted-argument-unclosed]="fg=red"
 ZSH_HIGHLIGHT_STYLES[single-quoted-argument-unclosed]="fg=red"
 ZSH_HIGHLIGHT_STYLES[double-quoted-argument-unclosed]="fg=red"
 ZSH_HIGHLIGHT_STYLES[dollar-quoted-argument-unclosed]="fg=red"
-
-# must be at the end of file
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
