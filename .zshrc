@@ -17,10 +17,8 @@ zstyle :omz:plugins:keychain options --quiet --ignore-missing
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 plugins=(
-    aliases
     bgnotify
     colored-man-pages
-    common-aliases
     copybuffer
     copydir
     copyfile
@@ -84,6 +82,27 @@ command -v fasd > /dev/null && {
 
 alias h=history
 alias j=jump
+
+alias l='ls -lFh'   # size, show type, human readable
+alias la='ls -lAFh' # long list, show almost all, show type, human readable
+alias lt='ls -ltFh' # long list, sorted by date, show type, human readable
+alias ll='ls -l'    # long list
+
+alias grep='grep --color'
+alias t='tail -f'
+
+# Command line head / tail shortcuts
+alias -g H='| head'
+alias -g T='| tail'
+alias -g G='| grep'
+alias -g L="| less"
+alias -g LL='2>&1 | less'
+alias -g NE='2> /dev/null'
+alias -g NUL='> /dev/null 2>&1'
+
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
 
 # enable main highlighters, plus brackets and following regexp
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets regexp)
