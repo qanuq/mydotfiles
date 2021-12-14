@@ -32,6 +32,7 @@ plugins=(
     genpass
     git-flow-avh
     gitignore
+    gh
     globalias
     gnu-utils
     isodate
