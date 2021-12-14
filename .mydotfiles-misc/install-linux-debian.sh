@@ -28,6 +28,9 @@ sudo apt install -y silversearcher-ag
 sudo apt install -y tmux
 sudo apt install -y tree
 
+# install bat, on debian 10. else, need to install with apt
+curl --silent --location https://github.com/sharkdp/bat/releases/download/v0.18.3/bat_0.18.3_amd64.deb --output bat_amd64.deb && sudo dpkg -i bat_amd64.deb; rm -fv bat_amd64.deb
+# install gitflow-avh
 curl --silent --location https://raw.githubusercontent.com/petervanderdoes/gitflow-avh/develop/contrib/gitflow-installer.sh --output ./gitflow-installer.sh && sudo /bin/bash gitflow-installer.sh install stable; rm -fv gitflow-installer.sh
 
 # install ohmyzsh
