@@ -1,3 +1,5 @@
+#!/bin/bash
+
 brew install --cask \
     adobe-acrobat-reader \
     adobe-creative-cloud \
