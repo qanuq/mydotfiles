@@ -17,6 +17,7 @@ sudo apt install -y direnv
 sudo apt install -y fasd
 sudo apt install -y fd-find
 sudo apt install -y fdupes
+sudo apt install -y git
 sudo apt install -y htop
 sudo apt install -y keychain
 sudo apt install -y mosh
