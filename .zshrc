@@ -22,8 +22,8 @@ plugins=(
     copybuffer
     copydir
     copyfile
-    dirhistory
     direnv
+    dirhistory
     encode64
     extract
     fancy-ctrl-z
