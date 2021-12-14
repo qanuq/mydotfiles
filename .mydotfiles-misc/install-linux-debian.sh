@@ -12,6 +12,8 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # allow gitconfig interactive.singleKey to work
 sudo apt install -y libterm-readkey-perl
 
+sudo apt install -y ack
+
 curl --silent --location https://raw.githubusercontent.com/petervanderdoes/gitflow-avh/develop/contrib/gitflow-installer.sh --output ./gitflow-installer.sh && sudo /bin/bash gitflow-installer.sh install stable; rm -fv gitflow-installer.sh
 
 # install ohmyzsh
