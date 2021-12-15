@@ -110,10 +110,12 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets regexp)
 typeset -A ZSH_HIGHLIGHT_REGEXP
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     ZSH_HIGHLIGHT_REGEXP+=('\bsudo\b' fg=yellow,bold,underline,bg=black)
+    ZSH_HIGHLIGHT_REGEXP+=('\bsudoedit\b' fg=yellow,bold,underline,bg=black)
     ZSH_HIGHLIGHT_REGEXP+=('\brm\b' fg=white,bold,bg=red)
     ZSH_HIGHLIGHT_REGEXP+=('\brmdir\b' fg=white,bold,bg=red)
 elif [[ "$OSTYPE" == "darwin"* ]]; then
     ZSH_HIGHLIGHT_REGEXP+=('[[:<:]]sudo[[:>:]]' fg=yellow,bold,underline,bg=black)
+    ZSH_HIGHLIGHT_REGEXP+=('[[:<:]]sudoedit[[:>:]]' fg=yellow,bold,underline,bg=black)
     ZSH_HIGHLIGHT_REGEXP+=('[[:<:]]rm[[:>:]]' fg=white,bold,bg=red)
     ZSH_HIGHLIGHT_REGEXP+=('[[:<:]]rmdir[[:>:]]' fg=white,bold,bg=red)
 fi
