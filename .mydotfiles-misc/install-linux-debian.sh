@@ -28,6 +28,9 @@ sudo apt install -y silversearcher-ag
 sudo apt install -y tmux
 sudo apt install -y tree
 
+# rename fdfind to fd
+sudo dpkg-divert --local --divert /usr/bin/fd --rename --add /usr/bin/fdfind
+
 # install bat, on debian 10. else, need to install with apt
 curl --silent --location https://github.com/sharkdp/bat/releases/download/v0.18.3/bat_0.18.3_amd64.deb --output bat_amd64.deb && sudo dpkg -i bat_amd64.deb; rm -fv bat_amd64.deb
 # install gitflow-avh
