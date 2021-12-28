@@ -12,7 +12,11 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # allow gitconfig interactive.singleKey to work
 sudo apt install -y libterm-readkey-perl
 
+sudo apt install -y awscli
 sudo apt install -y ack
+sudo apt install -y cmake
+sudo apt install -y cmus
+sudo apt install -y colordiff
 sudo apt install -y direnv
 sudo apt install -y fasd
 sudo apt install -y fd-find
@@ -20,13 +24,28 @@ sudo apt install -y fdupes
 sudo apt install -y git
 sudo apt install -y htop
 sudo apt install -y keychain
+sudo apt install -y libxml2
+sudo apt install -y make
 sudo apt install -y mosh
 sudo apt install -y ncdu
+sudo apt install -y neofetch
 sudo apt install -y neovim
+sudo apt install -y nodejs
+sudo apt install -y p7zip
+sudo apt install -y pbzip2
+sudo apt install -y pigz
 sudo apt install -y ripgrep
+sudo apt install -y screen
+sudo apt install -y shellcheck
 sudo apt install -y silversearcher-ag
+sudo apt install -y tidy
+sudo apt install -y tig
 sudo apt install -y tmux
 sudo apt install -y tree
+sudo apt install -y unar
+sudo apt install -y universal-ctags
+sudo apt install -y watch
+sudo apt install -y wdiff
 
 # rename fdfind to fd
 sudo dpkg-divert --local --divert /usr/bin/fd --rename --add /usr/bin/fdfind
