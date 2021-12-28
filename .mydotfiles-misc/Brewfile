@@ -1,7 +1,5 @@
 #!/bin/bash
 
-brew uninstall ctags
-
 brew install \
     ack \
     awscli \
