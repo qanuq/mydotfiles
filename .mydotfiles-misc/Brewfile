@@ -47,6 +47,7 @@ brew install \
     ripgrep \
     screen \
     shellcheck \
+    terraform \
     terminal-notifier \
     the_silver_searcher \
     tidy-html5 \

@@ -17,11 +17,13 @@ sudo apt install -y ack
 sudo apt install -y cmake
 sudo apt install -y cmus
 sudo apt install -y colordiff
+sudo apt install -y curl
 sudo apt install -y direnv
 sudo apt install -y fasd
 sudo apt install -y fd-find
 sudo apt install -y fdupes
 sudo apt install -y git
+sudo apt install -y gnupg
 sudo apt install -y htop
 sudo apt install -y keychain
 sudo apt install -y libxml2
@@ -65,6 +67,12 @@ curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo 
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
 sudo apt update
 sudo apt install -y gh
+
+# install terraform
+curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+echo "deb [arch=amd64] https://apt.releases.hashicorp.com buster main" | sudo tee /etc/apt/sources.list.d/hashicorp.list > /dev/null
+sudo apt update
+sudo apt install -y terraform
 
 # install ohmyzsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
