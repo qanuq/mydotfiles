@@ -3,7 +3,6 @@
 brew uninstall ctags
 
 brew install \
-    universal-ctags \
     ack \
     awscli \
     bat \
@@ -42,8 +41,8 @@ brew install \
     mosh \
     ncdu \
     neofetch \
-    node \
     neovim \
+    node \
     p7zip \
     pbzip2 \
     pigz \
@@ -57,5 +56,6 @@ brew install \
     tmux \
     tree \
     unar \
+    universal-ctags \
     watch \
     wdiff
