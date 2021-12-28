@@ -44,6 +44,8 @@ brew install \
     p7zip \
     pbzip2 \
     pigz \
+    pyenv \
+    pyenv-virtualenv \
     ripgrep \
     screen \
     shellcheck \

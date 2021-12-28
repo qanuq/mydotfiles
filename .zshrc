@@ -42,6 +42,7 @@ plugins=(
     macos
     mosh
     pip
+    pyenv
     ripgrep
     rsync
     sudo
