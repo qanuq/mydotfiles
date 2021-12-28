@@ -50,6 +50,12 @@ sudo apt install -y wdiff
 # rename fdfind to fd
 sudo dpkg-divert --local --divert /usr/bin/fd --rename --add /usr/bin/fdfind
 
+echo 'deb [ signed-by=/usr/share/keyrings/vscodium-archive-keyring.gpg ] https://download.vscodium.com/debs vscodium main' | sudo tee /etc/apt/sources.list.d/vscodium.list
+curl --silent --location https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | gpg --dearmor | sudo dd of=/usr/share/keyrings/vscodium-archive-keyring.gpg
+sudo apt update
+sudo apt install -y codium
+sudo dpkg-divert --local --divert /usr/bin/code --rename --add /usr/bin/codium
+
 # install bat, on debian 10. else, need to install with apt
 curl --silent --location https://github.com/sharkdp/bat/releases/download/v0.18.3/bat_0.18.3_amd64.deb --output bat_amd64.deb && sudo dpkg -i bat_amd64.deb; rm -fv bat_amd64.deb
 # install gitflow-avh
