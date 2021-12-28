@@ -45,6 +45,7 @@ plugins=(
     ripgrep
     rsync
     sudo
+    terraform
     zsh-syntax-highlighting
     zsh-history-substring-search
 )
