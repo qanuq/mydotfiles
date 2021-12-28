@@ -10,7 +10,6 @@ brew install \
     cmake \
     cmus \
     colordiff \
-    colormake \
     coreutils \
     diffutils \
     direnv \
@@ -32,8 +31,7 @@ brew install \
     gnu-which \
     grep \
     htop \
-    jq \
-    keychain \
+    keychain \
     less \
     libtool \
     libxml2 \
