@@ -636,3 +636,24 @@ Hit `ctrl-z` once again to get back to Vim or any other background process.
 
 This plugin adds completion for the file search tool
 [`fd`](https://github.com/sharkdp/fd).
+
+#### genpass
+
+This plugin provides three unique password generators for ZSH. Each generator
+has at least a 128-bit security margin and generates passwords from the
+cryptographically secure /dev/urandom. Each generator can also take an optional
+numeric argument to generate multiple passwords.
+
+* `genpass-apple` generates a pronounceable pseudoword passphrase of the
+  "cvccvc" consonant/vowel syntax, inspired by Apple's iCloud Keychain password
+  generator. Each password has exactly 1 digit placed at the edge of a "word"
+  and exactly 1 capital letter to satisfy most password security requirements.
+
+* `genpass-monkey` generates visually unambiguous random meaningless strings
+  using Crockford's base32.
+
+* `genpass-xkcd` generates passphrases from /usr/share/dict/words inspired by
+  the famous (and slightly misleading) XKCD comic. Each passphrase is prepended
+  with a digit showing the number of words in the passphrase to adhere to
+  password security requirements that require digits. Each word is 6 characters
+  or less.
