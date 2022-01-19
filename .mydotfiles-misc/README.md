@@ -545,3 +545,8 @@ Bookmark commands
 Made with zsh and ohmyzsh framework.
 
 ### aliases by plugin
+
+#### bgnotify
+
+Cross-platform background notifications for long running commands.
+Need to install `terminal-notifier` on macOS, nothing on Debian.
