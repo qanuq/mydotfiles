@@ -631,3 +631,8 @@ you pass it, and it supports a wide variety of archive filetypes.
 #### fancy-ctrl-z
 
 Hit `ctrl-z` once again to get back to Vim or any other background process.
+
+#### fd
+
+This plugin adds completion for the file search tool
+[`fd`](https://github.com/sharkdp/fd).
