@@ -561,3 +561,8 @@ colored:
 ```zsh
 colored git help clone
 ```
+
+#### copybuffer
+
+This plugin binds `ctrl-o` to a command that copies the text that is currently
+typed in the command line before you hit enter to execute it.
