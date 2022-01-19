@@ -36,6 +36,7 @@ sudo apt install -y nodejs
 sudo apt install -y p7zip
 sudo apt install -y pbzip2
 sudo apt install -y pigz
+sudo apt install -y python3-invoke
 sudo apt install -y ripgrep
 sudo apt install -y screen
 sudo apt install -y shellcheck

@@ -35,6 +35,7 @@ plugins=(
     gh
     globalias
     gnu-utils
+    invoke
     isodate
     iterm2
     jump
