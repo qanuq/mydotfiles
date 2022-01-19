@@ -539,3 +539,9 @@ Bookmark commands
 
 * `:FormatJSON`: format a JSON file
 * `:FormatXML`: format an XML file
+
+## shell
+
+Made with zsh and ohmyzsh framework.
+
+### aliases by plugin
