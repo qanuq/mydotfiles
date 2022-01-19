@@ -658,6 +658,10 @@ numeric argument to generate multiple passwords.
   password security requirements that require digits. Each word is 6 characters
   or less.
 
+#### gh
+
+This plugin adds completion for the [GitHub CLI](https://cli.github.com/).
+
 #### git-flow-avh
 
 This plugin adds completion for the
