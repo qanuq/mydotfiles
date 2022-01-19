@@ -570,3 +570,8 @@ typed in the command line before you hit enter to execute it.
 #### copydir
 
 `copydir` copies the path of your current folder to the system clipboard.
+
+#### copyfile
+
+`copyfile <filename>` puts the contents of filename in your system clipboard so
+you can paste it anywhere.
