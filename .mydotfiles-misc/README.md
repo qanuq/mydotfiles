@@ -550,3 +550,14 @@ Made with zsh and ohmyzsh framework.
 
 Cross-platform background notifications for long running commands.
 Need to install `terminal-notifier` on macOS, nothing on Debian.
+
+#### colored-man-pages
+
+This plugin adds colors to man pages.
+
+You can also try to color other pages by prefixing the respective command with
+colored:
+
+```zsh
+colored git help clone
+```
