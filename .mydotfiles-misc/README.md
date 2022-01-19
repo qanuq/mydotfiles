@@ -575,3 +575,28 @@ typed in the command line before you hit enter to execute it.
 
 `copyfile <filename>` puts the contents of filename in your system clipboard so
 you can paste it anywhere.
+
+#### direnv
+
+This plugin creates the [direnv](https://direnv.net/) hook.
+
+```zsh
+$ mkdir ~/my-project
+$ cd ~/my-project
+$ echo ${FOO-nope}
+$ echo export FOO=foo > .envrc
+.envrc is not allowed
+$ direnv allow .
+direnv: reloading
+direnv: loading .envrc
+direnv export: +FOO
+$ echo ${FOO-nope}
+foo
+$ cd ..
+direnv: unloading
+$ echo ${FOO-nope}
+nope
+```
+
+[A guide to manage your environment variables in a better way using
+direnv](https://shivamarora.medium.com/a-guide-to-manage-your-environment-variables-in-a-better-way-using-direnv-2c1cd475c8e).
