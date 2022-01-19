@@ -613,3 +613,12 @@ This plugin adds keyboard shortcuts for navigating directory history and hierarc
 | <kbd>Alt</kbd> + <kbd>Down</kbd>  | Move into the first child directory by alphabetical order |
 
 To print the directory stack, type `dirs -v`.
+
+#### encode64
+
+Alias plugin for encoding or decoding using `base64` command.
+
+| Function   | Alias | Description                    |
+| ---------- | ----- | ------------------------------ |
+| `encode64` | `e64` | Encodes given data to base64   |
+| `decode64` | `d64` | Decodes given data from base64 |
