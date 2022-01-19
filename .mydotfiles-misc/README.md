@@ -662,3 +662,14 @@ numeric argument to generate multiple passwords.
 
 This plugin adds completion for the
 [git-flow](https://github.com/petervanderdoes/gitflow-avh).
+
+#### gitignore
+
+This plugin enables you the use of [gitignore.io](https://www.gitignore.io/)
+from the command line.
+
+* `gi list` lists all the currently supported gitignore.io templates.
+* `gi [TEMPLATENAME]` shows git-ignore output on the command line, e.g. gi java
+  to exclude class and package files.
+* `gi [TEMPLATENAME] >> .gitignore` appends programming language settings to
+  .gitignore.
