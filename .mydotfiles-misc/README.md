@@ -566,3 +566,7 @@ colored git help clone
 
 This plugin binds `ctrl-o` to a command that copies the text that is currently
 typed in the command line before you hit enter to execute it.
+
+#### copydir
+
+`copydir` copies the path of your current folder to the system clipboard.
