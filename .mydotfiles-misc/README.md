@@ -657,3 +657,8 @@ numeric argument to generate multiple passwords.
   with a digit showing the number of words in the passphrase to adhere to
   password security requirements that require digits. Each word is 6 characters
   or less.
+
+#### git-flow-avh
+
+This plugin adds completion for the
+[git-flow](https://github.com/petervanderdoes/gitflow-avh).
