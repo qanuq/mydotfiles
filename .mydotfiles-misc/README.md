@@ -627,3 +627,7 @@ Alias plugin for encoding or decoding using `base64` command.
 
 This plugin defines a function called `extract` that extracts the archive file
 you pass it, and it supports a wide variety of archive filetypes.
+
+#### fancy-ctrl-z
+
+Hit `ctrl-z` once again to get back to Vim or any other background process.
