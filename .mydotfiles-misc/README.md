@@ -600,3 +600,16 @@ nope
 
 [A guide to manage your environment variables in a better way using
 direnv](https://shivamarora.medium.com/a-guide-to-manage-your-environment-variables-in-a-better-way-using-direnv-2c1cd475c8e).
+
+#### dirhistory
+
+This plugin adds keyboard shortcuts for navigating directory history and hierarchy.
+
+| Shortcut                          | Description                                               |
+|-----------------------------------|-----------------------------------------------------------|
+| <kbd>Alt</kbd> + <kbd>Left</kbd>  | Go to previous directory                                  |
+| <kbd>Alt</kbd> + <kbd>Right</kbd> | Go to next directory                                      |
+| <kbd>Alt</kbd> + <kbd>Up</kbd>    | Move into the parent directory                            |
+| <kbd>Alt</kbd> + <kbd>Down</kbd>  | Move into the first child directory by alphabetical order |
+
+To print the directory stack, type `dirs -v`.
