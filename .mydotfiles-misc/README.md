@@ -622,3 +622,8 @@ Alias plugin for encoding or decoding using `base64` command.
 | ---------- | ----- | ------------------------------ |
 | `encode64` | `e64` | Encodes given data to base64   |
 | `decode64` | `d64` | Decodes given data from base64 |
+
+#### extract
+
+This plugin defines a function called `extract` that extracts the archive file
+you pass it, and it supports a wide variety of archive filetypes.
