@@ -812,6 +812,58 @@ time you autocomplete `pip install`.
 | `pipupall` | Update all installed packages                 |
 | `pipunall` | Uninstall all installed packages              |
 
+#### pyenv
+
+[`pyenv`](https://github.com/pyenv/pyenv) lets easily switch between multiple
+versions of python and
+[`pyenv-virtualenv`](https://github.com/pyenv/pyenv-virtualenv) lets to easily
+create virtualenvs.
+
+```
+# list all available python versions
+pyenv install --list
+
+# install 3.9.9 python version
+pyenv install 3.9.9
+
+# uninstall 3.9.9
+pyenv uninstall 3.9.9
+
+# set the global python version to 3.9.9
+python global 3.9.9
+
+# set the local python version to 3.9.9, application-specific version,
+# create a .python-version file in the current directory
+python local 3.9.9
+
+# show the path to the current python version
+pyenv which python
+
+# show current python version
+pyenv version
+
+# show available python versions.
+pyenv versions
+
+# create a virtualenv named myvenv from python 3.9.9
+pyenv virtualenv 3.9.9 myvenv
+
+# set the local python version to myvenv virtualenv
+pyenv local myvenv
+
+# set a local shell with python version ou myvenv
+pyenv shell 'version or venv name'
+
+# disable this local shell
+pyenv shell --unset
+
+# disable the local python version
+pyenv local --unset
+```
+
+pyenv takes the python version in this priority order:
+`system -> global -> local -> shell`.
+
 #### ripgrep
 
 This plugin adds completion for the text search tool
