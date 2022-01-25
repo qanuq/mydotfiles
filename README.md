@@ -790,3 +790,15 @@ time you autocomplete `pip install`.
 
 This plugin adds completion for the text search tool
 [`ripgrep`](https://github.com/BurntSushi/ripgrep).
+
+#### rsync
+
+This plugin adds aliases for frequent [`rsync`](https://rsync.samba.org/)
+commands.
+
+| Alias               | Command                                          |
+| :------------------ | :----------------------------------------------- |
+| `rsync-copy`        | `rsync -avz --progress -h`                       |
+| `rsync-move`        | `rsync -avz --progress -h --remove-source-files` |
+| `rsync-update`      | `rsync -avzu --progress -h`                      |
+| `rsync-synchronize` | `rsync -avzu --delete --progress -h`             |
