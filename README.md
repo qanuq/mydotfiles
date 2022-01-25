@@ -802,3 +802,8 @@ commands.
 | `rsync-move`        | `rsync -avz --progress -h --remove-source-files` |
 | `rsync-update`      | `rsync -avzu --progress -h`                      |
 | `rsync-synchronize` | `rsync -avzu --delete --progress -h`             |
+
+#### sudo
+
+Easily prefix your current or previous commands with `sudo` by pressing
+<kbd>ESC</kbd> twice.
