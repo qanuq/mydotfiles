@@ -25,4 +25,22 @@ export PAGER=less
 export _FASD_VIMINFO=$HOME/.vim/viminfo
 
 # globalias module will not expand these aliases
-export GLOBALIAS_FILTER_VALUES=(a cat catd d dot f la ll mydotfiles s sd sf v z zz)
+export GLOBALIAS_FILTER_VALUES=(
+    a
+    cat
+    catd
+    d
+    dot
+    f
+    l
+    la
+    ll
+    ls
+    mydotfiles
+    s
+    sd
+    sf
+    v
+    z
+    zz
+)
