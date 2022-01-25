@@ -113,6 +113,8 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 
+bindkey '^q' push-line-or-edit
+
 # enable main highlighters, plus brackets and following regexp
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets regexp)
 typeset -A ZSH_HIGHLIGHT_REGEXP
