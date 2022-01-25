@@ -722,3 +722,17 @@ This plugin adds a few functions that are useful when using [iTerm2](https://www
   currently active tab. `red`/`green`/`blue` are on the range 0-255.
 * `iterm2_tab_color_reset` resets the color of iTerm2's current tab back to
   default.
+
+#### jump
+
+This plugin allows to easily jump around the file system by manually adding marks.
+
+* `jump <mark-name>` jumps to the given mark.
+* `mark [mark-name]` creates a mark with the given name or with the name of the current directory if none is provided.
+* `unmark <mark-name>` removes the given mark.
+* `marks` lists the existing marks and the directories they point to.
+
+<kbd>ctrl</kbd> + <kbd>g</kbd> substitutes the written mark name for the full
+path of the mark.
+
+`j` is an alias for `jump`.
