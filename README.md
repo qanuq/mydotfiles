@@ -694,3 +694,15 @@ to call them using their prefixed name, which starts with g.
 #### invoke
 
 This adds completion for python [invoke](https://www.pyinvoke.org/) plugin.
+
+#### isodate
+
+This plugin adds aliases for the [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date.
+
+| Alias           | Command                       | Description                                                                 |
+|-----------------|-------------------------------|-----------------------------------------------------------------------------|
+| `isodate`       | `date +%Y-%m-%dT%H:%M:%S%z`   | Display the current date with UTC offset and ISO 8601-2 extended format     |
+| `isodate_utc`   | `date -u +%Y-%m-%dT%H:%M:%SZ` | Display the current date in UTC and ISO 8601-2 extended format              |
+| `isodate_basic` | `date -u +%Y%m%dT%H%M%SZ`     | Display the current date in UTC and ISO 8601 basic format                   |
+| `unixstamp`     | `date +%s`                    | Display the current date as a Unix timestamp (seconds since the Unix epoch) |
+| `date_locale`   | `date +"%c"`                  | Display the current date using the default locale's format                  |
