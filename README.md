@@ -813,3 +813,14 @@ Easily prefix your current or previous commands with `sudo` by pressing
 This plugin adds completion for [`terraform`](https://www.terraform.io/).
 
 `tf` is an alias for `terraform`.
+
+#### zsh-syntax-highlighting
+
+Syntax highlighting for Zsh.
+
+Must be sourced at the end of plugin list, but just before
+zsh-history-substring-search.
+
+#### zsh-history-substring-search
+
+Must be sourced after zsh-syntax-highlighting plugin.
