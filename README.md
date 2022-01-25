@@ -765,3 +765,8 @@ This plugin provides a few utilities to make it more enjoyable on macOS.
 | `rmdsstore`   | Remove .DS_Store files recursively in a directory        |
 | `btrestart`   | Restart the Bluetooth daemon                             |
 | `freespace`   | Erases purgeable disk space with 0s on the selected disk |
+
+#### mosh
+
+This plugin allows SSH tab completion for
+[`mosh`](https://github.com/mobile-shell/mosh) hostnames.
