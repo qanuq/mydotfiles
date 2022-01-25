@@ -690,3 +690,7 @@ a space without expanding the command line, press <kbd>ctrl</kbd> +
 
 This plugin binds GNU coreutils to their default names, so that you don't have
 to call them using their prefixed name, which starts with g.
+
+#### invoke
+
+This adds completion for python [invoke](https://www.pyinvoke.org/) plugin.
