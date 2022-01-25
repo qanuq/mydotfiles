@@ -736,3 +736,9 @@ This plugin allows to easily jump around the file system by manually adding mark
 path of the mark.
 
 `j` is an alias for `jump`.
+
+#### keychain
+
+This plugin starts automatically [`keychain`](https://www.funtoo.org/Keychain)
+to set up and load whichever credentials for ssh connections. It tries to load
+several identities in quiet mode and will ignore missing identities.
