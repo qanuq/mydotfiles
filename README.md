@@ -685,3 +685,8 @@ press <kbd>space</kbd> to trigger the expansion of a written command. To insert
 a space without expanding the command line, press <kbd>ctrl</kbd> +
 <kbd>space</kbd>. To filter out any values from expanding set
 `GLOBALIAS_FILTER_VALUES` to an array of said values.
+
+#### gnu-utils
+
+This plugin binds GNU coreutils to their default names, so that you don't have
+to call them using their prefixed name, which starts with g.
