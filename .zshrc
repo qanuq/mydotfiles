@@ -73,15 +73,19 @@ command -v fasd > /dev/null && {
     unalias v
     unalias o
     unalias j
-    alias v='f -e "$EDITOR" -B viminfo'
-    alias a='fasd -a' # any
-    alias s='fasd -si' # show search and select
-    alias d='fasd -d' # directory
-    alias f='fasd -f' # file
-    alias sd='fasd -sid'
-    alias sf='fasd -sif'
-    alias z='fasd_cd -d'
-    alias zz='fasd_cd -d -i'
+    alias v='f -e "$EDITOR" -B viminfo' # complete files from history and viminfo
+    alias a='fasd -a'                   # any
+    alias s='fasd -si'                  # show search and select
+    alias d='fasd -d'                   # directory
+    alias f='fasd -f'                   # file
+    alias sd='fasd -sid'                # interactive directory selection
+    alias sf='fasd -sif'                # interactive file selection
+    alias z='fasd_cd -d'                # cd
+    alias zz='fasd_cd -d -i'            # cd with interactive selection
+
+    bindkey '^X^A' fasd-complete    # C-x C-a to do fasd-complete (files and directories)
+    bindkey '^X^F' fasd-complete-f  # C-x C-f to do fasd-complete-f (only files)
+    bindkey '^X^D' fasd-complete-d  # C-x C-d to do fasd-complete-d (only directories)
 }
 
 alias g=git

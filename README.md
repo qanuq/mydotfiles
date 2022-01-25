@@ -632,6 +632,32 @@ you pass it, and it supports a wide variety of archive filetypes.
 
 Hit `ctrl-z` once again to get back to Vim or any other background process.
 
+#### fasd
+
+[`fasd`](https://github.com/clvv/fasd) offers quick access to files and
+directories.
+
+Remove default aliases: v, o and j and add some aliases and bind keys.
+
+```zsh
+alias v='f -e "$EDITOR" -B viminfo' # complete files from history and viminfo
+# v pass would open /etc/password for example
+# v alone would list recent opened files
+
+alias a='fasd -a'                   # any
+alias s='fasd -si'                  # show search and select
+alias d='fasd -d'                   # directory
+alias f='fasd -f'                   # file
+alias sd='fasd -sid'                # interactive directory selection
+alias sf='fasd -sif'                # interactive file selection
+alias z='fasd_cd -d'                # cd
+alias zz='fasd_cd -d -i'            # cd with interactive selection
+
+bindkey '^X^A' fasd-complete    # C-x C-a to do fasd-complete (files and directories)
+bindkey '^X^F' fasd-complete-f  # C-x C-f to do fasd-complete-f (only files)
+bindkey '^X^D' fasd-complete-d  # C-x C-d to do fasd-complete-d (only directories)
+```
+
 #### fd
 
 This plugin adds completion for the file search tool
