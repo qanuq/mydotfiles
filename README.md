@@ -544,6 +544,12 @@ Bookmark commands
 
 Made with zsh and ohmyzsh framework.
 
+Some useful keyboard shortcuts I put here so I don't forget:
+
+* <kbd>ctrl</kbd>+<kbd>x</kbd> <kbd>ctrl</kbd>+<kbd>e</kbd> edits current lines in text editor.
+* <kbd>ctrl</kbd>+<kbd>q</kbd> calls `push-line-or-edit` (kills the lines and yanks them on the next fresh prompt).
+* <kbd>ctrl</kbd>+<kbd>/</kbd> allows to undo typing or completion.
+
 ### aliases by plugin
 
 #### bgnotify
