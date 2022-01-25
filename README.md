@@ -785,3 +785,8 @@ time you autocomplete `pip install`.
 | `pipir`    | Install packages from `requirements.txt` file |
 | `pipupall` | Update all installed packages                 |
 | `pipunall` | Uninstall all installed packages              |
+
+#### ripgrep
+
+This plugin adds completion for the text search tool
+[`ripgrep`](https://github.com/BurntSushi/ripgrep).
