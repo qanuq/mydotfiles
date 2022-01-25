@@ -606,7 +606,7 @@ direnv](https://shivamarora.medium.com/a-guide-to-manage-your-environment-variab
 This plugin adds keyboard shortcuts for navigating directory history and hierarchy.
 
 | Shortcut                          | Description                                               |
-|-----------------------------------|-----------------------------------------------------------|
+| :-------------------------------- | :-------------------------------------------------------- |
 | <kbd>Alt</kbd> + <kbd>Left</kbd>  | Go to previous directory                                  |
 | <kbd>Alt</kbd> + <kbd>Right</kbd> | Go to next directory                                      |
 | <kbd>Alt</kbd> + <kbd>Up</kbd>    | Move into the parent directory                            |
@@ -619,7 +619,7 @@ To print the directory stack, type `dirs -v`.
 Alias plugin for encoding or decoding using `base64` command.
 
 | Function   | Alias | Description                    |
-| ---------- | ----- | ------------------------------ |
+| :--------- | :---- | :----------------------------- |
 | `encode64` | `e64` | Encodes given data to base64   |
 | `decode64` | `d64` | Decodes given data from base64 |
 
@@ -726,7 +726,7 @@ This adds completion for python [invoke](https://www.pyinvoke.org/) plugin.
 This plugin adds aliases for the [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date.
 
 | Alias           | Command                       | Description                                                                 |
-|-----------------|-------------------------------|-----------------------------------------------------------------------------|
+| :-------------- | :---------------------------- | :-------------------------------------------------------------------------- |
 | `isodate`       | `date +%Y-%m-%dT%H:%M:%S%z`   | Display the current date with UTC offset and ISO 8601-2 extended format     |
 | `isodate_utc`   | `date -u +%Y-%m-%dT%H:%M:%SZ` | Display the current date in UTC and ISO 8601-2 extended format              |
 | `isodate_basic` | `date -u +%Y%m%dT%H%M%SZ`     | Display the current date in UTC and ISO 8601 basic format                   |
