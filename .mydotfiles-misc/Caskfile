@@ -8,11 +8,11 @@ brew install --cask \
     bitwarden \
     brave-browser \
     docker \
-    dropbox \
     firefox \
     insomnia \
     iterm2 \
     jetbrains-toolbox \
+    kdrive \
     macvim \
     microsoft-excel \
     microsoft-powerpoint \
