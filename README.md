@@ -807,3 +807,9 @@ commands.
 
 Easily prefix your current or previous commands with `sudo` by pressing
 <kbd>ESC</kbd> twice.
+
+#### terraform
+
+This plugin adds completion for [`terraform`](https://www.terraform.io/).
+
+`tf` is an alias for `terraform`.
