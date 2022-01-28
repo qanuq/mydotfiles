@@ -32,6 +32,9 @@ which brew &> /dev/null || /bin/bash -c "$(curl -fsSL https://raw.githubusercont
 ./Brewfile
 ./Caskfile
 
+# install iTerm flat-remix colorscheme, must be manually set in iTerm preferences
+bash <(curl -sL https://raw.githubusercontent.com/Mayccoll/Gogh/master/themes/flat-remix.sh)
+
 # add sudoedit link
 ln -s /usr/bin/sudo /usr/local/bin/sudoedit
 
@@ -368,3 +371,5 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting"
 # install zsh-history-substring-search plugin
 git clone https://github.com/zsh-users/zsh-history-substring-search "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search"
+
+ echo 'Colorscheme must be manually set in iTerm preferences > Profiles > Colors > Color Presets'
