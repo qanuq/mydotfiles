@@ -1,0 +1,4 @@
+--theme="Monokai Extended Bright"
+--style="numbers,changes,header"
+--paging=never
+--pager="--RAW-CONTROL-CHARS --quit-if-one-screen --mouse"
