@@ -75,6 +75,11 @@ echo "deb [arch=amd64] https://apt.releases.hashicorp.com buster main" | sudo te
 sudo apt update
 sudo apt install -y terraform
 
+# install kdrive
+curl --silent --location https://download.storage.infomaniak.com/drive/desktopclient/kDrive-3.2.6.20211208.AppImage --output "$HOME/bin/kDrive.AppImage"
+chmod +x "$HOME/bin/kDrive.AppImage"
+"$HOME/bin/kDrive.AppImage" &
+
 # install ohmyzsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
