@@ -498,6 +498,15 @@ let g:syntastic_enable_balloons = 1
 
 " }}}
 
+" languages {{{
+
+" vim-qml {{{
+" QML syntax highlighting for Vim
+Plug 'peterhoeg/vim-qml'
+" }}}
+
+" }}}
+
 " }}}
 
 " Initialize plugin system

@@ -136,6 +136,7 @@ The mapleader key is set to the spacebar.
 * [mbbill/undotree](https://github.com/mbbill/undotree)
 * [mhinz/vim-startify](https://github.com/mhinz/vim-startify)
 * [nathanaelkane/vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides)
+* [peterhoeg/vim-qml](https://github.com/peterhoeg/vim-qml)
 * [scrooloose/nerdcommenter](https://github.com/scrooloose/nerdcommenter)
 * [scrooloose/nerdtree](https://github.com/scrooloose/nerdtree)
 * [SirVer/ultisnips](https://github.com/SirVer/ultisnips)
