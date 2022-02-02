@@ -621,6 +621,8 @@ if (has("termguicolors"))
 endif
 
 if &diff
+    " prefer light mode
+    set background=light
     " use a slightly darker background
     let g:github_colors_soft = 1
     " set a colorscheme improved for diff
