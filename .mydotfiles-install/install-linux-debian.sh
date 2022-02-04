@@ -49,6 +49,12 @@ while true; do /usr/bin/sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/de
 /usr/bin/sudo /usr/bin/apt install -y watch
 /usr/bin/sudo /usr/bin/apt install -y wdiff
 
+# pyenv dependencies
+/usr/bin/sudo /usr/bin/apt install make build-essential libssl-dev zlib1g-dev \
+    libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm \
+    libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
+/usr/bin/curl -fsSL https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | /bin/bash
+
 # rename fdfind to fd
 /usr/bin/sudo /usr/bin/dpkg-divert --local --divert /usr/bin/fd --rename --add /usr/bin/fdfind
 

@@ -44,3 +44,6 @@ export GLOBALIAS_FILTER_VALUES=(
     z
     zz
 )
+
+# disable pyenv warning at shell startup
+export ZSH_PYENV_QUIET=true
