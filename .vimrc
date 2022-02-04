@@ -343,6 +343,11 @@ Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
 " }}}
 
+" vcscommand {{{
+" VIM plugin for integration with many version control systems
+Plug 'https://repo.or.cz/vcscommand.git'
+" }}}
+
 " vim-surround {{{
 " surround.vim: quoting/parenthesizing made simple
 Plug 'tpope/vim-surround'

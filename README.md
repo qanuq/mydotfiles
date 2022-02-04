@@ -145,6 +145,7 @@ The mapleader key is set to the spacebar.
 * [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive)
 * [tpope/vim-surround](https://github.com/tpope/vim-surround)
 * [tpope/vim-unimpaired](https://github.com/tpope/vim-unimpaired)
+* [vcscommand](https://repo.or.cz/vcscommand.git)
 * [vim-airline/vim-airline](https://github.com/vim-airline/vim-airline)
 * [vim-syntastic/syntastic](https://github.com/vim-syntastic/syntastic)
 
