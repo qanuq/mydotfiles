@@ -36,7 +36,6 @@ while true; do /usr/bin/sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/de
 /usr/bin/sudo /usr/bin/apt install -y p7zip
 /usr/bin/sudo /usr/bin/apt install -y pbzip2
 /usr/bin/sudo /usr/bin/apt install -y pigz
-/usr/bin/sudo /usr/bin/apt install -y python3-invoke
 /usr/bin/sudo /usr/bin/apt install -y ripgrep
 /usr/bin/sudo /usr/bin/apt install -y screen
 /usr/bin/sudo /usr/bin/apt install -y shellcheck
