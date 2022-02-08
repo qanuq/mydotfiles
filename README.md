@@ -1,4 +1,4 @@
-# ardeidae dotfiles
+# ardeidae dotfiles 0.1
 
 This repository hosts my dotfiles. This is a work in progress.
 
