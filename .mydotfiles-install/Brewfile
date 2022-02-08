@@ -1,0 +1,64 @@
+#!/bin/bash
+
+brew install \
+    ack \
+    awscli \
+    bat \
+    binutils \
+    cmake \
+    cmus \
+    colordiff \
+    coreutils \
+    diffutils \
+    direnv \
+    dockutil \
+    fasd \
+    fd \
+    fdupes \
+    findutils \
+    gawk \
+    gh \
+    git \
+    git-flow-avh \
+    gnu-getopt \
+    gnu-indent \
+    gnu-sed \
+    gnu-tar \
+    gnu-time \
+    gnu-units \
+    gnu-which \
+    grep \
+    htop \
+    keychain \
+    less \
+    libtool \
+    libxml2 \
+    make \
+    mosh \
+    ncdu \
+    neofetch \
+    neovim \
+    node \
+    p7zip \
+    pbzip2 \
+    pigz \
+    pyenv \
+    pyenv-virtualenv \
+    pyinvoke \
+    ripgrep \
+    screen \
+    shellcheck \
+    terraform \
+    terminal-notifier \
+    the_silver_searcher \
+    tidy-html5 \
+    tig \
+    tmux \
+    tree \
+    unar \
+    universal-ctags \
+    watch \
+    wdiff
+
+# pyenv dependencies
+brew install openssl readline sqlite3 xz zlib

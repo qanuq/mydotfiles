@@ -1,0 +1,30 @@
+#!/bin/bash
+
+brew install --cask \
+    adobe-acrobat-reader \
+    adobe-creative-cloud \
+    authy \
+    balenaetcher \
+    bitwarden \
+    brave-browser \
+    docker \
+    firefox \
+    insomnia \
+    iterm2 \
+    jetbrains-toolbox \
+    kdrive \
+    kmeet \
+    macvim \
+    microsoft-excel \
+    microsoft-powerpoint \
+    microsoft-word \
+    postman \
+    qutebrowser \
+    signal \
+    sourcetree \
+    teamviewer \
+    transmission \
+    virtualbox \
+    virtualbox-extension-pack \
+    vlc \
+    vscodium
