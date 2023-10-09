@@ -1,14 +1,15 @@
 
 
-# 50-character subject line
+
+# Capitalized 50-char title, no dot, imperative form
 #
-# 72-character wrapped longer description. This should answer:
+# Blank line then 72-char limited description which should answer:
 #
 # * Why was this change necessary?
 # * How does it address the problem?
 # * Are there any side effects?
 #
-# Include a link to the ticket, if any.
+# Fixes: #0000
 #
 # Add co-authors if you worked on this code with others:
 #
