@@ -20,8 +20,8 @@ plugins=(
     bgnotify
     colored-man-pages
     copybuffer
-    copydir
     copyfile
+    copypath
     direnv
     dirhistory
     encode64
