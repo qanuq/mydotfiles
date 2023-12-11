@@ -43,6 +43,8 @@ plugins=(
     macos
     mosh
     pip
+    poetry-env
+    poetry
     pyenv
     ripgrep
     rsync
