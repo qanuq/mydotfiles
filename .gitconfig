@@ -28,7 +28,9 @@
 	dc = diff --cached
 	dl = diff HEAD^ # diff last committed change
 	dt = difftool
+	dtc = difftool --cached
 	dtg = difftool --gui
+	dtgc = difftool --gui --cached
 	ec = config --global --edit
 	f = fetch
 	fc = "!f() { git log --name-status -S$1; }; f" # find commits by source code
