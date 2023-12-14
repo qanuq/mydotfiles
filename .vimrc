@@ -982,6 +982,12 @@ if has("autocmd")
         autocmd BufNewFile,BufRead ~/.gitconfig.local set filetype=gitconfig
     augroup END
 
+    augroup gitcommit
+        autocmd FileType gitcommit set textwidth=72
+        autocmd FileType gitcommit set colorcolumn=+1
+        autocmd FileType gitcommit set colorcolumn+=51
+    augroup END
+
     augroup makefile
         autocmd!
         autocmd BufRead,BufNewFile,BufEnter *Makefile*,*makefile* set filetype=make
