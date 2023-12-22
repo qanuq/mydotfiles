@@ -494,7 +494,7 @@ let g:syntastic_id_checkers = 1
 " passive checking for somes filetypes, to check, :SyntasticCheck
 let g:syntastic_mode_map = { 'mode': 'active',
             \ 'active_filetypes': [],
-            \ 'passive_filetypes': ['java', 'c', 'cpp'] }
+            \ 'passive_filetypes': ['java', 'c', 'cpp', 'rst'] }
 " sort aggregated errors
 let g:syntastic_sort_aggregated_errors = 1
 " enable balloons if vim is compiled with +ballon_eval
