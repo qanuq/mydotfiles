@@ -41,6 +41,7 @@ plugins=(
     pip
     poetry-env
     poetry
+    profiles
     pyenv
     ripgrep
     sudo

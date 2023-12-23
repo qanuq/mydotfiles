@@ -765,6 +765,14 @@ time you autocomplete `pip install`.
 | `pipupall` | Update all installed packages                 |
 | `pipunall` | Uninstall all installed packages              |
 
+#### profiles
+
+This plugin allows to create separate configuration files for zsh based on
+hostname.
+
+It takes ``$HOST`` variable and looks for files named according to the domain
+parts in ``$ZSH_CUSTOM/profiles/`` directory.
+
 #### pyenv
 
 [`pyenv`](https://github.com/pyenv/pyenv) lets easily switch between multiple
