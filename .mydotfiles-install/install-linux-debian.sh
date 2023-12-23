@@ -13,7 +13,6 @@ while true; do /usr/bin/sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/de
 /usr/bin/sudo /usr/bin/apt install -y libterm-readkey-perl
 
 /usr/bin/sudo /usr/bin/apt install -y awscli
-/usr/bin/sudo /usr/bin/apt install -y ack
 /usr/bin/sudo /usr/bin/apt install -y cmake
 /usr/bin/sudo /usr/bin/apt install -y cmus
 /usr/bin/sudo /usr/bin/apt install -y colordiff
@@ -39,7 +38,6 @@ while true; do /usr/bin/sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/de
 /usr/bin/sudo /usr/bin/apt install -y ripgrep
 /usr/bin/sudo /usr/bin/apt install -y screen
 /usr/bin/sudo /usr/bin/apt install -y shellcheck
-/usr/bin/sudo /usr/bin/apt install -y silversearcher-ag
 /usr/bin/sudo /usr/bin/apt install -y tidy
 /usr/bin/sudo /usr/bin/apt install -y tig
 /usr/bin/sudo /usr/bin/apt install -y tmux
@@ -73,7 +71,7 @@ echo 'deb [ signed-by=/usr/share/keyrings/vscodium-archive-keyring.gpg ] https:/
 /usr/bin/sudo /usr/bin/dpkg-divert --local --divert /usr/bin/code --rename --add /usr/bin/codium
 
 # install gitflow-avh
-/usr/bin/curl -fsSL https://raw.githubusercontent.com/petervanderdoes/gitflow-avh/develop/contrib/gitflow-installer.sh -o gitflow-installer.sh && /usr/bin/sudo /bin/bash gitflow-installer.sh install stable; rm -fv gitflow-installer.sh
+/usr/bin/curl -fsSL https://raw.githubusercontent.com/petervanderdoes/gitflow-avh/develop/contrib/gitflow-installer.sh -o gitflow-installer.sh && /usr/bin/sudo /bin/bash gitflow-installer.sh install stable; /usr/bin/rm -fv gitflow-installer.sh
 
 # install github-cli
 /usr/bin/curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | /usr/bin/sudo /bin/dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg

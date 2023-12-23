@@ -23,13 +23,11 @@ plugins=(
     copyfile
     copypath
     direnv
-    dirhistory
     encode64
     extract
     fancy-ctrl-z
     fasd
     fd
-    genpass
     git-flow-avh
     gitignore
     gh
@@ -37,17 +35,14 @@ plugins=(
     gnu-utils
     invoke
     isodate
-    iterm2
     jump
     keychain
     macos
-    mosh
     pip
     poetry-env
     poetry
     pyenv
     ripgrep
-    rsync
     sudo
     terraform
     zsh-syntax-highlighting

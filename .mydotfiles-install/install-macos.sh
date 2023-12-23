@@ -33,7 +33,7 @@ which brew &> /dev/null || /bin/bash -c "$(curl -fsSL https://raw.githubusercont
 ./Caskfile
 
 # install iTerm flat-remix colorscheme, must be manually set in iTerm preferences
-bash <(curl -sL https://raw.githubusercontent.com/Mayccoll/Gogh/master/themes/flat-remix.sh)
+bash <(curl -sL https://raw.githubusercontent.com/Gogh-Co/Gogh/master/installs/flat-remix.sh)
 
 # add sudoedit link
 ln -s /usr/bin/sudo /usr/local/bin/sudoedit
@@ -54,9 +54,8 @@ dockutil --no-restart --add "/System/Applications/Music.app"
 dockutil --no-restart --add "/Applications/iTerm.app"
 dockutil --no-restart --add "/Applications/MacVim.app"
 dockutil --no-restart --add "/Applications/Sourcetree.app"
-dockutil --no-restart --add "/Applications/Visual Studio Code.app"
+dockutil --no-restart --add "/Applications/VSCodium.app"
 dockutil --no-restart --add "/Applications/Insomnia.app"
-dockutil --no-restart --add "/Applications/Postman.app"
 dockutil --no-restart --add "/Applications/VirtualBox.app"
 
 dockutil --no-restart --add "/Applications/Bitwarden.app"
@@ -64,14 +63,9 @@ dockutil --no-restart --add "/Applications/Authy Desktop.app"
 dockutil --no-restart --add "/Applications/Brave Browser.app"
 dockutil --no-restart --add "/Applications/Firefox.app"
 dockutil --no-restart --add "/Applications/Safari.app"
-dockutil --no-restart --add "/Applications/qutebrowser.app"
-dockutil --no-restart --add "/Applications/TeamViewer.app"
 dockutil --no-restart --add "/Applications/Microsoft Excel.app"
-dockutil --no-restart --add "/Applications/Microsoft PowerPoint.app"
 dockutil --no-restart --add "/Applications/Microsoft Word.app"
 dockutil --no-restart --add "/Applications/Signal.app"
-dockutil --no-restart --add "/Applications/Transmission.app"
-dockutil --no-restart --add "/Applications/VLC.app"
 
 
 

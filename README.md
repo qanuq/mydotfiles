@@ -575,9 +575,9 @@ colored git help clone
 This plugin binds `ctrl-o` to a command that copies the text that is currently
 typed in the command line before you hit enter to execute it.
 
-#### copydir
+#### copypath
 
-`copydir` copies the path of your current folder to the system clipboard.
+`copypath` copies the path of given directory or file to the system clipboard.
 
 #### copyfile
 
@@ -608,19 +608,6 @@ nope
 
 [A guide to manage your environment variables in a better way using
 direnv](https://shivamarora.medium.com/a-guide-to-manage-your-environment-variables-in-a-better-way-using-direnv-2c1cd475c8e).
-
-#### dirhistory
-
-This plugin adds keyboard shortcuts for navigating directory history and hierarchy.
-
-| Shortcut                          | Description                                               |
-| :-------------------------------- | :-------------------------------------------------------- |
-| <kbd>Alt</kbd> + <kbd>Left</kbd>  | Go to previous directory                                  |
-| <kbd>Alt</kbd> + <kbd>Right</kbd> | Go to next directory                                      |
-| <kbd>Alt</kbd> + <kbd>Up</kbd>    | Move into the parent directory                            |
-| <kbd>Alt</kbd> + <kbd>Down</kbd>  | Move into the first child directory by alphabetical order |
-
-To print the directory stack, type `dirs -v`.
 
 #### encode64
 
@@ -671,27 +658,6 @@ bindkey '^X^D' fasd-complete-d  # C-x C-d to do fasd-complete-d (only directorie
 This plugin adds completion for the file search tool
 [`fd`](https://github.com/sharkdp/fd).
 
-#### genpass
-
-This plugin provides three unique password generators for ZSH. Each generator
-has at least a 128-bit security margin and generates passwords from the
-cryptographically secure /dev/urandom. Each generator can also take an optional
-numeric argument to generate multiple passwords.
-
-* `genpass-apple` generates a pronounceable pseudoword passphrase of the
-  "cvccvc" consonant/vowel syntax, inspired by Apple's iCloud Keychain password
-  generator. Each password has exactly 1 digit placed at the edge of a "word"
-  and exactly 1 capital letter to satisfy most password security requirements.
-
-* `genpass-monkey` generates visually unambiguous random meaningless strings
-  using Crockford's base32.
-
-* `genpass-xkcd` generates passphrases from /usr/share/dict/words inspired by
-  the famous (and slightly misleading) XKCD comic. Each passphrase is prepended
-  with a digit showing the number of words in the passphrase to adhere to
-  password security requirements that require digits. Each word is 6 characters
-  or less.
-
 #### gh
 
 This plugin adds completion for the [GitHub CLI](https://cli.github.com/).
@@ -741,22 +707,6 @@ This plugin adds aliases for the [ISO 8601](https://en.wikipedia.org/wiki/ISO_86
 | `unixstamp`     | `date +%s`                    | Display the current date as a Unix timestamp (seconds since the Unix epoch) |
 | `date_locale`   | `date +"%c"`                  | Display the current date using the default locale's format                  |
 
-#### iterm2
-
-This plugin adds a few functions that are useful when using [iTerm2](https://www.iterm2.com/).
-
-* `_iterm2_command <iterm2-command>` executes an arbitrary iTerm2 command via
-  an escape code sequence. See [escape codes
-  documentation](https://iterm2.com/documentation-escape-codes.html) for all
-  supported commands.
-* `iterm2_profile <profile-name>` changes the current terminal window's profile
-  (colors, fonts, settings, etc). `profile-name` is the name of another iTerm2
-  profile. The profile name can contain spaces.
-* `iterm2_tab_color <red> <green> <blue>` changes the color of iTerm2's
-  currently active tab. `red`/`green`/`blue` are on the range 0-255.
-* `iterm2_tab_color_reset` resets the color of iTerm2's current tab back to
-  default.
-
 #### jump
 
 This plugin allows to easily jump around the file system by manually adding marks.
@@ -799,11 +749,6 @@ This plugin provides a few utilities to make it more enjoyable on macOS.
 | `rmdsstore`   | Remove .DS_Store files recursively in a directory        |
 | `btrestart`   | Restart the Bluetooth daemon                             |
 | `freespace`   | Erases purgeable disk space with 0s on the selected disk |
-
-#### mosh
-
-This plugin allows SSH tab completion for
-[`mosh`](https://github.com/mobile-shell/mosh) hostnames.
 
 #### pip
 
@@ -876,18 +821,6 @@ pyenv takes the python version in this priority order:
 
 This plugin adds completion for the text search tool
 [`ripgrep`](https://github.com/BurntSushi/ripgrep).
-
-#### rsync
-
-This plugin adds aliases for frequent [`rsync`](https://rsync.samba.org/)
-commands.
-
-| Alias               | Command                                          |
-| :------------------ | :----------------------------------------------- |
-| `rsync-copy`        | `rsync -avz --progress -h`                       |
-| `rsync-move`        | `rsync -avz --progress -h --remove-source-files` |
-| `rsync-update`      | `rsync -avzu --progress -h`                      |
-| `rsync-synchronize` | `rsync -avzu --delete --progress -h`             |
 
 #### sudo
 

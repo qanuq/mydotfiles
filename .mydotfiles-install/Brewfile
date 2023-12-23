@@ -1,7 +1,6 @@
 #!/bin/bash
 
 brew install \
-    ack \
     awscli \
     bat \
     binutils \
@@ -44,13 +43,11 @@ brew install \
     pigz \
     pyenv \
     pyenv-virtualenv \
-    pyinvoke \
     ripgrep \
     screen \
     shellcheck \
     terraform \
     terminal-notifier \
-    the_silver_searcher \
     tidy-html5 \
     tig \
     tmux \
