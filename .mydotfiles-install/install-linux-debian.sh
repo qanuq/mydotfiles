@@ -49,6 +49,8 @@ while true; do /usr/bin/sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/de
 /usr/bin/sudo /usr/bin/apt install -y watch
 /usr/bin/sudo /usr/bin/apt install -y wdiff
 
+/usr/bin/sudo /usr/bin/apt install -y zsh
+
 /usr/bin/sudo /usr/bin/apt install -y bat
 /usr/bin/sudo /usr/bin/dpkg-divert --local --divert /usr/bin/bat --rename --add /usr/bin/batcat
 
