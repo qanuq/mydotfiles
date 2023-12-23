@@ -59,3 +59,8 @@ brew install \
 
 # pyenv dependencies
 brew install openssl readline sqlite3 xz zlib
+
+brew tap homebrew/cask-fonts
+brew install --cask font-fira-code-nerd-font
+brew install --cask font-hack-nerd-font
+brew install --cask font-meslolg-nerd-font
