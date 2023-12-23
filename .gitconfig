@@ -205,6 +205,10 @@
 	# remote
 	prune = true
 
+	# git fetch (and the underlying fetch in git pull) will recursively fetch
+	# into populated submodules
+	recurseSubmodules = true
+
 [format]
 
 	# default pretty format to use
@@ -353,6 +357,9 @@
 
 	# show also individual files in untracked directories
 	showUntrackedFiles = all
+
+	# a summary of commits for modified submodules will be shown
+	submoduleSummary = true
 
 [tag]
 
