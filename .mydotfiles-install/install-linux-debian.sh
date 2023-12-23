@@ -75,6 +75,7 @@ echo 'deb [ signed-by=/usr/share/keyrings/vscodium-archive-keyring.gpg ] https:/
 # install gitflow-avh
 /usr/bin/curl -fsSL https://raw.githubusercontent.com/petervanderdoes/gitflow-avh/develop/contrib/gitflow-installer.sh -o gitflow-installer.sh && /usr/bin/sudo /bin/bash gitflow-installer.sh install stable; rm -fv gitflow-installer.sh
 
+# install github-cli
 /usr/bin/curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | /usr/bin/sudo /bin/dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
 echo "deb [arch=$(/usr/bin/dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | /usr/bin/sudo /usr/bin/tee /etc/apt/sources.list.d/github-cli.list > /dev/null
 /usr/bin/sudo /usr/bin/apt update
