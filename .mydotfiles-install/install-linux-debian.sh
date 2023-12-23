@@ -49,6 +49,9 @@ while true; do /usr/bin/sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/de
 /usr/bin/sudo /usr/bin/apt install -y watch
 /usr/bin/sudo /usr/bin/apt install -y wdiff
 
+/usr/bin/sudo /usr/bin/apt install -y bat
+/usr/bin/sudo /usr/bin/dpkg-divert --local --divert /usr/bin/bat --rename --add /usr/bin/batcat
+
 # pyenv dependencies
 /usr/bin/sudo /usr/bin/apt install make build-essential libssl-dev zlib1g-dev \
     libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm \
@@ -64,8 +67,6 @@ echo 'deb [ signed-by=/usr/share/keyrings/vscodium-archive-keyring.gpg ] https:/
 /usr/bin/sudo /usr/bin/apt install -y codium
 /usr/bin/sudo /usr/bin/dpkg-divert --local --divert /usr/bin/code --rename --add /usr/bin/codium
 
-# install bat, on debian 10. else, need to install with apt
-/usr/bin/curl -fsSL https://github.com/sharkdp/bat/releases/download/v0.18.3/bat_0.18.3_amd64.deb -o bat_amd64.deb && /usr/bin/sudo /usr/bin/dpkg -i bat_amd64.deb; rm -fv bat_amd64.deb
 # install gitflow-avh
 /usr/bin/curl -fsSL https://raw.githubusercontent.com/petervanderdoes/gitflow-avh/develop/contrib/gitflow-installer.sh -o gitflow-installer.sh && /usr/bin/sudo /bin/bash gitflow-installer.sh install stable; rm -fv gitflow-installer.sh
 
