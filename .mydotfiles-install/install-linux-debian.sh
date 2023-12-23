@@ -54,6 +54,9 @@ while true; do /usr/bin/sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/de
 /usr/bin/sudo /usr/bin/apt install -y bat
 /usr/bin/sudo /usr/bin/dpkg-divert --local --divert /usr/bin/bat --rename --add /usr/bin/batcat
 
+
+/usr/bin/sudo update/-alternatives --set editor /usr/bin/vim.basic
+
 # pyenv dependencies
 /usr/bin/sudo /usr/bin/apt install make build-essential libssl-dev zlib1g-dev \
     libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm \
