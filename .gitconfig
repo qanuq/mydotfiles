@@ -150,6 +150,9 @@
 	# global gitignore, user specific
 	excludesfile = /Users/matthieu/.gitignore_global
 
+	# do not touch new line chars
+	autocrlf = false
+
 [credential]
 
 	# credential storage on macOS
