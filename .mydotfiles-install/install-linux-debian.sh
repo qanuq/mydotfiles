@@ -82,8 +82,8 @@ echo "deb [arch=$(/usr/bin/dpkg --print-architecture) signed-by=/usr/share/keyri
 /usr/bin/sudo /usr/bin/apt install -y gh
 
 # install terraform
-/usr/bin/curl -fsSL https://apt.releases.hashicorp.com/gpg | /usr/bin/sudo /usr/bin/apt-key add -
-echo "deb [arch=amd64] https://apt.releases.hashicorp.com buster main" | /usr/bin/sudo /usr/bin/tee /etc/apt/sources.list.d/hashicorp.list > /dev/null
+/usr/bin/curl -fsSL https://apt.releases.hashicorp.com/gpg | /usr/bin/gpg --dearmor | /usr/bin/sudo /bin/dd of=/usr/share/keyrings/hashicorp-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com bullseye main" | /usr/bin/sudo /usr/bin/tee /etc/apt/sources.list.d/hashicorp.list
 /usr/bin/sudo /usr/bin/apt update
 /usr/bin/sudo /usr/bin/apt install -y terraform
 
