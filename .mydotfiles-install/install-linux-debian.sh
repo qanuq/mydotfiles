@@ -87,7 +87,7 @@ echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://
 
 # install kdrive
 /usr/bin/curl -fsSL https://download.storage.infomaniak.com/drive/desktopclient/kDrive-3.2.6.20211208.AppImage -o "$HOME/bin/kDrive.AppImage"
-chmod +x "$HOME/bin/kDrive.AppImage"
+/usr/bin/chmod +x "$HOME/bin/kDrive.AppImage"
 "$HOME/bin/kDrive.AppImage" &
 
 # install ohmyzsh
