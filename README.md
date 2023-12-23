@@ -773,6 +773,16 @@ hostname.
 It takes ``$HOST`` variable and looks for files named according to the domain
 parts in ``$ZSH_CUSTOM/profiles/`` directory.
 
+#### poetry-env
+
+This plugin automatically changes poetry environment when you cd into or out of
+the project directory. Note: Script looks for pyproject.toml file to determine
+poetry if its a poetry environment
+
+#### poetry
+
+This plugin gives Poetry's completions.
+
 #### pyenv
 
 [`pyenv`](https://github.com/pyenv/pyenv) lets easily switch between multiple
