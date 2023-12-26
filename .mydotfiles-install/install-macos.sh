@@ -13,21 +13,11 @@ sudo -v
 # keep-alive: update existing `sudo` time stamp until this script has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-# headless install of xcode command line tools
-if ! xcode-select -p &> /dev/null; then
-  touch /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress;
-  CLTX=$(softwareupdate --list | \
-         grep "\*.*Command Line Tools" | \
-         tail -n 1 | \
-         awk -F"Label: " '{print $2}' \
-        )
-  softwareupdate --verbose --install "$CLTX"
-  rm -f /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress
-fi
-
 # install homebrew if it is not already installed
-export HOMEBREW_NO_GITHUB_API=1
 which brew &> /dev/null || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# turn homebrew analytics off
+brew analytics off
 
 ./Brewfile
 ./Caskfile
