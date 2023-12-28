@@ -19,6 +19,5 @@ brew install --cask \
     signal \
     sourcetree \
     virtualbox \
-    virtualbox-extension-pack \
     vlc \
     vscodium
