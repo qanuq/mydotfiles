@@ -1,0 +1,10 @@
+*~
+.DS_Store
+
+# direnv files
+.direnv
+.envrc
+
+# editor specific files and folders
+.idea
+.vscode
