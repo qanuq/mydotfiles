@@ -12,6 +12,8 @@ while true; do /usr/bin/sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/de
 # add sudoedit link
 [ ! -e /usr/local/bin/sudoedit ] && ln -s /usr/bin/sudo /usr/local/bin/sudoedit
 
+mkdir -p "$HOME/.local/bin"
+
 # allow gitconfig interactive.singleKey to work
 /usr/bin/sudo /usr/bin/apt install -y libterm-readkey-perl
 

@@ -24,3 +24,5 @@ brew analytics off
 
 # add sudoedit link
 [ ! -e /usr/local/bin/sudoedit ] && ln -s /usr/bin/sudo /usr/local/bin/sudoedit
+
+mkdir -p "$HOME/.local/bin"
