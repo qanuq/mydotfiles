@@ -19,3 +19,6 @@ source $HOME/.zsh/globalias.zsh
 source $HOME/.zsh/jump.zsh
 source $HOME/.zsh/ssh.zsh
 source $HOME/.zsh/sudo.zsh
+
+# https://github.com/Tarrasch/zsh-bd
+source "$HOME/.zsh/bd.zsh"
