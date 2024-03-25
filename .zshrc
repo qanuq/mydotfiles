@@ -12,6 +12,7 @@ fi
 
 source "$HOME/.zsh/setopt.zsh"
 source "$HOME/.zsh/aliases.zsh"
+source "$HOME/.zsh/colors.zsh"
 source "$HOME/.zsh/completion.zsh"
 source "$HOME/.zsh/encode64.zsh"
 source "$HOME/.zsh/fancy-ctrl-z.zsh"
