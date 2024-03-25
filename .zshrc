@@ -12,3 +12,4 @@ source $HOME/.zsh/encode64.zsh
 source $HOME/.zsh/fancy-ctrl-z.zsh
 source $HOME/.zsh/globalias.zsh
 source $HOME/.zsh/jump.zsh
+source $HOME/.zsh/ssh.zsh
