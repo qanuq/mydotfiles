@@ -22,3 +22,8 @@ source "$HOME/.zsh/sudo.zsh"
 
 # https://github.com/Tarrasch/zsh-bd
 source "$HOME/.zsh/bd.zsh"
+
+# https://github.com/zsh-users/zsh-syntax-highlighting
+# version 0.8.0
+# must be at the end of this file
+source "$HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
