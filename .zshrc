@@ -6,7 +6,7 @@ autoload -Uz compinit && compinit
 # use emacs key bindings
 bindkey -e
 
-if [ -d "${HOME}/.zsh/completions" ]; then
+if [ -d "$HOME/.zsh/completions" ]; then
     fpath=("$HOME/.zsh/completions" $fpath)
 fi
 

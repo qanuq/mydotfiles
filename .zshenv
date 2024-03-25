@@ -4,7 +4,7 @@ export SAVEHIST=$HISTSIZE
 
 export LANG=fr_FR.UTF-8
 
-if command -v nvim >/dev/null 2>&1; then
+if command -v nvim > /dev/null 2>&1; then
     export EDITOR=nvim
 else
     export EDITOR=vim
@@ -13,7 +13,7 @@ export VISUAL=$EDITOR
 export PAGER=less
 
 typeset -U path PATH
-if [ -d "${HOME}/.local/bin" ] ; then
+if [ -d "$HOME/.local/bin" ]; then
     path=("$HOME/.local/bin" $path)
 fi
 export PATH

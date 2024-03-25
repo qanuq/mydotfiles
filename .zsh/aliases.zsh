@@ -1,6 +1,6 @@
 # add dot alias if git command exists
 if command -v git > /dev/null 2>&1; then
-    alias dot='git --git-dir=$HOME/.mydotfiles.git/ --work-tree=$HOME'
+    alias dot='git --git-dir="$HOME/.mydotfiles.git/" --work-tree="$HOME"'
     alias g=git
     alias -s git="git clone"
 fi
@@ -14,7 +14,7 @@ if command -v bat > /dev/null 2>&1; then
     alias catd='bat -d --paging=never --style="plain,changes"'
 fi
 
-if command -v nvim >/dev/null 2>&1; then
+if command -v nvim > /dev/null 2>&1; then
     alias n=nvim
     alias nd='nvim -d'
     alias ro='nvim -R'
@@ -25,7 +25,7 @@ else
 fi
 alias -s {txt,json,xml,yml,yaml,toml,py,html,css,js}=n
 
-if command -v tmux >/dev/null 2>&1; then
+if command -v tmux > /dev/null 2>&1; then
     alias t='tmux'
     alias tl='tmux ls'
     alias tn='tmux new -s'
