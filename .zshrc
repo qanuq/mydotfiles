@@ -9,3 +9,4 @@ bindkey -e
 source $HOME/.zsh/setopt.zsh
 source $HOME/.zsh/aliases.zsh
 source $HOME/.zsh/globalias.zsh
+source $HOME/.zsh/jump.zsh
