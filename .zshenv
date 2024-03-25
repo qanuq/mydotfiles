@@ -17,3 +17,14 @@ if [ -d "${HOME}/.local/bin" ] ; then
     path=("$HOME/.local/bin" $path)
 fi
 export PATH
+
+# globalias module will not expand these aliases
+export GLOBALIAS_FILTER_VALUES=(
+    cat
+    catd
+    dot
+    echo_path
+    la
+    ll
+    ls
+)
