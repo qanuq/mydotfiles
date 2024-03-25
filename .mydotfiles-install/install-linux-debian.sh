@@ -21,4 +21,7 @@ mkdir -p "$HOME/.local/bin"
 
 /usr/bin/sudo /usr/bin/apt install -y zsh
 
+/usr/bin/sudo /usr/bin/apt install -y bat
+/usr/bin/sudo /usr/bin/dpkg-divert --local --divert /usr/bin/bat --rename --add /usr/bin/batcat
+
 /usr/bin/sudo update-alternatives --set editor /usr/bin/vim.basic

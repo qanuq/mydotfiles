@@ -6,3 +6,8 @@ fi
 if command -v tig > /dev/null 2>&1; then
     alias dotig='GIT_DIR="$HOME/.mydotfiles.git/" GIT_WORK_TREE="$HOME" tig'
 fi
+# bat is a better cat
+if command -v bat > /dev/null 2>&1; then
+    alias cat='bat -p'
+    alias catd='bat -d'
+fi
