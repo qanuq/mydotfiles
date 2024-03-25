@@ -17,11 +17,14 @@ mkdir -p "$HOME/.local/bin"
 # allow gitconfig interactive.singleKey to work
 /usr/bin/sudo /usr/bin/apt install -y libterm-readkey-perl
 
+/usr/bin/sudo /usr/bin/apt install -y bat
+/usr/bin/sudo /usr/bin/apt install -y fd-find
+/usr/bin/sudo /usr/bin/apt install -y ripgrep
 /usr/bin/sudo /usr/bin/apt install -y tig
 
 /usr/bin/sudo /usr/bin/apt install -y zsh
 
-/usr/bin/sudo /usr/bin/apt install -y bat
 /usr/bin/sudo /usr/bin/dpkg-divert --local --divert /usr/bin/bat --rename --add /usr/bin/batcat
+/usr/bin/sudo /usr/bin/dpkg-divert --local --divert /usr/bin/fd --rename --add /usr/bin/fdfind
 
 /usr/bin/sudo update-alternatives --set editor /usr/bin/vim.basic
