@@ -1,378 +1,378 @@
 [user]
 
-	# /!\ DO NOT store sensitive information such as name, email,
-	# signingkey or github credentials in this file! Use ~/.gitconfig.local
-	# instead.
+    # /!\ DO NOT store sensitive information such as name, email,
+    # signingkey or github credentials in this file! Use ~/.gitconfig_local
+    # instead.
 
-	# if you need to commit with differents emails for differents
-	# repositories, it's better to not define the email in the global
-	# configuration. with this option, git will abort commit until you set
-	# an email. you just have to set it locally for each repository.
-	useConfigOnly = true
+    # if you need to commit with differents emails for differents
+    # repositories, it's better to not define the email in the global
+    # configuration. with this option, git will abort commit until you set
+    # an email. you just have to set it locally for each repository.
+    useConfigOnly = true
 
 [alias]
 
-	aliases = !git config --get-regexp alias |cut -c 7-|sort
+    aliases = !git config --get-regexp alias |cut -c 7-|sort
 
-	a = add
-	amend = commit --verbose --amend
-	ap = add --patch
-	bl = blame
-	br = branch --verbose
-	ci = commit --verbose
-	co = checkout
-	conflicts = diff --name-only --diff-filter=U
-	contrib = shortlog --email --summary --numbered # list contributors with number of commits
-	cp = cherry-pick -x
-	d = diff
-	dc = diff --cached
-	dl = diff HEAD^ # diff last committed change
-	dt = difftool
-	dtc = difftool --cached
-	dtg = difftool --gui
-	dtgc = difftool --gui --cached
-	ec = config --global --edit
-	f = fetch
-	fc = "!f() { git log --name-status -S$1; }; f" # find commits by source code
-	fm = "!f() { git log --name-status --grep=$1; }; f" # find commits by commit message
-	g = grep -I
-	l = log
-	lg = log --graph
-	lga = log --all --graph
-	ll = log --max-count=10
-	lp = log --patch
-	m = merge
-	mt = mergetool
-	mtg = mergetool --gui
-	nb = checkout -b # new branch, or just checkout it
-	pl = pull
-	ps = push
-	r = rebase
-	rc = rebase --continue
-	rp = reset --patch
-	recentbr = !git for-each-ref --count=10 --sort=-committerdate refs/heads/ --format='%(refname:short)' # get list of branches ordered by most recent commit
-	rlast = "!f() { git rebase -i HEAD~$1; }; f" # rebase the given number of latest commits
-	rt = remote --verbose
-	s = status -s # view status using short format
-	sa = stash apply
-	sd = stash drop
-	sl = stash list
-	sp = stash pop
-	ss = stash
-	st = status
-	unstage = reset HEAD # remove files from index
-	wd = diff --word-diff=color
-	wdc = diff --word-diff=color --cached
+    a = add
+    amend = commit --verbose --amend
+    ap = add --patch
+    bl = blame
+    br = branch --verbose
+    ci = commit --verbose
+    co = checkout
+    conflicts = diff --name-only --diff-filter=U
+    contrib = shortlog --email --summary --numbered # list contributors with number of commits
+    cp = cherry-pick -x
+    d = diff
+    dc = diff --cached
+    dl = diff HEAD^ # diff last committed change
+    dt = difftool
+    dtc = difftool --cached
+    dtg = difftool --gui
+    dtgc = difftool --gui --cached
+    ec = config --global --edit
+    f = fetch
+    fc = "!f() { git log --name-status -S$1; }; f" # find commits by source code
+    fm = "!f() { git log --name-status --grep=$1; }; f" # find commits by commit message
+    g = grep -I
+    l = log
+    lg = log --graph
+    lga = log --all --graph
+    ll = log --max-count=10
+    lp = log --patch
+    m = merge
+    mt = mergetool
+    mtg = mergetool --gui
+    nb = checkout -b # new branch, or just checkout it
+    pl = pull
+    ps = push
+    r = rebase
+    rc = rebase --continue
+    rp = reset --patch
+    recentbr = !git for-each-ref --count=10 --sort=-committerdate refs/heads/ --format='%(refname:short)' # get list of branches ordered by most recent commit
+    rlast = "!f() { git rebase -i HEAD~$1; }; f" # rebase the given number of latest commits
+    rt = remote --verbose
+    s = status -s # view status using short format
+    sa = stash apply
+    sd = stash drop
+    sl = stash list
+    sp = stash pop
+    ss = stash
+    st = status
+    unstage = reset HEAD # remove files from index
+    wd = diff --word-diff=color
+    wdc = diff --word-diff=color --cached
 
-	# credit an author on the latest commit
-	credit = "!f() { \
-		if [ -n \"$1\" ] && [ -n \"$2\" ]; then \
-		git commit --amend --author \"$1 <$2>\" -C HEAD; \
-		fi \
-		}; f"
+    # credit an author on the latest commit
+    credit = "!f() { \
+        if [ -n \"$1\" ] && [ -n \"$2\" ]; then \
+        git commit --amend --author \"$1 <$2>\" -C HEAD; \
+        fi \
+        }; f"
 
-	# list remote branches
-	lrb = "!f() { \
-		remote="${1:-origin}"; \
-		git ls-remote --heads "$remote"; \
-		}; f"
+    # list remote branches
+    lrb = "!f() { \
+        remote="${1:-origin}"; \
+        git ls-remote --heads "$remote"; \
+        }; f"
 
-	# remove last commits (last commit by default)
-	rlc = "!f() { \
-		declare n=\"${1:-1}\"; \
-		git reset --hard \"HEAD~$n\"; \
-		}; f"
+    # remove last commits (last commit by default)
+    rlc = "!f() { \
+        declare n=\"${1:-1}\"; \
+        git reset --hard \"HEAD~$n\"; \
+        }; f"
 
-	# undo last commits (last commit by default)
-	ulc = "!f() { \
-		declare n=\"${1:-1}\"; \
-		git reset --soft \"HEAD~$n\"; \
-		}; f"
+    # undo last commits (last commit by default)
+    ulc = "!f() { \
+        declare n=\"${1:-1}\"; \
+        git reset --soft \"HEAD~$n\"; \
+        }; f"
 
 [apply]
 
-	# detect and fix whitespace errors when applying a patch
-	whitespace = fix
+    # detect and fix whitespace errors when applying a patch
+    whitespace = fix
 
 [color]
 
-	ui = auto
+    ui = auto
 
 [color "branch"]
 
-	current = green white reverse bold
-	local = magenta white reverse bold
-	remote = blue white reverse bold
+    current = green white reverse bold
+    local = magenta white reverse bold
+    remote = blue white reverse bold
 
 [color "diff"]
 
-	meta = yellow
-	frag = magenta
-	old = red white reverse bold
-	new = green white reverse bold
-	whitespace = blue white reverse bold
+    meta = yellow
+    frag = magenta
+    old = red white reverse bold
+    new = green white reverse bold
+    whitespace = blue white reverse bold
 
 [color "status"]
 
-	added = green white reverse bold
-	changed = magenta white reverse bold
-	untracked = blue white reverse bold
+    added = green white reverse bold
+    changed = magenta white reverse bold
+    untracked = blue white reverse bold
 
 [commit]
 
-	# file to use as the template for new commit messages
-	template = ~/.gitmessage
+    # file to use as the template for new commit messages
+    template = ~/.gitmessage
 
     # sign commits
-	gpgsign = true
+    gpgsign = true
 
 [core]
 
-	# editor used to edit commit and tag messages
-	editor = vim
+    # editor used to edit commit and tag messages
+    editor = vim
 
-	# text viewer for use by Git commands
-	pager = less -FRXK
+    # text viewer for use by Git commands
+    pager = less -FRXK
 
-	# macOS option, git reverts the unicode decomposition of filenames done
-	# by macOS. useful when sharing a repository between macOS and Linux or
-	# Windows.
-	precomposeUnicode = true
+    # macOS option, git reverts the unicode decomposition of filenames done
+    # by macOS. useful when sharing a repository between macOS and Linux or
+    # Windows.
+    precomposeUnicode = true
 
-	# dot no trust ctime. make rebase safer on macOS
-	trustctime = false
+    # dot no trust ctime. make rebase safer on macOS
+    trustctime = false
 
-	# treat spaces before tabs and all kinds of trailing whitespace as an
-	# error
-	whitespace = space-before-tab,-indent-with-non-tab,trailing-space
+    # treat spaces before tabs and all kinds of trailing whitespace as an
+    # error
+    whitespace = space-before-tab,-indent-with-non-tab,trailing-space
 
-	# speed up commands involving untracked files such as git status
-	# https://git-scm.com/docs/git-update-index#_untracked_cache
-	untrackedCache = true
+    # speed up commands involving untracked files such as git status
+    # https://git-scm.com/docs/git-update-index#_untracked_cache
+    untrackedCache = true
 
-	# global gitignore, user specific
-	excludesfile = ~/.gitignore_global
+    # global gitignore, user specific
+    excludesfile = ~/.gitignore_global
 
-	# do not touch new line chars
-	autocrlf = false
+    # do not touch new line chars
+    autocrlf = false
 
 [credential]
 
-	# credential storage on macOS
-	helper = osxkeychain
+    # credential storage on macOS
+    helper = osxkeychain
 
 [diff]
 
-	# control which diff tool is used by git-difftool
-	tool = vim
+    # control which diff tool is used by git-difftool
+    tool = vim
 
-	# control which diff tool is used by git-difftool when the -g/--gui
-	# flag is specified
-	guitool = vscode
+    # control which diff tool is used by git-difftool when the -g/--gui
+    # flag is specified
+    guitool = vscode
 
-	# use a prefix pair that is different from the standard "a/" and "b/"
-	# depending on what is being compared
-	# https://git-scm.com/docs/diff-config#diff-config-diffmnemonicPrefix
-	mnemonicPrefix = true
+    # use a prefix pair that is different from the standard "a/" and "b/"
+    # depending on what is being compared
+    # https://git-scm.com/docs/diff-config#diff-config-diffmnemonicPrefix
+    mnemonicPrefix = true
 
-	# this diff algorithm extends the patience algorithm to "support
-	# low-occurrence common elements"
-	algorithm = histogram
+    # this diff algorithm extends the patience algorithm to "support
+    # low-occurrence common elements"
+    algorithm = histogram
 
-	# Regular Expression used to determine what is a "word" when performing
-	# --word-diff
-	wordRegex = .
+    # Regular Expression used to determine what is a "word" when performing
+    # --word-diff
+    wordRegex = .
 
-	# enable experimental heuristics that shift diff hunk boundaries to
-	# make patches easier to read
-	indentHeuristic = true
+    # enable experimental heuristics that shift diff hunk boundaries to
+    # make patches easier to read
+    indentHeuristic = true
 
 [difftool]
 
-	# prompt before each invocation of the diff tool
-	prompt = false
+    # prompt before each invocation of the diff tool
+    prompt = false
 
 [difftool "vim"]
 
-	# specify the command to invoke the specified diff tool
-	cmd = vimdiff \"$LOCAL\" \"$REMOTE\"
+    # specify the command to invoke the specified diff tool
+    cmd = vimdiff \"$LOCAL\" \"$REMOTE\"
 
 [difftool "vscode"]
 
-	# specify the command to invoke the specified diff tool
-	cmd = code --wait --diff \"$LOCAL\" \"$REMOTE\"
+    # specify the command to invoke the specified diff tool
+    cmd = code --wait --diff \"$LOCAL\" \"$REMOTE\"
 
 [fetch]
 
-	# remove any remote-tracking references that no longer exist on the
-	# remote
-	prune = true
+    # remove any remote-tracking references that no longer exist on the
+    # remote
+    prune = true
 
-	# git fetch (and the underlying fetch in git pull) will recursively fetch
-	# into populated submodules
-	recurseSubmodules = true
+    # git fetch (and the underlying fetch in git pull) will recursively fetch
+    # into populated submodules
+    recurseSubmodules = true
 
 [format]
 
-	# default pretty format to use
-	pretty = custom
+    # default pretty format to use
+    pretty = custom
 
 [grep]
 
-	# prefix the line number to matching lines
-	lineNumber = true
+    # prefix the line number to matching lines
+    lineNumber = true
 
-	# use perl pattern type
-	patternType = perl
+    # use perl pattern type
+    patternType = perl
 
 [interactive]
 
-	# allow to provide one-letter input without hitting enter in
-	# interactive mode. libterm-readkey-perl must be installed,
-	# as apt-get install libterm-readkey-perl.
-	singleKey = true
+    # allow to provide one-letter input without hitting enter in
+    # interactive mode. libterm-readkey-perl must be installed,
+    # as apt-get install libterm-readkey-perl.
+    singleKey = true
 
 [log]
 
-	# git-log, git-show, and git-whatchanged show only a partial commit
-	# object name
-	abbrevCommit = true
+    # git-log, git-show, and git-whatchanged show only a partial commit
+    # object name
+    abbrevCommit = true
 
 [merge]
 
-	# control which merge tool is used by git-mergetool
-	tool = vimdiff
+    # control which merge tool is used by git-mergetool
+    tool = vimdiff
 
-	# control which merge tool is used by git-mergetool when the -g/--gui
-	# flag is specified
-	guitool = vscode
+    # control which merge tool is used by git-mergetool when the -g/--gui
+    # flag is specified
+    guitool = vscode
 
-	# display common-ancestor blocks in conflict hunks
-	conflictstyle = diff3
+    # display common-ancestor blocks in conflict hunks
+    conflictstyle = diff3
 
-	# create an extra merge commit, force explicit call of git merge --ff
-	ff = false
+    # create an extra merge commit, force explicit call of git merge --ff
+    ff = false
 
-	# include summaries of merged commits in newly created merge commit
-	# messages
-	log = 1000
+    # include summaries of merged commits in newly created merge commit
+    # messages
+    log = 1000
 
 [mergetool]
 
-	# do not prompt before each invocation of the merge resolution program
-	prompt = false
+    # do not prompt before each invocation of the merge resolution program
+    prompt = false
 
-	# after performing a merge, the original file with conflict markers can
-	# be saved as a file with a .orig extension
-	keepBackup = true
+    # after performing a merge, the original file with conflict markers can
+    # be saved as a file with a .orig extension
+    keepBackup = true
 
-	# when invoking a custom merge tool, git uses a set of temporary files
-	# to pass to the tool. keep the files
-	keepTemporaries = true
+    # when invoking a custom merge tool, git uses a set of temporary files
+    # to pass to the tool. keep the files
+    keepTemporaries = true
 
 [mergetool "vim"]
 
-	# command to invoke the specified merge tool
-	cmd = vim \"$MERGED\"
+    # command to invoke the specified merge tool
+    cmd = vim \"$MERGED\"
 
-	# specify the exit code of the merge command can be used to determine
-	# whether the merge was successful. from vim, use :cquit to quit with
-	# an error code
-	trustExitCode = true
+    # specify the exit code of the merge command can be used to determine
+    # whether the merge was successful. from vim, use :cquit to quit with
+    # an error code
+    trustExitCode = true
 
 [mergetool "vscode"]
 
-	# command to invoke the specified merge tool
-	cmd = code --wait \"$MERGED\"
+    # command to invoke the specified merge tool
+    cmd = code --wait \"$MERGED\"
 
-	# specify the exit code of the merge command cannot be used to
-	# determine whether the merge was successful
-	trustExitCode = false
+    # specify the exit code of the merge command cannot be used to
+    # determine whether the merge was successful
+    trustExitCode = false
 
 [pretty]
 
-	custom = "%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset"
-	#               │                    │        │           │                  └─ author name
-	#               │                    │        │           └─ date (relative)
-	#               │                    │        └─ message
-	#               │                    └─ decorations (branch, heads or tags)
-	#               └─ hash (abbreviated)
+    custom = "%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset"
+    #               │                    │        │           │                  └─ author name
+    #               │                    │        │           └─ date (relative)
+    #               │                    │        └─ message
+    #               │                    └─ decorations (branch, heads or tags)
+    #               └─ hash (abbreviated)
 
 [protocol]
 
-	# disable all protocols, so we only enable secured ones
-	allow = never
+    # disable all protocols, so we only enable secured ones
+    allow = never
 
 [protocol "https"]
 
-	# enable https
-	allow = always
+    # enable https
+    allow = always
 
 [protocol "ssh"]
 
-	# enable ssh
-	allow = always
+    # enable ssh
+    allow = always
 
 [pull]
 
-	# rebase branches on top of the fetched branch, instead of merging the
-	# default branch from the default remote when git-pull is run, since
-	# git 2.18.0
-	rebase = merges
+    # rebase branches on top of the fetched branch, instead of merging the
+    # default branch from the default remote when git-pull is run, since
+    # git 2.18.0
+    rebase = merges
 
-	# only such fast-forward merges are allowed
-	ff = only
+    # only such fast-forward merges are allowed
+    ff = only
 
 [push]
 
-	# define the action git push should take if no refspec is explicitly
-	# given
-	default = simple
+    # define the action git push should take if no refspec is explicitly
+    # given
+    default = simple
 
 [rebase]
 
-	# enable autoSquash
-	autoSquash = true
+    # enable autoSquash
+    autoSquash = true
 
-	# autoStash before rebase
-	autoStash = true
+    # autoStash before rebase
+    autoStash = true
 
-	# in interactive mode, drop must be used to remove a commit
-	missingCommitsCheck = error
+    # in interactive mode, drop must be used to remove a commit
+    missingCommitsCheck = error
 
 [status]
 
-	# display the number of entries currently stashed away
-	showStash = true
+    # display the number of entries currently stashed away
+    showStash = true
 
-	# shows paths relative to the current directory
-	relativePaths = true
+    # shows paths relative to the current directory
+    relativePaths = true
 
-	# disable short format
-	short = false
+    # disable short format
+    short = false
 
-	# show branch and tracking info
-	branch = true
+    # show branch and tracking info
+    branch = true
 
-	# display detailed ahead/behind counts for the branch relative to its
-	# upstream branch
-	aheadBehind = true
+    # display detailed ahead/behind counts for the branch relative to its
+    # upstream branch
+    aheadBehind = true
 
-	# show also individual files in untracked directories
-	showUntrackedFiles = all
+    # show also individual files in untracked directories
+    showUntrackedFiles = all
 
-	# a summary of commits for modified submodules will be shown
-	submoduleSummary = true
+    # a summary of commits for modified submodules will be shown
+    submoduleSummary = true
 
 [tag]
 
-	# ordering of tags
-	sort = version:refname
+    # ordering of tags
+    sort = version:refname
 
 [gpg]
 
     # use ssh pubkey to sign
-	format = ssh
+    format = ssh
 
 [gpg "ssh"]
 
@@ -380,23 +380,23 @@
     # using this format:
     # echo "$(git config --global --get user.email) namespaces=\"git\" $(cat ~/.ssh/my_key.pub)" >> ~/.ssh/git_allowed_signers
     # signatures can be verified with git log --show-signature
-	allowedSignersFile = ~/.ssh/git_allowed_signers
+    allowedSignersFile = ~/.ssh/git_allowed_signers
 
 [include]
 
-	# load local configuration.
-	# need to remain at the end of this file.
-	# included configurations will overwrite those in this file.
-	# set sensitive information like user.name, user.email and
-	# user.signingkey.
+    # load local configuration.
+    # need to remain at the end of this file.
+    # included configurations will overwrite those in this file.
+    # set sensitive information like user.name, user.email and
+    # user.signingkey.
 
-	path = ~/.gitconfig.local
+    path = ~/.gitconfig_local
 
-    # .gitconfig.local should contains something like this:
+    # .gitconfig_local should contains something like this:
     #
     # [user]
-    # 	email = firstname.lastname@domain.tld
-    # 	name = Firstname Lastname
-    # 	signingkey = ~/.ssh/my_key.pub
+    #   email = firstname.lastname@domain.tld
+    #   name = Firstname Lastname
+    #   signingkey = ~/.ssh/my_key.pub
     #
     # And more, if needed.
