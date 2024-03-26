@@ -3,6 +3,8 @@
 # uncomment to debug
 # set -x
 
+script_dir=$(dirname "$(realpath "$0")")
+
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
 osascript -e 'tell application "System Preferences" to quit'
@@ -32,3 +34,6 @@ if [ ! -d "$HOME/.pyenv" ]; then
     git clone https://github.com/pyenv/pyenv.git $HOME/.pyenv
     git clone https://github.com/pyenv/pyenv-virtualenv.git $HOME/.pyenv/plugins/pyenv-virtualenv
 fi
+
+# install direnv
+$script_dir/install-direnv.sh

@@ -24,6 +24,11 @@ source "$HOME/.zsh/sudo.zsh"
 
 [[ -f "$HOME/.zsh/local_config.zsh" ]] && source "$HOME/.zsh/local_config.zsh"
 
+
+if command -v direnv > /dev/null 2>&1; then
+    eval "$(direnv hook zsh)"
+fi
+
 # https://github.com/Tarrasch/zsh-bd
 source "$HOME/.zsh/bd.zsh"
 
