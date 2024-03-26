@@ -26,3 +26,9 @@ brew analytics off
 [ ! -e /usr/local/bin/sudoedit ] && ln -s /usr/bin/sudo /usr/local/bin/sudoedit
 
 mkdir -p "$HOME/.local/bin"
+
+# clone pyenv repo
+if [ ! -d "$HOME/.pyenv" ]; then
+    git clone https://github.com/pyenv/pyenv.git $HOME/.pyenv
+    git clone https://github.com/pyenv/pyenv-virtualenv.git $HOME/.pyenv/plugins/pyenv-virtualenv
+fi

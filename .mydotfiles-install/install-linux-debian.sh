@@ -28,3 +28,9 @@ mkdir -p "$HOME/.local/bin"
 /usr/bin/sudo /usr/bin/dpkg-divert --local --divert /usr/bin/fd --rename --add /usr/bin/fdfind
 
 /usr/bin/sudo update-alternatives --set editor /usr/bin/vim.basic
+
+# clone pyenv repo
+if [ ! -d "$HOME/.pyenv" ]; then
+    git clone https://github.com/pyenv/pyenv.git $HOME/.pyenv
+    git clone https://github.com/pyenv/pyenv-virtualenv.git $HOME/.pyenv/plugins/pyenv-virtualenv
+fi
