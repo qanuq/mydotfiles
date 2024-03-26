@@ -21,6 +21,8 @@ source "$HOME/.zsh/jump.zsh"
 source "$HOME/.zsh/ssh.zsh"
 source "$HOME/.zsh/sudo.zsh"
 
+[[ -f "$HOME/.zsh/local_config.zsh" ]] && source "$HOME/.zsh/local_config.zsh"
+
 # https://github.com/Tarrasch/zsh-bd
 source "$HOME/.zsh/bd.zsh"
 
