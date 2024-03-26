@@ -14,15 +14,18 @@ export PAGER=less
 
 
 typeset -U path
-if [ -d "$HOME/.local/bin" ]; then
-    path=("$HOME/.local/bin" $path)
+local_bin="$HOME/.local/bin"
+if [ -d "$local_bin" ]; then
+    path=("$local_bin" $path)
 fi
+
 export PYENV_ROOT="$HOME/.pyenv"
 if [ -d "$PYENV_ROOT/bin" ]; then
     path=("$PYENV_ROOT/bin" $path)
     eval "$(pyenv init -)"
     eval "$(pyenv virtualenv-init -)"
 fi
+
 export PATH
 
 # globalias module will not expand these aliases
