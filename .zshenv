@@ -22,8 +22,6 @@ fi
 export PYENV_ROOT="$HOME/.pyenv"
 if [ -d "$PYENV_ROOT/bin" ]; then
     path=("$PYENV_ROOT/bin" $path)
-    eval "$(pyenv init -)"
-    eval "$(pyenv virtualenv-init -)"
 fi
 
 export PATH

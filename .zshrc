@@ -24,6 +24,10 @@ source "$HOME/.zsh/sudo.zsh"
 
 [[ -f "$HOME/.zsh/local_config.zsh" ]] && source "$HOME/.zsh/local_config.zsh"
 
+if command -v pyenv > /dev/null 2>&1; then
+    eval "$(pyenv init -)"
+    eval "$(pyenv virtualenv-init -)"
+fi
 
 if command -v direnv > /dev/null 2>&1; then
     eval "$(direnv hook zsh)"
