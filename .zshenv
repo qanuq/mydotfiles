@@ -12,7 +12,8 @@ fi
 export VISUAL=$EDITOR
 export PAGER=less
 
-typeset -U path PATH
+
+typeset -U path
 if [ -d "$HOME/.local/bin" ]; then
     path=("$HOME/.local/bin" $path)
 fi
