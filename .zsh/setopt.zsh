@@ -4,10 +4,8 @@
 # http://zsh.sourceforge.net/Doc/Release/Options.html#Changing-Directories
 setopt auto_cd                 # if a command isn't valid, but is a directory, cd to that dir
 setopt auto_pushd              # make cd push the old directory onto the directory stack
-setopt cd_silent               # print nothing when typing cd -
 setopt pushd_ignore_dups       # don’t push multiple copies of the same directory onto the directory stack
 setopt pushd_minus             # exchanges the meanings of ‘+’ and ‘-’ when specifying a directory in the stack
-setopt pushd_silent            # print nothing when typing pushd
 setopt pushd_to_home           # pushd without args go to home
 
 # Completions
@@ -31,14 +29,14 @@ unsetopt glob_dots             # don't include dotfiles when globbing
 setopt append_history          # append to history file
 setopt extended_history        # write the history file in the ':start:elapsed;command' format
 setopt hist_beep               # beep when attempting to access a missing history entry
-setopt hist_expire_dups_first  # expire a duplicate event first when trimming history
+# xxx setopt hist_expire_dups_first  # expire a duplicate event first when trimming history
 setopt hist_find_no_dups       # don't display a previously found event
-setopt hist_ignore_all_dups    # delete an old recorded event if a new event is a duplicate
+# xxx setopt hist_ignore_all_dups    # delete an old recorded event if a new event is a duplicate
 setopt hist_ignore_dups        # don't record an event that was just recorded again
 setopt hist_ignore_space       # don't record an event starting with a space
 setopt hist_no_store           # don't store history commands
 setopt hist_reduce_blanks      # remove superfluous blanks from each command line being added to the history list
-setopt hist_save_no_dups       # don't write a duplicate event to the history file
+# xxx setopt hist_save_no_dups       # don't write a duplicate event to the history file
 setopt hist_verify             # don't execute immediately upon history expansion
 setopt inc_append_history      # write to the history file immediately, not when the shell exits
 setopt share_history           # share history between all sessions
