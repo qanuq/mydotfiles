@@ -10,8 +10,9 @@ if command -v tig > /dev/null 2>&1; then
 fi
 # bat is a better cat
 if command -v bat > /dev/null 2>&1; then
-    alias cat='bat -p --paging=never --style="plain"'
-    alias catd='bat -d --paging=never --style="plain,changes"'
+    alias cat='bat --plain --style="plain"'
+    alias catd='bat --diff --style="plain,changes,numbers"'
+    alias catr='bat --show-all --style="plain"'
 fi
 
 if command -v nvim > /dev/null 2>&1; then

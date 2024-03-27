@@ -30,6 +30,7 @@ export PATH
 export GLOBALIAS_FILTER_VALUES=(
     cat
     catd
+    catr
     dot
     echo_path
     la
