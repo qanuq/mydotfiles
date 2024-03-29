@@ -35,5 +35,5 @@ if [ ! -d "$HOME/.pyenv" ]; then
     git clone https://github.com/pyenv/pyenv-virtualenv.git $HOME/.pyenv/plugins/pyenv-virtualenv
 fi
 
-# install direnv
 $script_dir/install-direnv.sh
+$script_dir/install-starship.sh
