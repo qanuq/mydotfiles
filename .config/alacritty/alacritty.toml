@@ -1,0 +1,142 @@
+live_config_reload = true
+
+[window]
+dimensions = { columns = 95, lines = 30 }
+opacity = 0.9
+blur = true
+
+[scrolling]
+history = 100000
+multiplier = 3
+
+[font]
+size = 16
+glyph_offset = { x = 0, y = 0 }
+
+[font.normal]
+family = "FiraCode Nerd Font"
+style = "Regular"
+
+[font.bold]
+family = "FiraCode Nerd Font"
+style = "Bold"
+
+# flat_remix theme taken from https://github.com/alacritty/alacritty-theme
+[colors.primary]
+background = '#272a34'
+foreground = '#FFFFFF'
+
+[colors.normal]
+black   = '#1F2229'
+red     = '#EC0101'
+green   = '#47D4B9'
+yellow  = '#FF8A18'
+blue    = '#277FFF'
+magenta = '#D71655'
+cyan    = '#05A1F7'
+white   = '#FFFFFF'
+
+[colors.bright]
+black   = '#1F2229'
+red     = '#D41919'
+green   = '#5EBDAB'
+yellow  = '#FEA44C'
+blue    = '#367bf0'
+magenta = '#BF2E5D'
+cyan    = '#49AEE6'
+white   = '#FFFFFF'
+
+[colors.selection]
+text = '#1F2229'
+background = '#05A1F7'
+
+[bell]
+animation = 'EaseOutSine'
+duration = 250
+
+[selection]
+semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
+save_to_clipboard = true
+
+[cursor]
+style = { shape = "beam", blinking = "On" }
+blink_interval = 750
+blink_timeout = 0
+unfocused_hollow = true
+thickness = 0.2
+
+[mouse]
+hide_when_typing = true
+bindings = [
+    { mouse = "Right", mods = "Control|Shift", action = "Paste" },
+]
+
+[[keyboard.bindings]]
+action = "CreateNewWindow"
+key = "N"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "Quit"
+key = "Q"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "ToggleFullscreen"
+key = "Return"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "ToggleMaximized"
+key = "Space"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "Hide"
+key = "H"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "Minimize"
+key = "M"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "ClearHistory"
+key = "K"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "SearchBackward"
+key = "?"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "SearchForward"
+key = "/"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "ScrollPageUp"
+key = "Up"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "ScrollPageDown"
+key = "Down"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "IncreaseFontSize"
+key = "+"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "ResetFontSize"
+key = "0"
+mods = "Control|Shift"
