@@ -36,7 +36,11 @@ source "$HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
 if command -v pyenv > /dev/null 2>&1; then
     eval "$(pyenv init -)"
-    eval "$(pyenv virtualenv-init -)"
+    # this eval is slowing down zsh
+    # eval "$(pyenv virtualenv-init -)"
+    # so, use this to enable / disable a virtualenv when needed
+    # pyenv activate <name>
+    # pyenv deactivate
 fi
 
 if command -v direnv > /dev/null 2>&1; then
