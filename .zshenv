@@ -38,4 +38,6 @@ export GLOBALIAS_FILTER_VALUES=(
     ls
 )
 
+export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
+
 [[ -f "$HOME/.zshenv_local" ]] && source "$HOME/.zshenv_local"

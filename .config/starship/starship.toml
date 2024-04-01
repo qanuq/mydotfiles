@@ -1,0 +1,290 @@
+# # Get editor completions based on the config schema
+# "$schema" = 'https://starship.rs/config-schema.json'
+#
+# format = """
+# [](color_orange)\
+# [](bg:color_yellow fg:color_orange)\
+# $directory\
+# [](fg:color_yellow bg:color_aqua)\
+# $git_branch\
+# $git_status\
+# [](fg:color_aqua bg:color_blue)\
+# $c\
+# $rust\
+# $nodejs\
+# $python\
+# [](fg:color_blue bg:color_bg3)\
+# $docker_context\
+# $conda\
+# [](fg:color_bg3 bg:color_bg1)\
+# $time\
+# [ ](fg:color_bg1)\
+# $line_break$character"""
+#
+# palette = 'gruvbox_dark'
+#
+# [palettes.gruvbox_dark]
+# color_fg0 = '#fbf1c7'
+# color_bg1 = '#3c3836'
+# color_bg3 = '#665c54'
+# color_blue = '#458588'
+# color_aqua = '#689d6a'
+# color_green = '#98971a'
+# color_orange = '#d65d0e'
+# color_purple = '#b16286'
+# color_red = '#cc241d'
+# color_yellow = '#d79921'
+#
+# [username]
+# show_always = true
+# style_user = "bg:color_orange fg:color_fg0"
+# style_root = "bg:color_orange fg:color_fg0"
+# format = '[ $user ]($style)'
+#
+# [directory]
+# style = "fg:color_fg0 bg:color_yellow"
+# format = "[ $path ]($style)"
+# truncation_length = 3
+# truncation_symbol = "…/"
+#
+# [directory.substitutions]
+# "Documents" = "󰈙 "
+# "Downloads" = " "
+# "Music" = "󰝚 "
+# "Pictures" = " "
+# "Developer" = "󰲋 "
+#
+# [git_branch]
+# symbol = ""
+# style = "bg:color_aqua"
+# format = '[[ $symbol $branch ](fg:color_fg0 bg:color_aqua)]($style)'
+#
+# [git_status]
+# style = "bg:color_aqua"
+# format = '[[($all_status$ahead_behind )](fg:color_fg0 bg:color_aqua)]($style)'
+#
+# [nodejs]
+# symbol = ""
+# style = "bg:color_blue"
+# format = '[[ $symbol( $version) ](fg:color_fg0 bg:color_blue)]($style)'
+#
+# [c]
+# symbol = " "
+# style = "bg:color_blue"
+# format = '[[ $symbol( $version) ](fg:color_fg0 bg:color_blue)]($style)'
+#
+# [rust]
+# symbol = ""
+# style = "bg:color_blue"
+# format = '[[ $symbol( $version) ](fg:color_fg0 bg:color_blue)]($style)'
+#
+# [python]
+# symbol = ""
+# style = "bg:color_blue"
+# format = '[[ $symbol( $version) ](fg:color_fg0 bg:color_blue)]($style)'
+#
+# [docker_context]
+# symbol = ""
+# style = "bg:color_bg3"
+# format = '[[ $symbol( $context) ](fg:#83a598 bg:color_bg3)]($style)'
+#
+# [conda]
+# style = "bg:color_bg3"
+# format = '[[ $symbol( $environment) ](fg:#83a598 bg:color_bg3)]($style)'
+#
+# [time]
+# disabled = false
+# time_format = "%R"
+# style = "bg:color_bg1"
+# format = '[[  $time ](fg:color_fg0 bg:color_bg1)]($style)'
+#
+# [line_break]
+# disabled = false
+#
+# [character]
+# disabled = false
+# success_symbol = '[](bold fg:color_green)'
+# error_symbol = '[](bold fg:color_red)'
+# vimcmd_symbol = '[](bold fg:color_green)'
+# vimcmd_replace_one_symbol = '[](bold fg:color_purple)'
+# vimcmd_replace_symbol = '[](bold fg:color_purple)'
+# vimcmd_visual_symbol = '[](bold fg:color_yellow)'
+
+
+
+
+##############
+
+# # Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+
+add_newline = true
+
+# format = """$time $all"""
+
+format = """
+$localip\
+$shlvl\
+$singularity\
+$kubernetes\
+$directory\
+$vcsh\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$pijul_channel\
+$package\
+$dart\
+$deno\
+$guix_shell\
+$haxe\
+$helm\
+$kotlin\
+$gradle\
+$lua\
+$nim\
+$nodejs\
+$opa\
+$pulumi\
+$purescript\
+$python\
+$quarto\
+$raku\
+$rlang\
+$red\
+$rust\
+$solidity\
+$swift\
+$terraform\
+$typst\
+$vlang\
+$vagrant\
+$zig\
+$nix_shell\
+$meson\
+$spack\
+$memory_usage\
+$openstack\
+$direnv\
+$env_var\
+$custom\
+$sudo\
+$cmd_duration\
+$line_break\
+$jobs\
+$status\
+$container\
+$shell\
+$character"""
+
+#[env_var.USER]
+#default = 'unknown user'
+
+[cmd_duration]
+min_time = 2_000
+show_milliseconds = false
+format = "[](fg:#ffffff bg:none)[󱦟](fg:#282c34 bg:#ffffff)[](fg:#ffffff bg:#f72851)[ $duration]($style)[](fg:#f72851 bg:none) "
+style="fg:#ffffff bg:#f72851"
+
+[direnv]
+format = "[](fg:#ffffff bg:none)[$symbol ](fg:#282c34 bg:#ffffff)[](fg:#ffffff bg:#24c90a)[ $allowed]($style)[](fg:#24c90a bg:none) "
+disabled = true
+symbol = "󰫧"
+style = "fg:#ffffff bg:#24c90a"
+
+[character]
+success_symbol = "[](bold green)"
+error_symbol = "[](bold red)"
+
+[git_branch]
+symbol = "🌱 "
+truncation_length = 10
+truncation_symbol = "…"
+only_attached = false
+always_show_remote = false
+# ignore_branches = ["master", "main"]
+format = "[](fg:#ffffff bg:none)[](fg:#282c34 bg:#ffffff)[](fg:#ffffff bg:#24c90a)[ $branch(:$remote_name/$remote_branch)]($style)[](fg:#24c90a bg:none) "
+style = "fg:#ffffff bg:#24c90a"
+
+[git_commit]
+commit_hash_length = 5
+tag_symbol = "󰓹 "
+format = "[](fg:#ffffff bg:none)[](fg:#282c34 bg:#ffffff)[](fg:#ffffff bg:#24c90a)[ $hash $tag]($style)[](fg:#24c90a bg:none) "
+style = "fg:#ffffff bg:#24c90a"
+only_detached = true
+tag_disabled = false
+
+[git_state]
+rebase = "REBASING"
+merge =	"MERGING"
+revert = "REVERTING"
+cherry_pick = "CHERRY-PICKING"
+bisect = "BISECTING"
+am = "AM"
+am_or_rebase = "AM/REBASE"
+style =	"bold red"
+format = "[$state( $progress_current/$progress_total)]($style) "
+disabled = false
+
+
+[git_metrics]
+disabled = false
+added_style = 'bold green'
+deleted_style = 'bold red'
+format = '([+$added]($added_style) )([-$deleted]($deleted_style) )'
+
+[git_status]
+format="[](fg:#ffffff bg:none)[󱖫 ](fg:#282c34 bg:#ffffff)[ ](fg:#ffffff bg:#4da0ff)[$modified](fg:#282c34 bg:#4da0ff)[$untracked](fg:#282c34 bg:#4da0ff)[$staged](fg:#282c34 bg:#4da0ff)[$renamed](fg:#282c34 bg:#4da0ff)[](fg:#4da0ff bg:none) "
+#conflicted = ""
+#ahead = "🏎💨"
+#behind = "😰"
+#diverged = "😵"
+#up_to_date = "🥰"
+#untracked = "🤷"
+#stashed = "📦"
+#modified = "📝"
+#renamed = "👅"
+#deleted = "🗑️"
+#style = "red"
+disabled = false
+
+
+[directory]
+format = "[](fg:#ffffff bg:none)[ ](fg:#282c34 bg:#ffffff)[](fg:#ffffff bg:#ffc32b)[ $path]($style)[ $read_only]($style)[](fg:#ffc32b bg:none) "
+style = "fg:#ffffff bg:#ffc32b"
+truncation_length = 3
+truncate_to_repo = true
+home_symbol = " "
+read_only = ""
+truncation_symbol = '…/'
+
+[nodejs]
+symbol = "🤖 "
+disabled = true
+
+[package]
+symbol = "📦 "
+disabled = true
+
+[python]
+# symbol = "󱔎 "
+symbol = " "
+
+[rust]
+symbol = " "
+
+# [time]
+# disabled = false
+# format="[](fg:#ffffff bg:none)[💖](fg:#282c34 bg:#ffffff)[](fg:#ffffff bg:#f72851)[ $time]($style)[](fg:#f72851 bg:none)"
+# time_format = "%T" #change to %R to only have HH:MM
+# style="fg:#ffffff bg:#f72851"
+
+# [custom.emoji]
+# description = "Displays a (pseudo) random emoji for each prompt"
+# command = "EMOJIS=(⛵️ 🛰 🪐 🚀 🧡 🔭 🌍 💫 ☄️ ✨ 🌠 🌌 ⭐️); EMOJI_INDEX=$(( $RANDOM % 12 + 0 )); echo ${EMOJIS[$EMOJI_INDEX]}"
+# when = "1"
+# shell = ["cmd /C"]
+# format = "$output"
