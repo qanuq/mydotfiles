@@ -22,7 +22,6 @@ source "$HOME/.zsh/jump.zsh"
 source "$HOME/.zsh/keybinds.zsh"
 source "$HOME/.zsh/ssh.zsh"
 source "$HOME/.zsh/sudo.zsh"
-source "$HOME/.zsh/misc.zsh"
 
 [[ -f "$HOME/.zsh/local_config.zsh" ]] && source "$HOME/.zsh/local_config.zsh"
 
