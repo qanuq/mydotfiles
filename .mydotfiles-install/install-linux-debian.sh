@@ -43,6 +43,6 @@ $script_dir/install-starship.sh --bin-dir $HOME/.local/bin/ --yes
 # installing fonts
 FONTS_DIR=$HOME/.local/share/fonts
 mkdir -p $FONTS_DIR
-cp -fv FiraCode/*.ttf $FONTS_DIR
-cp -fv FiraCodeNerdFont/*.ttf $FONTS_DIR
-cp -fv SymbolsNerdFont/*.ttf $FONTS_DIR
+cp -fv $script_dir/fonts/FiraCode/*.ttf $FONTS_DIR
+cp -fv $script_dir/fonts/FiraCodeNerdFont/*.ttf $FONTS_DIR
+cp -fv $script_dir/fonts/SymbolsNerdFont/*.ttf $FONTS_DIR
