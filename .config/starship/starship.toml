@@ -1,6 +1,3 @@
-# # Get editor completions based on the config schema
-# "$schema" = 'https://starship.rs/config-schema.json'
-#
 # format = """
 # [](color_orange)\
 # [](bg:color_yellow fg:color_orange)\
@@ -100,18 +97,6 @@
 #
 # [line_break]
 # disabled = false
-#
-# [character]
-# disabled = false
-# success_symbol = '[](bold fg:color_green)'
-# error_symbol = '[](bold fg:color_red)'
-# vimcmd_symbol = '[](bold fg:color_green)'
-# vimcmd_replace_one_symbol = '[](bold fg:color_purple)'
-# vimcmd_replace_symbol = '[](bold fg:color_purple)'
-# vimcmd_visual_symbol = '[](bold fg:color_yellow)'
-
-
-
 
 ##############
 
@@ -121,53 +106,33 @@
 
 add_newline = true
 
-# format = """$time $all"""
+# $localip\
+# $shlvl\
+# $typst\
+# $opa\
+# $kubernetes\
+# $terraform\
+# $vagrant\
+# $helm\
+# $openstack\
 
 format = """
-$localip\
-$shlvl\
-$singularity\
-$kubernetes\
 $directory\
-$vcsh\
 $git_branch\
 $git_commit\
 $git_state\
 $git_metrics\
 $git_status\
-$pijul_channel\
 $package\
 $dart\
 $deno\
-$guix_shell\
-$haxe\
-$helm\
-$kotlin\
 $gradle\
 $lua\
-$nim\
 $nodejs\
-$opa\
-$pulumi\
-$purescript\
 $python\
-$quarto\
-$raku\
-$rlang\
-$red\
 $rust\
-$solidity\
-$swift\
-$terraform\
-$typst\
-$vlang\
-$vagrant\
-$zig\
 $nix_shell\
-$meson\
-$spack\
 $memory_usage\
-$openstack\
 $direnv\
 $env_var\
 $custom\
@@ -180,39 +145,68 @@ $container\
 $shell\
 $character"""
 
+palette = 'my_palette'
+
+[palettes.my_palette]
+_white   = "#ffffff"
+_magenta = "#ff3366"
+_light_gray = "#cccccc"
+_dark_gray = "#333333"
+_orange = "#ff6600"
+_red = "#cc3300"
+_yellow = "#ffcc00"
+_green = "#33cc00"
+_aqua = "#669966"
+
+# XXX
+color_blue = '#458588'
+color_green = '#98971a'
+color_purple = '#b16286'
+color_yellow = '#d79921'
+
 #[env_var.USER]
 #default = 'unknown user'
 
-[cmd_duration]
-min_time = 2_000
-show_milliseconds = false
-format = "[](fg:#ffffff bg:none)[󱦟](fg:#282c34 bg:#ffffff)[](fg:#ffffff bg:#f72851)[ $duration]($style)[](fg:#f72851 bg:none) "
-style="fg:#ffffff bg:#f72851"
-
-[direnv]
-format = "[](fg:#ffffff bg:none)[$symbol ](fg:#282c34 bg:#ffffff)[](fg:#ffffff bg:#24c90a)[ $allowed]($style)[](fg:#24c90a bg:none) "
-disabled = true
-symbol = "󰫧"
-style = "fg:#ffffff bg:#24c90a"
+# TODO use only emoji or not ?
 
 [character]
-success_symbol = "[](bold green)"
-error_symbol = "[](bold red)"
+success_symbol = " 🟢"
+error_symbol = " 🔴"
+
+[directory]
+format = "[ ](bg:_white)[📂](fg:_dark_gray bg:_white)[ ](bg:_white)[ $path]($style)[ $read_only](bold fg:_magenta bg:_yellow)[ ](bg:_yellow)"
+style = "bold fg:_white bg:_yellow"
+truncation_length = 3
+truncate_to_repo = true
+home_symbol = "🏠"
+read_only = "!!"
+truncation_symbol = '…/'
 
 [git_branch]
-symbol = "🌱 "
+symbol = "🌿"
 truncation_length = 10
 truncation_symbol = "…"
 only_attached = false
 always_show_remote = false
-# ignore_branches = ["master", "main"]
-format = "[](fg:#ffffff bg:none)[](fg:#282c34 bg:#ffffff)[](fg:#ffffff bg:#24c90a)[ $branch(:$remote_name/$remote_branch)]($style)[](fg:#24c90a bg:none) "
-style = "fg:#ffffff bg:#24c90a"
+format = "[ ](bg:_white)[$symbol](fg:_dark_gray bg:_white)[ ](bg:_white)[ $branch(:$remote_name/$remote_branch)]($style)[ ](bg:_green)"
+style = "fg:_white bg:_green"
+
+[cmd_duration]
+min_time = 2_000
+show_milliseconds = false
+format = "[ ](bg:_white)[🕑](bg:_dark_gray bg:_white)[ ](bg:_white)[ $duration]($style)[ ](bg:_magenta)"
+style="fg:_white bg:_magenta"
+
+[direnv]
+format = "[ ](bg:_white)[$symbol](bold fg:_dark_gray bg:_white)[ ](bg:_white)[ $allowed]($style)[ ](bg:_aqua)"
+disabled = false
+symbol = "env"
+style = "fg:_white bg:_aqua"
 
 [git_commit]
 commit_hash_length = 5
 tag_symbol = "󰓹 "
-format = "[](fg:#ffffff bg:none)[](fg:#282c34 bg:#ffffff)[](fg:#ffffff bg:#24c90a)[ $hash $tag]($style)[](fg:#24c90a bg:none) "
+format = "[█](fg:#ffffff bg:none)[](fg:_dark_gray bg:#ffffff)[█](fg:#ffffff bg:#24c90a)[ $hash $tag]($style)[█](fg:#24c90a bg:none) "
 style = "fg:#ffffff bg:#24c90a"
 only_detached = true
 tag_disabled = false
@@ -237,7 +231,7 @@ deleted_style = 'bold red'
 format = '([+$added]($added_style) )([-$deleted]($deleted_style) )'
 
 [git_status]
-format="[](fg:#ffffff bg:none)[󱖫 ](fg:#282c34 bg:#ffffff)[ ](fg:#ffffff bg:#4da0ff)[$modified](fg:#282c34 bg:#4da0ff)[$untracked](fg:#282c34 bg:#4da0ff)[$staged](fg:#282c34 bg:#4da0ff)[$renamed](fg:#282c34 bg:#4da0ff)[](fg:#4da0ff bg:none) "
+format="[█](fg:#ffffff bg:none)[󱖫 ](fg:_dark_gray bg:#ffffff)[█ ](fg:#ffffff bg:#4da0ff)[$modified](fg:_dark_gray bg:#4da0ff)[$untracked](fg:_dark_gray bg:#4da0ff)[$staged](fg:_dark_gray bg:#4da0ff)[$renamed](fg:_dark_gray bg:#4da0ff)[█](fg:#4da0ff bg:none) "
 #conflicted = ""
 #ahead = "🏎💨"
 #behind = "😰"
@@ -251,15 +245,6 @@ format="[](fg:#ffffff bg:none)[󱖫 ](fg:#282c34 bg:#ffffff)[ ](fg:#ffffff
 #style = "red"
 disabled = false
 
-
-[directory]
-format = "[](fg:#ffffff bg:none)[ ](fg:#282c34 bg:#ffffff)[](fg:#ffffff bg:#ffc32b)[ $path]($style)[ $read_only]($style)[](fg:#ffc32b bg:none) "
-style = "fg:#ffffff bg:#ffc32b"
-truncation_length = 3
-truncate_to_repo = true
-home_symbol = " "
-read_only = ""
-truncation_symbol = '…/'
 
 [nodejs]
 symbol = "🤖 "
@@ -278,7 +263,7 @@ symbol = " "
 
 # [time]
 # disabled = false
-# format="[](fg:#ffffff bg:none)[💖](fg:#282c34 bg:#ffffff)[](fg:#ffffff bg:#f72851)[ $time]($style)[](fg:#f72851 bg:none)"
+# format="[█](fg:#ffffff bg:none)[💖](fg:_dark_gray bg:#ffffff)[█](fg:#ffffff bg:#f72851)[ $time]($style)[█](fg:#f72851 bg:none)"
 # time_format = "%T" #change to %R to only have HH:MM
 # style="fg:#ffffff bg:#f72851"
 
