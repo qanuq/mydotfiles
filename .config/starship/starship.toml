@@ -1,275 +1,180 @@
-# format = """
-# [](color_orange)\
-# [](bg:color_yellow fg:color_orange)\
-# $directory\
-# [](fg:color_yellow bg:color_aqua)\
-# $git_branch\
-# $git_status\
-# [](fg:color_aqua bg:color_blue)\
-# $c\
-# $rust\
-# $nodejs\
-# $python\
-# [](fg:color_blue bg:color_bg3)\
-# $docker_context\
-# $conda\
-# [](fg:color_bg3 bg:color_bg1)\
-# $time\
-# [ ](fg:color_bg1)\
-# $line_break$character"""
-#
-# palette = 'gruvbox_dark'
-#
-# [palettes.gruvbox_dark]
-# color_fg0 = '#fbf1c7'
-# color_bg1 = '#3c3836'
-# color_bg3 = '#665c54'
-# color_blue = '#458588'
-# color_aqua = '#689d6a'
-# color_green = '#98971a'
-# color_orange = '#d65d0e'
-# color_purple = '#b16286'
-# color_red = '#cc241d'
-# color_yellow = '#d79921'
-#
-# [username]
-# show_always = true
-# style_user = "bg:color_orange fg:color_fg0"
-# style_root = "bg:color_orange fg:color_fg0"
-# format = '[ $user ]($style)'
-#
-# [directory]
-# style = "fg:color_fg0 bg:color_yellow"
-# format = "[ $path ]($style)"
-# truncation_length = 3
-# truncation_symbol = "…/"
-#
-# [directory.substitutions]
-# "Documents" = "󰈙 "
-# "Downloads" = " "
-# "Music" = "󰝚 "
-# "Pictures" = " "
-# "Developer" = "󰲋 "
-#
-# [git_branch]
-# symbol = ""
-# style = "bg:color_aqua"
-# format = '[[ $symbol $branch ](fg:color_fg0 bg:color_aqua)]($style)'
-#
-# [git_status]
-# style = "bg:color_aqua"
-# format = '[[($all_status$ahead_behind )](fg:color_fg0 bg:color_aqua)]($style)'
-#
-# [nodejs]
-# symbol = ""
-# style = "bg:color_blue"
-# format = '[[ $symbol( $version) ](fg:color_fg0 bg:color_blue)]($style)'
-#
-# [c]
-# symbol = " "
-# style = "bg:color_blue"
-# format = '[[ $symbol( $version) ](fg:color_fg0 bg:color_blue)]($style)'
-#
-# [rust]
-# symbol = ""
-# style = "bg:color_blue"
-# format = '[[ $symbol( $version) ](fg:color_fg0 bg:color_blue)]($style)'
-#
-# [python]
-# symbol = ""
-# style = "bg:color_blue"
-# format = '[[ $symbol( $version) ](fg:color_fg0 bg:color_blue)]($style)'
-#
-# [docker_context]
-# symbol = ""
-# style = "bg:color_bg3"
-# format = '[[ $symbol( $context) ](fg:#83a598 bg:color_bg3)]($style)'
-#
-# [conda]
-# style = "bg:color_bg3"
-# format = '[[ $symbol( $environment) ](fg:#83a598 bg:color_bg3)]($style)'
-#
-# [time]
-# disabled = false
-# time_format = "%R"
-# style = "bg:color_bg1"
-# format = '[[  $time ](fg:color_fg0 bg:color_bg1)]($style)'
-#
-# [line_break]
-# disabled = false
-
-##############
-
-# # Get editor completions based on the config schema
-"$schema" = 'https://starship.rs/config-schema.json'
-
+# Get editor completions based on the config schema
+"$schema" = "https://starship.rs/config-schema.json"
 
 add_newline = true
+scan_timeout = 200
+command_timeout = 1000
 
-# $localip\
-# $shlvl\
-# $typst\
-# $opa\
-# $kubernetes\
-# $terraform\
-# $vagrant\
-# $helm\
-# $openstack\
+# things to try
+#
+# $kubernetes
+# $terraform
+# $vagrant
+# $helm
+# $openstack
+# $nix_shell
+# $custom
 
 format = """
+$time\
+$username\
+$hostname\
 $directory\
 $git_branch\
 $git_commit\
 $git_state\
 $git_metrics\
 $git_status\
-$package\
 $dart\
 $deno\
 $gradle\
-$lua\
 $nodejs\
 $python\
 $rust\
-$nix_shell\
-$memory_usage\
-$direnv\
-$env_var\
-$custom\
-$sudo\
+$fill\
+$status\
 $cmd_duration\
 $line_break\
 $jobs\
-$status\
-$container\
-$shell\
 $character"""
 
-palette = 'my_palette'
+palette = "custom_palette"
 
-[palettes.my_palette]
-_white   = "#ffffff"
-_magenta = "#ff3366"
-_light_gray = "#cccccc"
-_dark_gray = "#333333"
-_orange = "#ff6600"
-_red = "#cc3300"
-_yellow = "#ffcc00"
-_green = "#33cc00"
-_aqua = "#669966"
+[palettes.custom_palette]
+_black           = "#000000"
+_blue            = "#339999"
+_dark_gray       = "#333333"
+_light_gray      = "#cccccc"
+_middle_gray     = "#999999"
+_dart_dark_blue  = "#01579b"
+_dart_light_blue = "#29b6f6"
+_git_color       = "#f1502f"
+_gradle_green    = "#02303a"
+_green           = "#33cc00"
+_magenta         = "#ff3366"
+_node_gray       = "#303030"
+_node_green      = "#3c873a"
+_orange          = "#ff6600"
+_python_blue     = "#306998"
+_python_yellow   = "#ffd43b"
+_red             = "#cc3300"
+_white           = "#ffffff"
+_yellow          = "#ffcc00"
 
-# XXX
-color_blue = '#458588'
-color_green = '#98971a'
-color_purple = '#b16286'
-color_yellow = '#d79921'
+[fill]
+disabled = false
+symbol = " "
 
-#[env_var.USER]
-#default = 'unknown user'
+[time]
+disabled = false
+format="[ $time ]($style)"
+style="_white bg:_middle_gray"
 
-# TODO use only emoji or not ?
+[username]
+disabled = false
+format = "[ $user ]($style)"
+style_root = "bold _red"
+style_user = "bold _dark_gray bg:_light_gray"
 
-[character]
-success_symbol = " 🟢"
-error_symbol = " 🔴"
+[hostname]
+disabled = false
+format = "[ $hostname ]($style)"
+style = "bold _dark_gray bg:_light_gray"
+trim_at = ""
 
 [directory]
-format = "[ ](bg:_white)[📂](fg:_dark_gray bg:_white)[ ](bg:_white)[ $path]($style)[ $read_only](bold fg:_magenta bg:_yellow)[ ](bg:_yellow)"
-style = "bold fg:_white bg:_yellow"
-truncation_length = 3
-truncate_to_repo = true
-home_symbol = "🏠"
-read_only = "!!"
-truncation_symbol = '…/'
+disabled = false
+format = "[ $path ]($style)[$read_only]($read_only_style)"
+style = "bold _white bg:_blue"
+read_only = "ro "
+read_only_style = "bold _dark_gray bg:_blue"
+truncation_symbol = "…/"
 
 [git_branch]
-symbol = "🌿"
+disabled = false
+format = "[ $branch(:$remote_name/$remote_branch) ]($style)"
+style = "_white bg:_git_color"
 truncation_length = 10
 truncation_symbol = "…"
-only_attached = false
-always_show_remote = false
-format = "[ ](bg:_white)[$symbol](fg:_dark_gray bg:_white)[ ](bg:_white)[ $branch(:$remote_name/$remote_branch)]($style)[ ](bg:_green)"
-style = "fg:_white bg:_green"
-
-[cmd_duration]
-min_time = 2_000
-show_milliseconds = false
-format = "[ ](bg:_white)[🕑](bg:_dark_gray bg:_white)[ ](bg:_white)[ $duration]($style)[ ](bg:_magenta)"
-style="fg:_white bg:_magenta"
-
-[direnv]
-format = "[ ](bg:_white)[$symbol](bold fg:_dark_gray bg:_white)[ ](bg:_white)[ $allowed]($style)[ ](bg:_aqua)"
-disabled = false
-symbol = "env"
-style = "fg:_white bg:_aqua"
 
 [git_commit]
-commit_hash_length = 5
-tag_symbol = "󰓹 "
-format = "[█](fg:#ffffff bg:none)[](fg:_dark_gray bg:#ffffff)[█](fg:#ffffff bg:#24c90a)[ $hash $tag]($style)[█](fg:#24c90a bg:none) "
-style = "fg:#ffffff bg:#24c90a"
-only_detached = true
-tag_disabled = false
+disabled = false
+format = "[\\($hash\\)]($style)"
+style = "_white bg:_git_color"
 
 [git_state]
-rebase = "REBASING"
-merge =	"MERGING"
-revert = "REVERTING"
-cherry_pick = "CHERRY-PICKING"
-bisect = "BISECTING"
-am = "AM"
-am_or_rebase = "AM/REBASE"
-style =	"bold red"
-format = "[$state( $progress_current/$progress_total)]($style) "
 disabled = false
-
+format = "[ $state ($progress_current/$progress_total )]($style)"
+style =	"_dark_gray bg:_git_color"
 
 [git_metrics]
 disabled = false
-added_style = 'bold green'
-deleted_style = 'bold red'
-format = '([+$added]($added_style) )([-$deleted]($deleted_style) )'
+format = "[([+$added]($added_style) )([-$deleted]($deleted_style) )](bg:_git_color)"
+added_style = "bold _green bg:_git_color"
+deleted_style = "bold _yellow bg:_git_color"
 
 [git_status]
-format="[█](fg:#ffffff bg:none)[󱖫 ](fg:_dark_gray bg:#ffffff)[█ ](fg:#ffffff bg:#4da0ff)[$modified](fg:_dark_gray bg:#4da0ff)[$untracked](fg:_dark_gray bg:#4da0ff)[$staged](fg:_dark_gray bg:#4da0ff)[$renamed](fg:_dark_gray bg:#4da0ff)[█](fg:#4da0ff bg:none) "
-#conflicted = ""
-#ahead = "🏎💨"
-#behind = "😰"
-#diverged = "😵"
-#up_to_date = "🥰"
-#untracked = "🤷"
-#stashed = "📦"
-#modified = "📝"
-#renamed = "👅"
-#deleted = "🗑️"
-#style = "red"
 disabled = false
+format = "[($all_status$ahead_behind )]($style)"
+style = "bold _dark_gray bg:_git_color"
 
+[dart]
+disabled = false
+format = "[ $symbol ($version )]($style)"
+style = "_dart_dark_blue bg:_dart_light_blue"
+symbol = "dart"
+
+[deno]
+disabled = false
+format = "[ $symbol ($version )]($style)"
+style = "_black bg:_white"
+symbol = "deno"
+
+[gradle]
+disabled = false
+format = "[ $symbol ($version )]($style)"
+style = "_white bg:_gradle_green"
+symbol = "gradle"
 
 [nodejs]
-symbol = "🤖 "
-disabled = true
-
-[package]
-symbol = "📦 "
-disabled = true
+disabled = false
+format = "[ $symbol ($version )]($style)"
+style = "_node_gray bg:_node_green"
+symbol = "node"
 
 [python]
-# symbol = "󱔎 "
-symbol = " "
+disabled = false
+format = "[ $symbol ($version )]($style)"
+style = "_python_yellow bg:_python_blue"
+symbol = "python"
 
 [rust]
-symbol = " "
+disabled = false
+format = "[ $symbol ($version )]($style)"
+style = "_white bg:_black"
+symbol = "rust"
 
-# [time]
-# disabled = false
-# format="[█](fg:#ffffff bg:none)[💖](fg:_dark_gray bg:#ffffff)[█](fg:#ffffff bg:#f72851)[ $time]($style)[█](fg:#f72851 bg:none)"
-# time_format = "%T" #change to %R to only have HH:MM
-# style="fg:#ffffff bg:#f72851"
+[status]
+disabled = false
+format = "[ ret: $status ]($style)"
+style = "_dark_gray bg:_yellow"
+pipestatus = true
+pipestatus_format = "[ ret: $pipestatus => $status ]($style)"
+pipestatus_segment_format = "[$status]($style)"
 
-# [custom.emoji]
-# description = "Displays a (pseudo) random emoji for each prompt"
-# command = "EMOJIS=(⛵️ 🛰 🪐 🚀 🧡 🔭 🌍 💫 ☄️ ✨ 🌠 🌌 ⭐️); EMOJI_INDEX=$(( $RANDOM % 12 + 0 )); echo ${EMOJIS[$EMOJI_INDEX]}"
-# when = "1"
-# shell = ["cmd /C"]
-# format = "$output"
+[cmd_duration]
+disabled = false
+format = "[ time: $duration ]($style)"
+style="_white bg:_magenta"
+min_time = 500
+
+[jobs]
+disabled = false
+format = "[jobs: $number]($style) "
+style = "bold _orange"
+number_threshold = 1
+
+[character]
+disabled = false
+error_symbol = " [>>>](bold _red)"
+success_symbol = " [>>>](bold _green)"

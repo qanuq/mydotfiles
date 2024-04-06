@@ -3,6 +3,8 @@ if command -v git > /dev/null 2>&1; then
     alias dot='git --git-dir="$HOME/.mydotfiles.git/" --work-tree="$HOME"'
     alias g=git
     alias -s git="git clone"
+    # use git completion for dot alias
+    compdef _git dot
 fi
 # add dotig alias if tig command exists
 if command -v tig > /dev/null 2>&1; then
@@ -89,3 +91,29 @@ alias http='python3 -m http.server 8888 -d .'
 alias public_ip='curl --silent -L https://ifconfig.co'
 alias tmp="cd $(mktemp -d)"
 alias echo_path='echo -e ${PATH//:/\\n}'
+
+alias _="sudo"
+alias mux="tmuxp load"
+alias dockls="docker container ls | awk 'NR > 1 {print \$NF}'"                  # display names of running containers
+alias dockRr='docker rm $(docker ps -a -q)'                                     # delete every containers / images
+alias dockRr='docker rm $(docker ps -a -q) && docker rmi $(docker images -q)'   # delete every containers / images
+alias dockstats='docker stats $(docker ps -q)'                                  # stats on images
+alias dockimg='docker images'                                                   # list images installed
+alias dockprune='docker system prune -a'                                        # prune everything
+alias dockceu='docker-compose run --rm -u $(id -u):$(id -g)'                    # run as the host user
+alias dockce='docker-compose run --rm'
+alias l='exa -la --git -I .git'
+alias isodate="date +%Y-%m-%dT%H:%M:%S%z"
+alias isodate_utc="date -u +%Y-%m-%dT%H:%M:%SZ"
+alias isodate_basic="date -u +%Y%m%dT%H%M%SZ"
+alias unixstamp="date +%s"
+alias date_locale="date +"%c""
+alias rsync-copy="rsync -avz --progress -h"
+alias rsync-move="rsync -avz --progress -h --remove-source-files"
+alias rsync-update="rsync -avzu --progress -h"
+alias rsync-synchronize="rsync -avzu --delete --progress -h"
+alias prc='pre-commit'
+alias prcau='pre-commit autoupdate'
+alias prcr='pre-commit run'
+alias prcra='pre-commit run --all-files'
+alias prcrf='pre-commit run --files'

@@ -4,15 +4,6 @@ export SAVEHIST=$HISTSIZE
 
 export LANG=fr_FR.UTF-8
 
-if command -v nvim > /dev/null 2>&1; then
-    export EDITOR=nvim
-else
-    export EDITOR=vim
-fi
-export VISUAL=$EDITOR
-export PAGER=less
-
-
 typeset -U path
 local_bin="$HOME/.local/bin"
 if [ -d "$local_bin" ]; then
@@ -25,6 +16,17 @@ if [ -d "$PYENV_ROOT/bin" ]; then
 fi
 
 export PATH
+
+if command -v nvim > /dev/null 2>&1; then
+    export EDITOR=nvim
+else
+    export EDITOR=vim
+fi
+export VISUAL=$EDITOR
+export PAGER=less
+
+# add brew path to man path
+export MANPATH="/usr/local/share/man:/usr/share/man:$MANPATH"
 
 # globalias module will not expand these aliases
 export GLOBALIAS_FILTER_VALUES=(
