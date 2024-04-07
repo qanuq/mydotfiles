@@ -23,6 +23,7 @@ mkdir -p "$HOME/.local/bin"
 /usr/bin/sudo /usr/bin/apt install -y fd-find
 /usr/bin/sudo /usr/bin/apt install -y ripgrep
 /usr/bin/sudo /usr/bin/apt install -y tig
+/usr/bin/sudo /usr/bin/apt install -y tmux
 
 /usr/bin/sudo /usr/bin/apt install -y zsh
 
