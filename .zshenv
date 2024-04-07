@@ -23,6 +23,7 @@ else
     export EDITOR=vim
 fi
 export VISUAL=$EDITOR
+export GIT_EDITOR=$EDITOR
 export PAGER=less
 
 # add brew path to man path
