@@ -5,6 +5,9 @@ export SAVEHIST=$HISTSIZE
 export LANG=fr_FR.UTF-8
 
 typeset -U path
+
+path=("/usr/local/bin" $path)
+
 local_bin="$HOME/.local/bin"
 if [ -d "$local_bin" ]; then
     path=("$local_bin" $path)
