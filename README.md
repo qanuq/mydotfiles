@@ -8,3 +8,7 @@ How to use?
 
     # backup files and use --force option if files must be overwritten.
     dot checkout main
+
+    # execute install script (linux or macos)
+    $HOME/.mydotfiles-install/install-linux-debian.sh
+    $HOME/.mydotfiles-install/install-macos.sh
