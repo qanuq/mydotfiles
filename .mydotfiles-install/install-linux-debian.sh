@@ -16,6 +16,8 @@ while true; do /usr/bin/sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/de
 
 mkdir -p "$HOME/.local/bin"
 
+/usr/bin/sudo /usr/bin/apt update
+
 # allow gitconfig interactive.singleKey to work
 /usr/bin/sudo /usr/bin/apt install -y libterm-readkey-perl
 
@@ -31,6 +33,15 @@ mkdir -p "$HOME/.local/bin"
 /usr/bin/sudo /usr/bin/dpkg-divert --local --divert /usr/bin/fd --rename --add /usr/bin/fdfind
 
 /usr/bin/sudo update-alternatives --set editor /usr/bin/vim.basic
+
+# install eza
+sudo apt install -y gpg
+sudo mkdir -p /etc/apt/keyrings
+curl -sL https://raw.githubusercontent.com/eza-community/eza/main/deb.asc | sudo gpg --dearmor -o /etc/apt/keyrings/gierens.gpg
+echo "# eza repo\ndeb [signed-by=/etc/apt/keyrings/gierens.gpg] http://deb.gierens.de stable main" | sudo tee /etc/apt/sources.list.d/gierens.list
+sudo chmod 644 /etc/apt/keyrings/gierens.gpg /etc/apt/sources.list.d/gierens.list
+sudo apt update
+sudo apt install -y eza
 
 # clone pyenv repo
 if [ ! -d "$HOME/.pyenv" ]; then

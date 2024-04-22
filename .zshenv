@@ -39,9 +39,12 @@ export GLOBALIAS_FILTER_VALUES=(
     catr
     dot
     echo_path
+    l
     la
+    lc
     ll
     ls
+    lt
 )
 
 export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"

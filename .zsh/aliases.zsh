@@ -41,9 +41,12 @@ alias c=clear
 alias h=history
 alias j=jump
 
-alias ls="ls --color=auto"
-alias ll="ls -l"
-alias la="ls -A"
+alias  l="eza --color=auto --oneline --classify=auto --group-directories-first"
+alias la="eza --color=auto --all"
+alias lc="eza --color=auto --across --grid --icons"
+alias ll="eza --color=auto --color-scale --color-scale-mode=gradient --git --group-directories-first --header --long --time-style=long-iso"
+alias ls="eza --color=auto --classify=auto"
+alias lt="eza --color=auto --all --header --long --reverse --sort=modified --time-style=relative"
 
 alias cp="cp -iv"
 alias mv="mv -iv"
@@ -102,7 +105,6 @@ alias dockimg='docker images'                                                   
 alias dockprune='docker system prune -a'                                        # prune everything
 alias dockceu='docker-compose run --rm -u $(id -u):$(id -g)'                    # run as the host user
 alias dockce='docker-compose run --rm'
-alias l='exa -la --git -I .git'
 alias isodate="date +%Y-%m-%dT%H:%M:%S%z"
 alias isodate_utc="date -u +%Y-%m-%dT%H:%M:%SZ"
 alias isodate_basic="date -u +%Y%m%dT%H%M%SZ"
