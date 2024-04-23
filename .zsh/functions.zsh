@@ -1,3 +1,4 @@
+# print color spectrum
 spectrum() {
     echo "${fg[black]}BLACK${reset_color}               PR_BLACK"
     echo "${fg[red]}RED${reset_color}                   PR_RED"
@@ -17,6 +18,7 @@ spectrum() {
     echo "${fg_bold[white]}BOLD WHITE${reset_color}     PR_BOLD_WHITE"
 }
 
+# print colors
 print_colors() {
     printf "|039| \033[39mDefault \033[m  |049| \033[49mDefault \033[m  |037| \033[37mLight gray \033[m     |047| \033[47mLight gray \033[m\n"
     printf "|030| \033[30mBlack \033[m    |040| \033[40mBlack \033[m    |090| \033[90mDark gray \033[m      |100| \033[100mDark gray \033[m\n"
@@ -28,6 +30,7 @@ print_colors() {
     printf "|036| \033[36mCyan \033[m     |046| \033[46mCyan \033[m     |096| \033[96mLight cyan \033[m     |106| \033[106mLight cyan \033[m\n"
 }
 
-function reset_broken_terminal () {
+# reset terminal if binary character broke it
+reset_broken_terminal () {
     printf '%b' '\e[0m\e(B\e)0\017\e[?5l\e7\e[0;0r\e8'
 }
