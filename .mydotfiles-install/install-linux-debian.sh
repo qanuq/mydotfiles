@@ -51,6 +51,7 @@ fi
 
 (export bin_path=$HOME/.local/bin/; $script_dir/install-direnv.sh)
 $script_dir/install-starship.sh --bin-dir $HOME/.local/bin/ --yes
+$script_dir/install-fzf.sh
 
 # installing fonts
 FONTS_DIR=$HOME/.local/share/fonts

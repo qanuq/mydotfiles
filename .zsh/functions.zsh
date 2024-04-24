@@ -34,3 +34,45 @@ print_colors() {
 reset_broken_terminal () {
     printf '%b' '\e[0m\e(B\e)0\017\e[?5l\e7\e[0;0r\e8'
 }
+
+# vim ~/**<tab> runs fzf_compgen_path() with the prefix (~/) as the first argument
+_fzf_compgen_path() {
+    eval "$_FZF_FD_COMMAND \"$1\""
+}
+
+# cd foo**<tab> runs fzf_compgen_dir() with the prefix (foo) as the first argument
+_fzf_compgen_dir() {
+    eval "$_FZF_FD_COMMAND --type=d \"$1\""
+}
+
+# Advanced customization of fzf options via _fzf_comprun function
+# The first argument to the function is the name of the command.
+_fzf_comprun() {
+    local command=$1
+    shift
+
+    case "$command" in
+        cd)
+            fzf --preview "$_FZF_EZA_COMMAND" "$@"
+            ;;
+        export|unset)
+            fzf --preview "eval 'echo \${}'" "$@"
+            ;;
+        ssh)
+            fzf --preview "dig {}" "$@"
+            ;;
+        *)
+            fzf --preview "$_FZF_BAT_COMMAND \
+                || $_FZF_EZA_COMMAND" "$@"
+            ;;
+    esac
+}
+
+# using ripgrep combined with preview
+# find-in-file - usage: fif <searchTerm>
+fif() {
+  if [ ! "$#" -gt 0 ]; then echo "Need a string to search for!" >&2; return 1; fi
+  rg --files-with-matches --no-messages "$1" | fzf -m --preview "highlight -O ansi -l {} 2> /dev/null \
+      | rg --colors 'match:bg:yellow' --ignore-case --pretty --context 10 '$1' \
+      || rg --ignore-case --pretty --context 10 '$1' {}"
+}
