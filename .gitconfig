@@ -126,6 +126,9 @@
     # sign commits
     gpgsign = true
 
+    # always show diff in commit editor
+    verbose = true
+
 [core]
 
     # editor used to edit commit and tag messages
