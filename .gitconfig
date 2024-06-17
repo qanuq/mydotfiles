@@ -10,6 +10,10 @@
     # an email. you just have to set it locally for each repository.
     useConfigOnly = true
 
+[init]
+    # default init branch name
+    defaultBranch = main
+
 [alias]
 
     aliases = !git config --get-regexp alias |cut -c 7-|sort
