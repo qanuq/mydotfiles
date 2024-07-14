@@ -26,7 +26,7 @@ else
     alias nd='vim -d'
     alias ro='vim -R'
 fi
-alias -s {txt,json,xml,yml,yaml,toml,py,html,css,js}=n
+alias -s {txt,json,xml,yml,yaml,toml,html,css,js}=n
 
 if command -v tmux > /dev/null 2>&1; then
     alias t='tmux'
