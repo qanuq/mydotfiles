@@ -90,7 +90,7 @@ alias -g ....='../../..'
 alias -g .....='../../../..'
 alias -g ......='../../../../..'
 
-alias http='python3 -m http.server 8888 -d .'
+alias http_server='python3 -m http.server 8888 -d .'
 alias public_ip='curl --silent -L https://ifconfig.co'
 alias tmp="cd $(mktemp -d)"
 alias echo_path='echo -e ${PATH//:/\\n}'
