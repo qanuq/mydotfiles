@@ -10,3 +10,4 @@ set fileencoding=utf-8
 set mouse=a
 set tabpagemax=999
 set nowrap
+set fileformat=unix
