@@ -38,3 +38,13 @@ vim.api.nvim_create_autocmd({ "VimResized" }, {
         vim.cmd("tabdo wincmd =")
     end,
 })
+
+-- Wrap text and check spelling in text filetypes
+vim.api.nvim_create_autocmd("FileType", {
+    group = augroup("wrap_spell"),
+    pattern = { "gitcommit", "markdown", "plaintext", "text", "rst" },
+    callback = function()
+        vim.opt_local.wrap = true
+        vim.opt_local.spell = true
+    end,
+})
