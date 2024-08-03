@@ -30,3 +30,11 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
         vim.fn.mkdir(vim.fn.fnamemodify(file, ":p:h"), "p")
     end,
 })
+
+-- Resize splits when window is resized
+vim.api.nvim_create_autocmd({ "VimResized" }, {
+    group = augroup("resize_splits"),
+    callback = function()
+        vim.cmd("tabdo wincmd =")
+    end,
+})
