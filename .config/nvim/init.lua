@@ -1,1 +1,1 @@
-require("qanuq.lazy")
+require("config.lazy")
