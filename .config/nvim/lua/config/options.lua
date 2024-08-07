@@ -53,7 +53,7 @@ opt.laststatus = 2  -- Always display the status line
 opt.cmdheight = 0   -- Set command height to 0
 opt.ruler = true    -- Shows the cursor position (line and column number) in the status line.
 
-opt.virtualedit = "all"  -- Allow virtual editing in visual and insert modes
+opt.virtualedit = "block"  -- Allow virtual editing in visual block only
 
 opt.shortmess = "aotTOIcC"
 -- 'a': abbreviate messages to avoid 'press enter' prompts
