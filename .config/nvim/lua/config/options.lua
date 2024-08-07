@@ -107,6 +107,8 @@ opt.sidescrolloff = 10  -- minimum columns to keep to the left and right of the 
 
 opt.wildmenu = true                        -- enable command-line completion
 opt.wildmode = { "longest:full", "full" }  -- command-line completion mode
+opt.wildignore = "*.swp,*.pyc,*.class,*.o,.DS_Store"
+-- Ignores files matching these patterns when using command-line completion.
 
 opt.complete = { ".", "w", "b", "u", "t", "i", "U", "kspell" }
 -- "."    : current buffer
