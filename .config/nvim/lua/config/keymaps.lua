@@ -41,3 +41,7 @@ keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
 -- use F1 to invert list display instead of help
 keymap.set('n', '<F1>', ':set invlist<Enter>', { noremap = true, silent = true })
 keymap.set('i', '<F1>', '<C-o>:set invlist<Enter>', { noremap = true, silent = true })
+
+-- use F2 to invert wrap
+keymap.set('n', '<F2>', ':set invwrap<Enter>', { noremap = true, silent = true })
+keymap.set('i', '<F2>', '<C-o>:set invwrap<Enter>', { noremap = true, silent = true })
