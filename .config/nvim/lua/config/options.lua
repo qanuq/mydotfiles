@@ -124,6 +124,9 @@ opt.nrformats = ""
 -- this disables all special number formats for the <c-a> and <c-x> commands.
 -- without any formats set, <c-a> and <c-x> will treat the entire number as a decimal number.
 
+vim.opt.showmatch = true          -- Briefly jump to the matching bracket if an insert is made.
+vim.opt.matchpairs:append("<:>")  -- Add angle brackets as a pair of characters to match.
+
 opt.diffopt:append({
   "iwhite",              -- ignore changes in white space during diff operations.
   "vertical",            -- use vertical splits for diff mode.
