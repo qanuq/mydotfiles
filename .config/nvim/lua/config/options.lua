@@ -41,7 +41,7 @@ opt.clipboard = { "unnamed", "unnamedplus" }  -- sync clipboard between OS and n
 opt.splitright = true  -- Split new windows to the right
 opt.splitbelow = true  -- Split new windows below
 
-opt.swapfile = false  -- Disable swap file
+opt.swapfile = enable  -- Enable swap file
 
 opt.mouse = "a"  -- Enable mouse in all modes
 
@@ -107,7 +107,6 @@ opt.sidescrolloff = 10  -- minimum columns to keep to the left and right of the 
 opt.wildmenu = true                        -- enable command-line completion
 opt.wildmode = { "longest:full", "full" }  -- command-line completion mode
 
-
 opt.complete = { ".", "w", "b", "u", "t", "i", "U", "kspell" }
 -- "."    : current buffer
 -- "w"    : buffers in other windows
@@ -146,3 +145,10 @@ vim.opt.linebreak = true
 vim.opt.showbreak = "+++ "
 -- sets the string to be displayed at the beginning of wrapped lines.
 -- in this case, it shows "+++" to indicate that a line is wrapped.
+
+opt.undodir = vim.fn.stdpath('config') .. '/tmp/undo'
+-- Specifies the directory for undo files, ensuring persistent undo history across sessions.
+opt.directory = vim.fn.stdpath('config') .. '/tmp/swap'
+-- Specifies the directory for swap files, which store temporary data to recover unsaved changes.
+opt.backupdir = vim.fn.stdpath('config') .. '/tmp/backup'
+-- Specifies the directory for backup files, used to create backup copies of files before overwriting.
