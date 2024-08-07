@@ -142,7 +142,7 @@ vim.opt.tabpagemax = 999
 vim.opt.linebreak = true
 -- breaks lines at convenient points, such as after spaces or other characters, instead of in the middle of words.
 
-vim.opt.showbreak = "+++ "
+opt.showbreak = ">>> "
 -- sets the string to be displayed at the beginning of wrapped lines.
 -- in this case, it shows "+++" to indicate that a line is wrapped.
 
