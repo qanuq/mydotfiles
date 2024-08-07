@@ -130,16 +130,16 @@ opt.diffopt:append({
   "algorithm:histogram"  -- use the 'histogram' algorithm for diff operations.
 })
 
-vim.opt.tildeop = true  -- enables the tilde operator (~) to be used with motion commands
+opt.tildeop = true  -- enables the tilde operator (~) to be used with motion commands
 
-vim.opt.startofline = false
+opt.startofline = false
 -- disables automatic movement of the cursor to the start of the line for certain commands and motions.
 
-vim.opt.tabpagemax = 999
+opt.tabpagemax = 999
 -- sets the maximum number of tab pages to 999.
 -- this limits the number of tab pages you can have open at once.
 
-vim.opt.linebreak = true
+opt.linebreak = true
 -- breaks lines at convenient points, such as after spaces or other characters, instead of in the middle of words.
 
 opt.showbreak = ">>> "
