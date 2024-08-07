@@ -37,3 +37,7 @@ keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true }
 
 -- do nothing with space
 keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
+
+-- use F1 to invert list display instead of help
+keymap.set('n', '<F1>', ':set invlist<CR>', { noremap = true, silent = true })
+keymap.set('i', '<F1>', '<C-o>:set invlist<CR>', { noremap = true, silent = true })
