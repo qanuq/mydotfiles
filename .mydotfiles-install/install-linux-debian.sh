@@ -26,6 +26,7 @@ sudo apt install -y fd-find
 sudo apt install -y ripgrep
 sudo apt install -y tig
 sudo apt install -y tmux
+sudo apt install -y tree-sitter
 
 sudo apt install -y zsh
 

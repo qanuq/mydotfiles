@@ -6,4 +6,5 @@ brew install \
     fd \
     ripgrep \
     tig \
-    tmux
+    tmux \
+    tree-sitter
