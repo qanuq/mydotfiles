@@ -22,6 +22,15 @@ vim.api.nvim_create_autocmd("BufReadPost", {
     end,
 })
 
+-- Got to first line on git commit (override last_loc)
+vim.api.nvim_create_autocmd("FileType", {
+    group = augroup("gitcommit_first_line"),
+    pattern = "gitcommit",
+    callback = function()
+        pcall(vim.api.nvim_win_set_cursor, 0, {1, 0})
+    end,
+})
+
 -- Auto create missing directory when saving a file
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
     group = augroup("auto_create_dir"),
