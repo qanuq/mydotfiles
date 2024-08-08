@@ -16,7 +16,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   spec = {
-    { import = "config.plugins" },
+    { import = "qanuq.plugins" },
   },
   checker = { enabled = true, notify = false },
   change_detection = { enabled = true, notify = true },
