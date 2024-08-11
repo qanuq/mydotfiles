@@ -19,5 +19,5 @@ require("lazy").setup({
     { import = "qanuq.plugins" },
   },
   checker = { enabled = true, notify = false },
-  change_detection = { enabled = true, notify = true },
+  change_detection = { notify = false },
 })
