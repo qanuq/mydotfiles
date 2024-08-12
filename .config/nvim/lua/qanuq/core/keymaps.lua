@@ -46,3 +46,5 @@ keymap.set('i', '<F1>', '<C-o><Cmd>set invlist<Enter>', { noremap = true, silent
 -- use F2 to invert wrap
 keymap.set('n', '<F2>', '<Cmd>set invwrap<Enter>', { noremap = true, silent = true })
 keymap.set('i', '<F2>', '<C-o><Cmd>set invwrap<Enter>', { noremap = true, silent = true })
+
+-- F5 is used for colorscheme cycle

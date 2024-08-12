@@ -57,13 +57,3 @@ vim.api.nvim_create_autocmd("FileType", {
         vim.opt_local.spell = true
     end,
 })
-
--- On buff enter set github theme if in diff mode
-vim.api.nvim_create_autocmd('BufEnter', {
-  group = augroup("diff_theme"),
-  callback = function()
-    if vim.wo.diff then
-      vim.cmd[[colorscheme github_light]]
-    end
-  end,
-})
