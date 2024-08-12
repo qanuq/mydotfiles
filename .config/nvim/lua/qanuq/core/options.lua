@@ -55,7 +55,7 @@ opt.ruler = true    -- Shows the cursor position (line and column number) in the
 
 opt.virtualedit = "block"  -- Allow virtual editing in visual block only
 
-opt.shortmess = "aotTOIcC"
+opt.shortmess = "aotTOIcCF"
 -- 'a': abbreviate messages to avoid 'press enter' prompts
 -- 'o': suppress 'search hit bottom, continuing at top' messages
 -- 't': truncate file messages at the start if too long
@@ -64,6 +64,7 @@ opt.shortmess = "aotTOIcC"
 -- 'I': suppress the intro message when starting vim
 -- 'c': suppress completion menu messages
 -- 'C': suppress ins-completion-menu messages
+-- 'F': don't give the file info when editing a file
 
 opt.formatoptions = "tjcroqlnt/"
 -- 't': auto-wrap text using 'textwidth'
