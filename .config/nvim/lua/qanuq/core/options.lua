@@ -137,6 +137,8 @@ opt.diffopt:append({
   "algorithm:histogram"  -- use the 'histogram' algorithm for diff operations.
 })
 
+opt.fillchars:append { diff = "╱" }  -- set diagonal lines in place of deleted lines in diff-mode
+
 opt.tildeop = true  -- enables the tilde operator (~) to be used with motion commands
 
 opt.startofline = false
