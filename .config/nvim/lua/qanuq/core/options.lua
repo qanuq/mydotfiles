@@ -131,7 +131,7 @@ vim.opt.showmatch = true          -- Briefly jump to the matching bracket if an 
 vim.opt.matchpairs:append("<:>")  -- Add angle brackets as a pair of characters to match.
 
 opt.diffopt:append({
-  "iwhite",              -- ignore changes in white space during diff operations.
+  "iwhiteeol",           -- ignore changes in white space at end of line during diff operations.
   "vertical",            -- use vertical splits for diff mode.
   "filler",              -- show filler lines to keep the text synchronized when lines are added or deleted.
   "internal",            -- use vim's internal diff library instead of an external diff program.
