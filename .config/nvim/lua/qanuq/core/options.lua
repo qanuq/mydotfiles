@@ -96,7 +96,7 @@ opt.listchars:append {
   precedes = "^",       -- character to show at the start of lines that extend beyond the screen
 }
 
-opt.showtabline = 2  -- always show tab line
+opt.showtabline = 1  -- show tab line if more than one tab
 
 opt.backup = false      -- Disable backup file
 opt.writebackup = true  -- Enable backup while writing
