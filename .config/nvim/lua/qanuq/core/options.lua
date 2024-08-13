@@ -1,3 +1,4 @@
+-- :h vim.opt
 local opt = vim.opt
 
 opt.modeline = false  -- security first, disable modeline
@@ -16,8 +17,8 @@ opt.numberwidth = 4        -- set number column width to 4
 
 opt.hlsearch = true    -- highlight search results
 opt.incsearch = true   -- incremental search that shows results as you type
-opt.ignorecase = true  -- case-insensitive search unless \c is used
-opt.smartcase = true   -- case-sensitive if uppercase letters are used in search
+opt.ignorecase = true  -- case insensitive search unless \c is used
+opt.smartcase = true   -- case sensitive if uppercase letters are used in search
 
 opt.tabstop = 4         -- 4 spaces for tabs
 opt.shiftwidth = 0      -- indentation width, falls back to tab stop
@@ -62,16 +63,16 @@ opt.shortmess = "aotTOIcCF"
 -- 'o': suppress 'search hit bottom, continuing at top' messages
 -- 't': truncate file messages at the start if too long
 -- 'T': truncate other messages in the middle if too long
--- 'O': overwrite file-written messages instead of appending
+-- 'O': overwrite file written messages instead of appending
 -- 'I': suppress the intro message when starting vim
 -- 'c': suppress completion menu messages
 -- 'C': suppress ins-completion-menu messages
 -- 'F': don't give the file info when editing a file
 
 opt.formatoptions = "tjcroqlnt/"
--- 't': auto-wrap text using 'textwidth'
+-- 't': auto wrap text using 'textwidth'
 -- 'j': remove comment leader when joining lines
--- 'c': auto-wrap comments using 'textwidth'
+-- 'c': auto wrap comments using 'textwidth'
 -- 'r': insert comment leader after <enter> in insert mode
 -- 'o': insert comment leader after 'o' or 'o' in normal mode
 -- 'q': allow formatting of comments with "gq"
@@ -90,7 +91,7 @@ opt.listchars:append {
   lead = ".",           -- character to show for leading spaces
   trail = ".",          -- character to show for trailing spaces
   space = ".",          -- character to show for each space
-  nbsp = "_",           -- character to show for non-breaking spaces
+  nbsp = "_",           -- character to show for non breaking spaces
   extends = "$",        -- character to show at the end of lines that extend beyond the screen
   precedes = "^",       -- character to show at the start of lines that extend beyond the screen
 }
@@ -108,10 +109,10 @@ opt.inccommand = "split"  -- show substitution preview in split window
 opt.scrolloff = 10      -- minimum lines to keep above and below the cursor
 opt.sidescrolloff = 10  -- minimum columns to keep to the left and right of the cursor
 
-opt.wildmenu = true                        -- enable command-line completion
-opt.wildmode = { "longest:full", "full" }  -- command-line completion mode
+opt.wildmenu = true                        -- enable command line completion
+opt.wildmode = { "longest:full", "full" }  -- command line completion mode
 opt.wildignore = "*.swp,*.pyc,*.class,*.o,.DS_Store"
--- Ignores files matching these patterns when using command-line completion.
+-- Ignores files matching these patterns when using command line completion.
 
 opt.complete = { ".", "w", "b", "u", "t", "i", "U", "kspell" }
 -- "."    : current buffer
