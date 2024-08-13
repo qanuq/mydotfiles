@@ -47,4 +47,8 @@ keymap.set('i', '<F1>', '<C-o><Cmd>set invlist<Enter>', { noremap = true, silent
 keymap.set('n', '<F2>', '<Cmd>set invwrap<Enter>', { noremap = true, silent = true })
 keymap.set('i', '<F2>', '<C-o><Cmd>set invwrap<Enter>', { noremap = true, silent = true })
 
+-- use F3 to invert spell
+keymap.set('n', '<F3>', '<Cmd>set invspell<Enter>', { noremap = true, silent = true })
+keymap.set('i', '<F3>', '<C-o><Cmd>set invspell<Enter>', { noremap = true, silent = true })
+
 -- F5 is used for colorscheme cycle

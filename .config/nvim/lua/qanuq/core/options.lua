@@ -165,3 +165,6 @@ opt.backupdir = vim.fn.stdpath('config') .. '/tmp/backup'
 -- Specifies the directory for backup files, used to create backup copies of files before overwriting.
 
 opt.title = true  -- set window title
+
+opt.spell = false           -- disable spell by default
+opt.spelllang = "en_us,fr"  -- set spell languages
