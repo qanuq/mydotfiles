@@ -163,3 +163,5 @@ opt.directory = vim.fn.stdpath('config') .. '/tmp/swap'
 -- Specifies the directory for swap files, which store temporary data to recover unsaved changes.
 opt.backupdir = vim.fn.stdpath('config') .. '/tmp/backup'
 -- Specifies the directory for backup files, used to create backup copies of files before overwriting.
+
+opt.title = true  -- set window title
