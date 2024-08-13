@@ -1,5 +1,7 @@
 local opt = vim.opt
 
+opt.modeline = false  -- security first, disable modeline
+
 opt.fileencoding = "utf-8"
 opt.encoding = "utf-8"
 
