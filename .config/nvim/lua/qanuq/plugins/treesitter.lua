@@ -29,9 +29,17 @@ return {
         "yaml",
       },
 
+      -- install parsers synchronously (only applied to `ensure_installed`)
+      sync_install = true,
+
+      -- automatically install missing parsers when entering buffer
       auto_install = true,
 
-      indent = { enable = true },
+      -- enable indenting
+      indent = { enable = true, },
+
+      -- enable highlighting
+      highlight = { enable = true, },
 
       incremental_selection = {
         enable = true,
@@ -43,6 +51,5 @@ return {
         },
       },
     })
-
   end,
 }
