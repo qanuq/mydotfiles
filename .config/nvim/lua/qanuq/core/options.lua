@@ -169,3 +169,7 @@ opt.title = true  -- set window title
 
 opt.spell = false           -- disable spell by default
 opt.spelllang = "en_us,fr"  -- set spell languages
+
+opt.updatetime = 250   -- decrease update time for swap file and CursorHold
+opt.timeout = true     -- explicitly set timeout for key sequences
+opt.timeoutlen = 1000  -- explicitly set timeoutlen for key sequences
