@@ -44,7 +44,7 @@ opt.clipboard = { "unnamed", "unnamedplus" }  -- sync clipboard between OS and n
 opt.splitright = true  -- Split new windows to the right
 opt.splitbelow = true  -- Split new windows below
 
-opt.swapfile = enable  -- Enable swap file
+opt.swapfile = true    -- Enable swap file
 
 opt.mouse = "a"  -- Enable mouse in all modes
 
