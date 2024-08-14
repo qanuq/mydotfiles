@@ -39,7 +39,10 @@ opt.signcolumn = "yes"  -- always show the sign column
 
 opt.backspace = { "indent", "eol", "start" }  -- allow backspacing over indentation, EOL, and insert mode start position
 
+--  Schedule the setting after `UiEnter` because it can increase startup-time.
+vim.schedule(function()
 opt.clipboard = { "unnamed", "unnamedplus" }  -- sync clipboard between OS and neovim
+end)
 
 opt.splitright = true  -- Split new windows to the right
 opt.splitbelow = true  -- Split new windows below
