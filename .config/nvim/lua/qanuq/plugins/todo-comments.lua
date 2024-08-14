@@ -24,6 +24,8 @@ return {
       todo_comments.jump_prev()
     end, { desc = "Previous todo comment" })
 
-    todo_comments.setup()
+    todo_comments.setup({
+      signs = false,
+    })
   end,
 }
