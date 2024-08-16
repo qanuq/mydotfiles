@@ -87,7 +87,7 @@ opt.formatoptions = "tjcroqlnt/"
 opt.grepformat = "%f:%l:%c:%m"  -- grep format
 opt.grepprg = "rg --vimgrep"    -- use 'rg' (ripgrep) for grep
 
-opt.list = true         -- Display invisible characters
+opt.list = false        -- Hide invisible characters
 opt.listchars:append {
   eol = "¬",            -- character to show at the end of each line
   tab = "> ",           -- character to show for each tab
