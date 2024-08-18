@@ -4,7 +4,6 @@ local opt = vim.opt
 opt.modeline = false  -- security first, disable modeline
 
 opt.fileencoding = "utf-8"
-opt.encoding = "utf-8"
 
 opt.autowrite = true  -- automatically save before certain actions
 
