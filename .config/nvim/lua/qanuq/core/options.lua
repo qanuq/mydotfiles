@@ -114,7 +114,7 @@ opt.sidescrolloff = 10  -- minimum columns to keep to the left and right of the 
 
 opt.wildmenu = true                        -- enable command line completion
 opt.wildmode = { "longest:full", "full" }  -- command line completion mode
-opt.wildignore = "*.swp,*.pyc,*.class,*.o,.DS_Store"
+opt.wildignore = { "*.swp", "*.pyc", "*.class", "*.o", ".DS_Store" }
 -- Ignores files matching these patterns when using command line completion.
 
 opt.complete = { ".", "w", "b", "u", "t", "i", "U", "kspell" }
@@ -170,8 +170,8 @@ opt.backupdir = vim.fn.stdpath('config') .. '/tmp/backup'
 
 opt.title = true  -- set window title
 
-opt.spell = false           -- disable spell by default
-opt.spelllang = "en_us,fr"  -- set spell languages
+opt.spell = false                  -- disable spell by default
+opt.spelllang = { "en_us", "fr" }  -- set spell languages
 
 opt.updatetime = 250   -- decrease update time for swap file and CursorHold
 opt.timeout = true     -- explicitly set timeout for key sequences
