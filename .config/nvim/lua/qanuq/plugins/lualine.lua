@@ -182,7 +182,7 @@ return {
           },
           {
             "fileformat",
-            -- XXX: icons_enabled = false,
+            icons_enabled = false,
             color = { fg = colors.green, gui = 'bold' },
           },
         },
