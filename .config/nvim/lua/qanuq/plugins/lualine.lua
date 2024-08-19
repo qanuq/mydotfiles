@@ -173,7 +173,8 @@ return {
             color = { fg = colors.orange },
           },
           {
-            "filetype"
+            "filetype",
+            color = { fg = colors.orange, gui = 'bold' },
           },
           {
             "encoding",
@@ -206,6 +207,7 @@ return {
               left = 1,
               right = 0,
             },
+            color = { fg = colors.blue, gui = 'bold' },
           },
           {
             'location',
@@ -213,6 +215,7 @@ return {
               left = 1,
               right = 1,
             },
+            color = { fg = colors.blue, gui = 'bold' },
           },
         },
       },
