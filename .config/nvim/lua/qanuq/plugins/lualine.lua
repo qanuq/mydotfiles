@@ -119,11 +119,9 @@ return {
         section_separators = '',
         ignore_focus = {
           "NvimTree",
-        },
-        ignore_focus = {
-          "DressingInput",
-          "DressingSelect",
-          "ccc-ui",
+          -- TODO: "DressingInput",
+          -- "DressingSelect",
+          -- "ccc-ui",
         },
       },
       sections = {
