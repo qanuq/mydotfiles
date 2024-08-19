@@ -3,14 +3,6 @@ return {
   event = { "BufReadPre", "BufNewFile" },
 
   opts = {
-
-    -- highlight line numbers
-    numhl = true,
-    -- highlight lines
-    linehl = true,
-    -- highlight word diff
-    word_diff = true,
-
     -- show blame at end of current line
     current_line_blame = true,
     current_line_blame_opts = {
