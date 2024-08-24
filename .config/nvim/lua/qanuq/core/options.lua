@@ -55,7 +55,7 @@ opt.breakindent = true  -- wrapped line will continue visually indented
 opt.completeopt = { "menuone", "noselect" }  -- better completion experience
 
 opt.laststatus = 2  -- Always display the status line
-opt.cmdheight = 1   -- Set command height to 1
+opt.cmdheight = 0   -- Set command height to 0
 opt.ruler = true    -- Shows the cursor position (line and column number) in the status line.
 
 opt.virtualedit = "block"  -- Allow virtual editing in visual block only
