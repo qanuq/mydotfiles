@@ -35,6 +35,9 @@ keymap.set("n", "<Leader>bd", "<Cmd>bdelete<Enter>", { desc = "Close current buf
 keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
+-- enter to go in command mode
+keymap.set({ 'n', 'v' }, '<Enter>', ':', { noremap = true, desc = 'Enter command line mode' })
+
 -- do nothing with space
 keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
 
