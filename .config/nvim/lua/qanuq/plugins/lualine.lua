@@ -39,82 +39,82 @@ return {
   config = function()
     local lualine = require("lualine")
     local lazy_status = require("lazy.status") -- to configure lazy pending updates count
+    local tokyo = require("tokyonight.colors").setup()
 
     local colors = {
+      black = "#000000",
       blue = "#33ccff",
+      gray = "#333333",
       green = "#33ff33",
-      magenta  = '#cc99cc',
       orange = "#ff9900",
       red = "#ff3333",
-      violet = "#ff66ff",
       yellow = "#ffff00",
-      bg = "#003333",
-      fg = "#cccccc",
-      inactive_bg = "#336666",
     }
 
-    local my_lualine_theme = {
+    local lualine_theme = {
       normal = {
-        a = { bg = colors.blue, fg = colors.bg, gui = "bold" },
-        b = { bg = colors.bg, fg = colors.fg },
-        c = { bg = colors.bg, fg = colors.fg },
-        z = { bg = colors.bg, fg = colors.fg },
+        a = { bg = colors.blue, fg = colors.black, gui = "bold" },
+        b = { bg = tokyo.bg, fg = tokyo.fg },
+        c = { bg = tokyo.bg, fg = tokyo.fg },
+        x = { bg = tokyo.bg, fg = tokyo.red },
+        y = { bg = tokyo.bg, fg = tokyo.teal },
+        z = { bg = tokyo.bg, fg = tokyo.fg },
       },
       insert = {
-        a = { bg = colors.green, fg = colors.bg, gui = "bold" },
-        b = { bg = colors.bg, fg = colors.fg },
-        c = { bg = colors.bg, fg = colors.fg },
-        z = { bg = colors.bg, fg = colors.fg },
+        a = { bg = colors.green, fg = colors.black, gui = "bold" },
+        b = { bg = tokyo.bg, fg = tokyo.fg },
+        c = { bg = tokyo.bg, fg = tokyo.fg },
+        x = { bg = tokyo.bg, fg = tokyo.red },
+        y = { bg = tokyo.bg, fg = tokyo.teal },
+        z = { bg = tokyo.bg, fg = tokyo.fg },
       },
       visual = {
-        a = { bg = colors.violet, fg = colors.bg, gui = "bold" },
-        b = { bg = colors.bg, fg = colors.fg },
-        c = { bg = colors.bg, fg = colors.fg },
-        z = { bg = colors.bg, fg = colors.fg },
+        a = { bg = colors.orange, fg = colors.black, gui = "bold" },
+        b = { bg = tokyo.bg, fg = tokyo.fg },
+        c = { bg = tokyo.bg, fg = tokyo.fg },
+        x = { bg = tokyo.bg, fg = tokyo.red },
+        y = { bg = tokyo.bg, fg = tokyo.teal },
+        z = { bg = tokyo.bg, fg = tokyo.fg },
       },
       command = {
-        a = { bg = colors.yellow, fg = colors.bg, gui = "bold" },
-        b = { bg = colors.bg, fg = colors.fg },
-        c = { bg = colors.bg, fg = colors.fg },
-        z = { bg = colors.bg, fg = colors.fg },
+        a = { bg = colors.yellow, fg = colors.black, gui = "bold" },
+        b = { bg = tokyo.bg, fg = tokyo.fg },
+        c = { bg = tokyo.bg, fg = tokyo.fg },
+        x = { bg = tokyo.bg, fg = tokyo.red },
+        y = { bg = tokyo.bg, fg = tokyo.teal },
+        z = { bg = tokyo.bg, fg = tokyo.fg },
       },
       replace = {
-        a = { bg = colors.red, fg = colors.bg, gui = "bold" },
-        b = { bg = colors.bg, fg = colors.fg },
-        c = { bg = colors.bg, fg = colors.fg },
-        z = { bg = colors.bg, fg = colors.fg },
+        a = { bg = colors.red, fg = colors.black, gui = "bold" },
+        b = { bg = tokyo.bg, fg = tokyo.fg },
+        c = { bg = tokyo.bg, fg = tokyo.fg },
+        x = { bg = tokyo.bg, fg = tokyo.red },
+        y = { bg = tokyo.bg, fg = tokyo.teal },
+        z = { bg = tokyo.bg, fg = tokyo.fg },
       },
       inactive = {
-        a = { bg = colors.inactive_bg, fg = colors.semilightgray, gui = "bold" },
-        b = { bg = colors.inactive_bg, fg = colors.semilightgray },
-        c = { bg = colors.inactive_bg, fg = colors.semilightgray },
-        z = { bg = colors.inactive_bg, fg = colors.semilightgray },
+        a = { bg = tokyo.bg_dark, fg = tokyo.fg_dark },
+        b = { bg = tokyo.bg_dark, fg = tokyo.fg_dark },
+        c = { bg = tokyo.bg_dark, fg = tokyo.fg_dark },
+        x = { bg = tokyo.bg_dark, fg = tokyo.fg_dark },
+        y = { bg = tokyo.bg_dark, fg = tokyo.fg_dark },
+        z = { bg = tokyo.bg_dark, fg = tokyo.fg_dark },
       },
     }
-    local conditions = {
-      buffer_not_empty = function()
-        return vim.fn.empty(vim.fn.expand('%:t')) ~= 1
-      end,
-      hide_in_width = function()
-        -- XXX: if vim.fn.winwidth(0) > 80 then
-        --   print(">>>>>>> 80")
-        -- end
-        return vim.fn.winwidth(0) > 80
-      end,
-    }
-    -- TODO: use this
-    local function selectionCount()
-      local isVisualMode = fn.mode():find("[Vv]")
-      if not isVisualMode then return "" end
-      local starts = fn.line("v")
-      local ends = fn.line(".")
-      local lines = starts <= ends and ends - starts + 1 or starts - ends + 1
-      return " " .. tostring(lines) .. "L " .. tostring(fn.wordcount().visual_chars) .. "C"
+
+    local function checkModified()
+      if vim.bo.modified then
+        return '+'
+      elseif not vim.bo.modifiable or vim.bo.readonly then
+        return '-'
+      end
+      return ' '
     end
 
     lualine.setup({
+
       options = {
-        theme = my_lualine_theme,
+        theme = lualine_theme,
         component_separators = '',
         section_separators = '',
         ignore_focus = {
@@ -124,109 +124,128 @@ return {
           -- "ccc-ui",
         },
       },
+
       sections = {
         lualine_a = { "mode" },
         lualine_b = {
           {
             'branch',
-            icon = '',
-            color = { fg = colors.violet, gui = 'bold' },
+            icon = '',
+            color = { bg = colors.gray, fg = tokyo.green },
           },
           {
             'diff',
-            symbols = { added = ' ', modified = '󰝤 ', removed = ' ' },
+            -- symbols = { added = ' ', modified = '󰝤 ', removed = ' ' },
+            symbols = { added = ' ', modified = '󰜥 ', removed = ' ' },
             diff_color = {
-              added = { fg = colors.green },
-              modified = { fg = colors.orange },
-              removed = { fg = colors.red },
+              added = { bg = colors.gray, fg = colors.green },
+              modified = { bg = colors.gray, fg = colors.orange },
+              removed = { bg = colors.gray, fg = colors.red },
             },
-            cond = conditions.hide_in_width,
           },
           {
-            "diagnostics",
-            -- sources = { 'nvim_diagnostic' },
-            symbols = { error = " ", warn = " ", info = " ", hint = " ", },
-            diagnostics_color = {
-              error = { fg = colors.red },
-              warn = { fg = colors.orange },
-              info = { fg = colors.yellow },
-              hint = { fg = colors.green },
-            },
+            'diagnostics',
+            -- TODO: source = { 'nvim', 'nvim_diagnostic' },
+            sections = { 'error' },
+            symbols = { error = " "},
+            diagnostics_color = { error = { bg = tokyo.red, fg = tokyo.bg } },
+            always_visible = true,
+          },
+          {
+            'diagnostics',
+            sections = { 'warn' },
+            symbols = { warn = " " },
+            diagnostics_color = { warn = { bg = tokyo.orange, fg = tokyo.bg } },
+            always_visible = true,
+          },
+          {
+            'diagnostics',
+            sections = { 'info' },
+            symbols = { info = "󰋼 " },
+            diagnostics_color = { info = { bg = tokyo.blue, fg = tokyo.bg } },
+            always_visible = true,
+          },
+          {
+            'diagnostics',
+            sections = { 'hint' },
+            symbols = { hint = " " },
+            diagnostics_color = { hint = { bg = tokyo.green, fg = tokyo.bg } },
             always_visible = true,
           },
         },
         lualine_c = {
           {
             'filename',
-            cond = conditions.buffer_not_empty,
-            color = { fg = colors.magenta, gui = 'bold' },
+            file_status = false, -- do not show modified or readonly
+            path = 1, -- relative path
+            color = { fg = tokyo.fg },
+            padding = { left = 1, right = 0, },
+          },
+          {
+            checkModified,
+            color = { fg = tokyo.red, gui = "bold" },
+            padding = { left = 0, right = 0, },
           },
           {
             'filesize',
-            cond = conditions.buffer_not_empty,
-          }
+            padding = { left = 1, right = 0, },
+          },
         },
         lualine_x = {
           {
+            "selectioncount",
+            padding = { left = 1, right = 0, },
+            color = { gui = "bold" },
+          },
+          {
+            "searchcount",
+            padding = { left = 1, right = 0, },
+            color = { gui = "bold" },
+          },
+          {
             lazy_status.updates,
             cond = lazy_status.has_updates,
-            color = { fg = colors.orange },
-          },
-          {
-            "filetype",
-            color = { fg = colors.orange, gui = 'bold' },
-          },
-          {
-            "encoding",
-            cond = conditions.hide_in_width,
-            color = { fg = colors.green, gui = 'bold' },
-          },
-          {
-            "fileformat",
-            icons_enabled = false,
-            color = { fg = colors.green, gui = 'bold' },
+            color = { fg = tokyo.orange, gui = "bold" },
+            padding = { left = 1, right = 0, },
           },
         },
         lualine_y = {
           {
-            "searchcount",
-            color = { fg = colors.red, gui = 'bold' },
+            "filetype",
+            padding = { left = 1, right = 0, },
           },
           {
-            "selectioncount",
-            padding = {
-              left = 0,
-              right = 1,
-            },
+            "encoding",
+            padding = { left = 1, right = 0, },
+          },
+          {
+            "fileformat",
+            icons_enabled = false,
+            padding = { left = 1, right = 0, },
           },
         },
         lualine_z = {
           {
             'progress',
-            padding = {
-              left = 1,
-              right = 0,
-            },
-            color = { fg = colors.blue, gui = 'bold' },
+            padding = { left = 1, right = 0, },
           },
           {
             'location',
-            padding = {
-              left = 1,
-              right = 1,
-            },
-            color = { fg = colors.blue, gui = 'bold' },
+            padding = { left = 1, right = 1, },
           },
         },
       },
 
       inactive_sections = {
-        lualine_a = {},
+        lualine_a = { "%f %y %m" },
         lualine_b = {},
-        lualine_c = {'filename'},
-        lualine_x = {'location'},
+        lualine_c = {},
+        lualine_x = {},
         lualine_y = {},
-        lualine_z = {}
+        lualine_z = {
+          'progress',
+          'location',
+        }
       },
     })
 
