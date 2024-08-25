@@ -149,28 +149,24 @@ return {
             sections = { 'error' },
             symbols = { error = " "},
             diagnostics_color = { error = { bg = tokyo.red, fg = tokyo.bg } },
-            always_visible = true,
           },
           {
             'diagnostics',
             sections = { 'warn' },
             symbols = { warn = " " },
             diagnostics_color = { warn = { bg = tokyo.orange, fg = tokyo.bg } },
-            always_visible = true,
           },
           {
             'diagnostics',
             sections = { 'info' },
             symbols = { info = "󰋼 " },
             diagnostics_color = { info = { bg = tokyo.blue, fg = tokyo.bg } },
-            always_visible = true,
           },
           {
             'diagnostics',
             sections = { 'hint' },
             symbols = { hint = " " },
             diagnostics_color = { hint = { bg = tokyo.green, fg = tokyo.bg } },
-            always_visible = true,
           },
         },
         lualine_c = {
