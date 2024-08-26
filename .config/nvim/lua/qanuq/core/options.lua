@@ -175,3 +175,17 @@ opt.spelllang = { "en_us", "fr" }  -- set spell languages
 opt.updatetime = 250   -- decrease update time for swap file and CursorHold
 opt.timeout = true     -- explicitly set timeout for key sequences
 opt.timeoutlen = 1000  -- explicitly set timeoutlen for key sequences
+
+-- recommended sessionoptions for auto-session plugin
+opt.sessionoptions = {
+  "blank",
+  "buffers",
+  "curdir",
+  "folds",
+  "help",
+  "tabpages",
+  "winsize",
+  "winpos",
+  "terminal",
+  "localoptions",
+}
