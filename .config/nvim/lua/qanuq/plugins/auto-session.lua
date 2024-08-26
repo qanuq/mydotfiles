@@ -23,6 +23,7 @@ return {
         "~/Desktop",
       },
       bypass_save_filetypes = {
+        "alpha",
         "NvimTree",
       },
     })
