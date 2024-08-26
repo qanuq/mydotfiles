@@ -41,6 +41,35 @@ return {
     local lazy_status = require("lazy.status") -- to configure lazy pending updates count
     local tokyo = require("tokyonight.colors").setup()
 
+    -- https://www.reddit.com/r/neovim/comments/xy0tu1/cmdheight0_recording_macros_message/
+    vim.api.nvim_create_autocmd("RecordingEnter", {
+      callback = function()
+        lualine.refresh({
+          place = { "statusline" },
+        })
+      end,
+    })
+    vim.api.nvim_create_autocmd("RecordingLeave", {
+      callback = function()
+        -- This is going to seem really weird!
+        -- Instead of just calling refresh we need to wait a moment because of the nature of
+        -- `vim.fn.reg_recording`. If we tell lualine to refresh right now it actually will
+        -- still show a recording occuring because `vim.fn.reg_recording` hasn't emptied yet.
+        -- So what we need to do is wait a tiny amount of time (in this instance 50 ms) to
+        -- ensure `vim.fn.reg_recording` is purged before asking lualine to refresh.
+        local timer = vim.loop.new_timer()
+        timer:start(
+          50,
+          0,
+          vim.schedule_wrap(function()
+            lualine.refresh({
+              place = { "statusline" },
+            })
+          end)
+        )
+      end,
+    })
+
     local colors = {
       black = "#000000",
       blue = "#33ccff",
@@ -109,6 +138,15 @@ return {
         return '-'
       end
       return ' '
+    end
+
+    local function macro_recording()
+      local recording_register = vim.fn.reg_recording()
+      if recording_register == "" then
+        return ""
+      else
+        return "Rec. @" .. recording_register
+      end
     end
 
     lualine.setup({
@@ -188,6 +226,11 @@ return {
           },
         },
         lualine_x = {
+          {
+            macro_recording,
+            padding = { left = 1, right = 0, },
+            color = { gui = "bold" },
+          },
           {
             "selectioncount",
             padding = { left = 1, right = 0, },
