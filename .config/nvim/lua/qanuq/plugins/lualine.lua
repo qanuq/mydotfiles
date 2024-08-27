@@ -1,35 +1,3 @@
--- -- shows global mark M
--- vim.api.nvim_del_mark("M") -- reset on session start
--- local function markM()
--- 	local markObj = vim.api.nvim_get_mark("M", {})
--- 	local markLn = markObj[1]
--- 	local markBufname = vim.fs.basename(markObj[4])
--- 	if markBufname == "" then return "" end -- mark not set
--- 	return " " .. markBufname .. ":" .. markLn
--- end
---
--- local lualineConfig = {
--- 	tabline = {
--- 		lualine_a = {
--- 			{
--- 				"tabs",
--- 				mode = 1,
--- 				max_length = vim.o.columns * 0.7,
--- 				cond = function() return fn.tabpagenr("$") > 1 end,
--- 			},
--- 		},
--- 		lualine_y = {
--- 			{ markM },
--- 		},
--- 	},
--- 	sections = {
--- 		lualine_x = {
--- 			{ irregularWhitespace },
--- 		},
--- 	},
--- }
-
-
 return {
   "nvim-lualine/lualine.nvim",
   dependencies = {
