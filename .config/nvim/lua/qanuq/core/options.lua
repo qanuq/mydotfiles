@@ -160,11 +160,11 @@ opt.showbreak = ">>> "
 -- sets the string to be displayed at the beginning of wrapped lines.
 -- in this case, it shows "+++" to indicate that a line is wrapped.
 
-opt.undodir = vim.fn.stdpath('config') .. '/tmp/undo'
+opt.undodir = vim.fn.stdpath('data') .. '/tmp/undo'
 -- Specifies the directory for undo files, ensuring persistent undo history across sessions.
-opt.directory = vim.fn.stdpath('config') .. '/tmp/swap'
+opt.directory = vim.fn.stdpath('data') .. '/tmp/swap'
 -- Specifies the directory for swap files, which store temporary data to recover unsaved changes.
-opt.backupdir = vim.fn.stdpath('config') .. '/tmp/backup'
+opt.backupdir = vim.fn.stdpath('data') .. '/tmp/backup'
 -- Specifies the directory for backup files, used to create backup copies of files before overwriting.
 
 opt.title = true  -- set window title
