@@ -13,7 +13,7 @@ return {
   opts = {
     auto_restore = true,
     bypass_save_filetypes = { "alpha", "NvimTree", "checkhealth", },
-    auto_session_suppress_dirs = { "~/", "~/Downloads", "~/Documents", "~/Desktop", },
+    suppressed_dirs = { "~/", "~/Downloads", "~/Documents", "~/Desktop", },
     use_git_branch = true,
   }
 }
