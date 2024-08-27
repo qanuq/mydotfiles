@@ -10,22 +10,10 @@ return {
     { "<Leader>ws", "<Cmd>SessionSave<Enter>", desc = "Save session for CWD" },
     { "<Leader>wt", "<Cmd>SessionToggleAutoSave<Enter>", desc = "Toggle autosave" },
   },
-  config = function()
-    local auto_session = require("auto-session")
-
-    auto_session.setup({
-      auto_restore = true,
-      use_git_branch = true,
-      auto_session_suppress_dirs = {
-        "~/",
-        "~/Downloads",
-        "~/Documents",
-        "~/Desktop",
-      },
-      bypass_save_filetypes = {
-        "alpha",
-        "NvimTree",
-      },
-    })
-  end,
+  opts = {
+    auto_restore = true,
+    bypass_save_filetypes = { "alpha", "NvimTree", "checkhealth", },
+    auto_session_suppress_dirs = { "~/", "~/Downloads", "~/Documents", "~/Desktop", },
+    use_git_branch = true,
+  }
 }
