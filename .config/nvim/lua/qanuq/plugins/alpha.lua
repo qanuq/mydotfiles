@@ -58,12 +58,15 @@ return {
     }
 
     dashboard.section.buttons.val = {
-      dashboard.button("e", "  New file", "<Cmd>ene <Bar> startinsert<Enter>"),
-      dashboard.button("Space ee", "  Toggle file explorer", "<Cmd>TreeToggle<Enter>"),
-      dashboard.button("Space wr", "󰁯  Restore CWD Session", "<Cmd>SessionRestore<Enter>"),
-      dashboard.button("l", "󰚰  Lazy", "<Cmd>Lazy<Enter>"),
+      dashboard.button("e", "󱪝  New file", "<Cmd>ene <Bar> startinsert<Enter>"),
+      dashboard.button("r", "󰥔  Recent", "<Cmd>Telescope oldfiles<Enter>"),
+      dashboard.button("fe", "  Toggle file explorer", "<Cmd>NvimTreeToggle<Enter>"),
+      dashboard.button("ff", "󰈞  Find file", "<Cmd>Telescope find_files<Enter>"),
+      dashboard.button("fw", "󰈬  Find word", "<Cmd>Telescope live_grep<Enter>"),
+      dashboard.button("rs", "󰙰  Restore CWD session", "<Cmd>SessionRestore<Enter>"),
+      dashboard.button("l", "  Lazy", "<Cmd>Lazy<Enter>"),
       dashboard.button("s", "  Settings", "<Cmd>e $MYVIMRC | :cd %:p:h | split . | wincmd l | pwd<Enter>"),
-      dashboard.button("q", "  Quit NVIM", "<Cmd>qa<Enter>"),
+      dashboard.button("q", "  Quit", "<Cmd>qa<Enter>"),
     }
 
     -- Send config to alpha
