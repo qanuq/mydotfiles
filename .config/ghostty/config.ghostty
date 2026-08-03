@@ -39,6 +39,7 @@ notify-on-command-finish = unfocused
 # === macOS ===
 macos-titlebar-proxy-icon = hidden
 macos-titlebar-style = tabs
+macos-option-as-alt = left
 
 # === Keybindings ===
 keybind = ctrl+shift+r=reload_config
