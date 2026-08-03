@@ -1,0 +1,48 @@
+# === Theme & Font ===
+# ghostty +list-themes
+theme = TokyoNight Moon
+
+# ghostty +list-fonts
+font-family = FiraCode Nerd Font Mono
+font-size = 16
+adjust-cell-height = 5%
+adjust-cell-width = 5%
+
+# avoid invisible text
+minimum-contrast = 1.1
+
+# === Cursor ===
+cursor-style = block
+cursor-style-blink = true
+cursor-click-to-move = true
+
+# === Mouse & Selection ===
+mouse-hide-while-typing = true
+copy-on-select = false
+clipboard-paste-protection = true
+right-click-action = copy-or-paste
+
+# === Scrolling ===
+scroll-to-bottom = keystroke, no-output
+scrollback-limit = 1000000000
+
+# === Window ===
+window-save-state = never
+maximize = true
+resize-overlay = always
+resize-overlay-position = bottom-right
+
+# === Shell Integration ===
+shell-integration-features = no-cursor, sudo, title, ssh-env, ssh-terminfo, path
+notify-on-command-finish = unfocused
+
+# === macOS ===
+macos-option-as-alt = true
+macos-titlebar-proxy-icon = hidden
+macos-titlebar-style = tabs
+
+# === Keybindings ===
+keybind = ctrl+shift+r=reload_config
+
+# fix gtk4 resize bug on linux with cinnamon desktop
+window-decoration = none
