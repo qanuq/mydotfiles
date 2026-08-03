@@ -37,7 +37,6 @@ shell-integration-features = no-cursor, sudo, title, ssh-env, ssh-terminfo, path
 notify-on-command-finish = unfocused
 
 # === macOS ===
-macos-option-as-alt = true
 macos-titlebar-proxy-icon = hidden
 macos-titlebar-style = tabs
 
